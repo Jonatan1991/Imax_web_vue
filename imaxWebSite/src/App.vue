@@ -1,4 +1,5 @@
 <script setup>
+import VariableReactiva from "./components/ejemplos/variableReactiva.vue";
 import headerComponent from "./components/headerComponent.vue";
 </script>
 
@@ -9,7 +10,12 @@ import headerComponent from "./components/headerComponent.vue";
 
   <body>
     <h1 class="title">Hello Imax Web</h1>
+    <VariableReactiva></VariableReactiva>
+
   </body>
+  <footer>
+    <p>footer</p>
+  </footer>
 </template>
 
 

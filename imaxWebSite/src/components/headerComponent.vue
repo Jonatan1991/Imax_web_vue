@@ -1,5 +1,4 @@
 <script setup>
-import VariableReactiva from './ejemplos/variableReactiva.vue';
 
 
 </script>
@@ -14,27 +13,27 @@ import VariableReactiva from './ejemplos/variableReactiva.vue';
             </ul>
         </nav>
     </header>
-    <VariableReactiva></VariableReactiva>
-    <footer>
-        <p>footer</p>
-    </footer>
+
 </template>
 
 <style>
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-    }
-    nav ul {
-        list-style: none;
-    }
-    nav ul li {
-        display: inline;
-        margin: 0 10px;
-    }
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 </style>
