@@ -7,9 +7,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a class="text-black" href="#">Inicio</a></li>
+                <li><a class="text-black" href="#">Productos</a></li>
+                <li><a class="text-black" href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -18,9 +18,13 @@
 
 <style>
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #e7e7e7;
+    color: #1b1b1b;
     padding: 10px;
+}
+
+.text-black {
+    color: #1b1b1b;
 }
 
 nav ul {
