@@ -30,3 +30,6 @@ npm run lint
 Ejecutar el linter y arreglar los errores:
 
 npm run lint-fix
+
+npm install vue-router
+para las rutas

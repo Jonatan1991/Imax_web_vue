@@ -8,12 +8,22 @@ const movie = reactive({
     genero: "",
     director: ""
 })
+
+const handleSubmit = () => {
+    if (!movie.name || movie.name.trim() === '' || !movie.year || movie.year < 1888 || !movie.rating
+        || movie.rating < 0 || movie.rating > 10 || !movie.genero || !movie.genero.trim() === ''
+        || !movie.director || !movie.director.trim() === '') {
+        alert("Revise la informacion y rellene los campos correctamente");
+        return;
+    }
+    console.log(movie);
+}
 </script>
 
 <template>
     <h1>Fomularios</h1>
 
-    <form class="form">
+    <form @submit.prevent="handleSubmit" class="form">
         <label for="name">Name</label>
         <input v-model="movie.name" type="text" id="name">
         <br>
@@ -28,6 +38,8 @@ const movie = reactive({
         <br>
         <label for="director">Director</label>
         <input v-model="movie.director" type="text" id="director">
+        <br>
+        <button type="submit">Guardar</button>
     </form>
 </template>
 
@@ -39,7 +51,40 @@ const movie = reactive({
 .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #b41212ff;
+    width: 25%;
+}
+
+.form button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(22, 143, 22);
+    margin-top: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    background-color: rgb(22, 143, 22);
+    color: white;
+    transform: scale(1.05);
+}
+
+.form label {
+    margin-bottom: 5px;
+}
+
+.form input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #4311b4ff;
+    margin-bottom: 10px;
 }
 </style>
