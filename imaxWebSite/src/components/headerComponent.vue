@@ -1,43 +1,40 @@
 <script setup>
-
-
+import menuComponent from './menuComponent.vue';
 </script>
 
 <template>
-    <header>
-        <nav>
-            <ul>
-                <li><a class="text-black" href="#">Inicio</a></li>
-                <li><a class="text-black" href="#">Productos</a></li>
-                <li><a class="text-black" href="#">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-text">Imax<span class="highlight">Web</span></span>
+        </div>
+        <menuComponent />
     </header>
-
 </template>
 
-<style>
-header {
-    background-color: #e7e7e7;
-    color: #1b1b1b;
-    padding: 10px;
+<style scoped>
+.main-header {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.text-black {
-    color: #1b1b1b;
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.5px;
+    color: #1a202c;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.logo-text .highlight {
+    color: #4f46e5; /* Indigo accent color to match menu hover */
 }
 </style>

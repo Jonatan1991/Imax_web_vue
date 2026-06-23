@@ -1,6 +1,6 @@
 <script setup>
 import headerComponent from "./components/headerComponent.vue";
-import BodyComponent from "./components/bodyComponent.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -9,12 +9,14 @@ import BodyComponent from "./components/bodyComponent.vue";
   </header>
 
   <body class="body">
-    <BodyComponent></BodyComponent>
-
+    <RouterView />
   </body>
+
   <footer class="footer">
     <p>footer</p>
   </footer>
+
+
 </template>
 
 <style></style>
