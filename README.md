@@ -33,3 +33,6 @@ npm run lint-fix
 
 npm install vue-router
 para las rutas
+
+npm install pinia
+para el manejo de estados
