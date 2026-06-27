@@ -21,8 +21,8 @@ const movies = [
 <template>
     <h2>Directiva v-for</h2>
     <ul>
-        <li v-for="movie in movies" :key="movie.id">
-            <p>Name: {{ movie.name }} - Year: {{ movie.year }}</p>
+        <li v-for="(movie, index) in movies" :key="movie.id">
+            <p>{{ index + 1 }} - {{ movie.name }} - {{ movie.year }}</p>
         </li>
     </ul>
 </template>
