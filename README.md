@@ -18,6 +18,8 @@ npm install
 Ejecutar el servidor de desarrollo:
 
 npm run dev
+npm run dev -- --host 0.0.0.0
+
 Compilar la aplicación:
 
 npm run build
