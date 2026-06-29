@@ -9,4 +9,3 @@ const condition2 = false
     <h3 v-else-if="condition2">La condicion 2 se cumple</h3>
     <h3 v-else>La condicion 3 se cumple</h3>
 </template>
-<style></style>

@@ -11,4 +11,3 @@ const myValue = ref("some value")
     <h2>{{ myValue }}</h2>
     <input type="text" v-model="myValue">
 </template>
-<style></style>

@@ -12,4 +12,3 @@ const addOne = () => {
     <h2>numero creciendo: {{ number }}</h2>
     <button @click="addOne">sumar 1</button>
 </template>
-<style></style>

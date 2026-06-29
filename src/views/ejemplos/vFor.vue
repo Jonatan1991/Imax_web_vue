@@ -26,4 +26,3 @@ const movies = [
         </li>
     </ul>
 </template>
-<style></style>

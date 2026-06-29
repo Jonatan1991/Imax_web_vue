@@ -13,15 +13,3 @@ import { RouterView } from "vue-router";
     <footerComponent></footerComponent>
   </div>
 </template>
-
-<style>
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-}
-</style>

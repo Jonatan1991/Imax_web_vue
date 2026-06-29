@@ -10,4 +10,3 @@ setInterval(() => {
 <template>
     <h2>numero creciendo: {{ number }}</h2>
 </template>
-<style></style>
