@@ -28,6 +28,14 @@ const slides = ref([
   },
 ]);
 
+const slideStyle = computed(() => {
+  return {
+    transform: `translateX(-${currentSlide.value * 100}%)`,
+    transition: 'transform 0.6s ease-in-out'
+  };
+});
+
+
 const startAutoSlide = () => {
   autoSlideTimer.value = setInterval(() => {
     currentSlide.value = (currentSlide.value + 1) % slides.value.length;
@@ -72,19 +80,19 @@ onUnmounted(() => {
 <template>
   <section class="hero-carousel">
     <div class="carousel-container">
-      <div class="carousel-slides">
+      <div class="carousel-slides" :style="slideStyle">
         <div
           v-for="(slide, index) in slides"
           :key="slide.id"
           class="carousel-slide"
-          :class="{ active: currentSlide === index }"
         >
-          <img :src="slide.image" :alt="slide.title" class="slide-image" />
           <div class="slide-content">
             <h2 class="slide-title">{{ slide.title }}</h2>
             <p class="slide-description">{{ slide.description }}</p>
             <button class="slide-button">{{ slide.button }}</button>
           </div>
+          <img :src="slide.image" :alt="slide.title" class="slide-image" />
+
         </div>
       </div>
 
@@ -127,32 +135,25 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   height: 600px;
-  overflow: hidden;
+  overflow: hidden; /* el que debe cortar es el contenedor */
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #EFEFEF;
 }
 
 .carousel-slides {
-  position: relative;
-  width: 100%;
+  display: flex;
   height: 100%;
+  /* IMPORTANTE: NO pongas overflow aquí */
 }
 
 .carousel-slide {
-  position: absolute;
-  width: 100%;
+  flex: 0 0 100%;      /* cada slide ocupa exactamente el 100% del ancho */
   height: 100%;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  z-index: 10;
+  position: relative;
 }
 
 .slide-image {
@@ -165,14 +166,12 @@ onUnmounted(() => {
 }
 
 .slide-content {
-  position: absolute;
-  top: 50%;
-  left: 5%;
+  position: relative;
+  top: 25%;
   transform: translateY(-50%);
   max-width: clamp(320px, 40%, 500px);
-  background: rgba(0, 0, 0, 0.55);
   padding: 2rem;
-  color: #ffffff;
+  color: #000000;
   border-radius: 0 16px 16px 0;
 }
 
