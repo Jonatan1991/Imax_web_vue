@@ -23,7 +23,7 @@ const products = ref([
     name: 'Luxury Accessory',
     price: 79.99,
     image: '/src/assets/img/feature_prod_03.jpg',
-    rating: 5,
+    rating: 1,
     reviews: 156,
   },
   {
@@ -87,8 +87,9 @@ const addToCart = (product) => {
 
 <style scoped>
 .featured-products-section {
+  width: 100%;
   padding: 3rem 0;
-  background-color: #ffffff;
+   background-color: #f5f5f5;
 }
 
 .container {

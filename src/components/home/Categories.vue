@@ -53,8 +53,9 @@ const categories = [
 
 <style scoped>
 .categories-section {
+  width: 100%;
   padding: 3rem 0;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .container {

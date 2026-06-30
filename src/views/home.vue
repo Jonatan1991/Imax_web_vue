@@ -10,14 +10,14 @@ import FeaturedProducts from '../components/home/FeaturedProducts.vue';
     <div class="container-home">
       <Categories />
     </div>
-    <div class="container-home">
+    <div class="container-home-grey">
       <FeaturedProducts />
     </div>
   </div>
 </template>
 
 <style scoped>
-.home-page {
+/* .home-page {
   min-height: calc(100vh - 400px);
 }
 
@@ -26,4 +26,12 @@ import FeaturedProducts from '../components/home/FeaturedProducts.vue';
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.container-home-grey {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #f5f5f5;
+} */
 </style>
