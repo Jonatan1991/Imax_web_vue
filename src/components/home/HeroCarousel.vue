@@ -138,7 +138,7 @@ onUnmounted(() => {
   overflow: hidden; /* el que debe cortar es el contenedor */
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #EFEFEF;
+  background-color: #F7F9FC;
 }
 
 .carousel-slides {
@@ -171,7 +171,7 @@ onUnmounted(() => {
   transform: translateY(-50%);
   max-width: clamp(320px, 40%, 500px);
   padding: 2rem;
-  color: #000000;
+  color: #1A1A1A;
   border-radius: 0 16px 16px 0;
 }
 
@@ -190,8 +190,8 @@ onUnmounted(() => {
 
 .slide-button {
   padding: 0.75rem 2rem;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A1A1A;
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -201,15 +201,15 @@ onUnmounted(() => {
 }
 
 .slide-button:hover {
-  background-color: #ffb300;
+  background-color: #3CA2D3;
 }
 
 .carousel-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 192, 0, 0.8);
-  color: #212245;
+  background-color: rgba(77, 183, 227, 0.8);
+  color: #1A3A6E;
   border: none;
   width: 50px;
   height: 50px;
@@ -224,7 +224,7 @@ onUnmounted(() => {
 }
 
 .carousel-control:hover {
-  background-color: #ffc000;
+  background-color: #4DB7E3;
 }
 
 .prev {
@@ -257,8 +257,8 @@ onUnmounted(() => {
 }
 
 .indicator.active {
-  background-color: #ffc000;
-  border-color: #ffc000;
+  background-color: #4DB7E3;
+  border-color: #4DB7E3;
   width: 30px;
   border-radius: 6px;
 }

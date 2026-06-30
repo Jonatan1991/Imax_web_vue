@@ -69,7 +69,7 @@ const categories = [
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #212245;
+  color: #1A3A6E;
 }
 
 .categories-grid {
@@ -115,7 +115,7 @@ const categories = [
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(33, 34, 69, 0.7);
+  background-color: rgba(26, 58, 110, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,8 +129,8 @@ const categories = [
 
 .overlay-button {
   padding: 0.75rem 2rem;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A1A1A;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
@@ -138,7 +138,7 @@ const categories = [
 }
 
 .overlay-button:hover {
-  background-color: #ffb300;
+  background-color: #3CA2D3;
 }
 
 .category-info {
@@ -149,7 +149,7 @@ const categories = [
 .category-name {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #212245;
+  color: #1A3A6E;
   margin-bottom: 0.5rem;
 }
 

@@ -45,7 +45,7 @@ const handleSubmit = () => {
 
 <style scoped>
 .title {
-    color: blueviolet;
+    color: #1A3A6E;
 }
 
 .form {
@@ -55,14 +55,14 @@ const handleSubmit = () => {
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #b41212ff;
+    border: 2px solid #E53935;
     width: 25%;
 }
 
 .form button {
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid rgb(22, 143, 22);
+    border: 2px solid #43A047;
     margin-top: 10px;
     width: 50%;
     margin-left: auto;
@@ -72,7 +72,7 @@ const handleSubmit = () => {
 }
 
 .form button:hover {
-    background-color: rgb(22, 143, 22);
+    background-color: #43A047;
     color: white;
     transform: scale(1.05);
 }
@@ -84,7 +84,7 @@ const handleSubmit = () => {
 .form input {
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid #4311b4ff;
+    border: 2px solid #1A3A6E;
     margin-bottom: 10px;
 }
 </style>

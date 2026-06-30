@@ -12,7 +12,7 @@
 </template>
 <style>
 .child {
-    background-color: rgb(100, 98, 255);
+    background-color: #4DB7E3;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;

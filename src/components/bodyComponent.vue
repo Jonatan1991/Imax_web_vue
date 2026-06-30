@@ -34,6 +34,6 @@ import FormComponent from "../views/ejemplos/Formularios/FormComponent.vue";
 </template>
 <style>
 .title {
-    color: red;
+    color: #E53935;
 }
 </style>

@@ -161,12 +161,12 @@
 
 <style scoped>
 .top-header {
-  background: linear-gradient(90deg, #333131 0%, #26272c 100%);
+  background: #1A3A6E;
   color: #ffffff;
   padding: 0.35rem 0;
   font-size: 0.75rem !important;
   line-height: 1.2;
-  border-bottom: 1px solid rgba(255, 192, 0, 0.12);
+  border-bottom: 1px solid rgba(77, 183, 227, 0.12);
 }
 
 .top-header,
@@ -197,13 +197,13 @@
 }
 
 .contact-info a {
-  color: #a8a8a8;
+  color: #E3E6EB;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-  color: #ffc000;
+  color: #4DB7E3;
 }
 
 .social-links {
@@ -212,17 +212,17 @@
 }
 
 .social-links a {
-  color: #a8a8a8;
+  color: #E3E6EB;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #ffc000;
+  color: #4DB7E3;
 }
 
 .main-header {
   background-color: #ffffff;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #E3E6EB;
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -250,7 +250,7 @@
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #212245;
+  color: #1A3A6E;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -258,7 +258,7 @@
 }
 
 .logo-text .highlight {
-  color: #ffc000;
+  color: #F4C20D;
 }
 
 .main-nav {
@@ -269,7 +269,7 @@
 }
 
 .nav-link {
-  color: #212245;
+  color: #1A1A1A;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -279,8 +279,8 @@
 
 .nav-link:hover,
 .nav-link.router-link-active {
-  color: #ffc000;
-  border-bottom-color: #ffc000;
+  color: #4DB7E3;
+  border-bottom-color: #4DB7E3;
 }
 
 .header-icons {
@@ -294,22 +294,22 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  color: #212245;
+  color: #1A1A1A;
   position: relative;
   transition: color 0.3s ease;
   padding: 0.5rem;
 }
 
 .icon-btn:hover {
-  color: #ffc000;
+  color: #4DB7E3;
 }
 
 .badge {
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #F4C20D;
+  color: #1A1A1A;
   border-radius: 50%;
   width: 18px;
   height: 18px;
@@ -327,8 +327,8 @@
 /* Mobile Navigation */
 .mobile-nav {
   display: none;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  background-color: #F7F9FC;
+  border-top: 1px solid #E3E6EB;
 }
 
 .mobile-nav-content {
@@ -339,7 +339,7 @@
 }
 
 .mobile-nav-link {
-  color: #212245;
+  color: #1A1A1A;
   text-decoration: none;
   font-weight: 500;
   padding: 0.75rem;
@@ -348,7 +348,7 @@
 }
 
 .mobile-nav-link:hover {
-  background-color: #e9ecef;
+  background-color: #E3E6EB;
 }
 
 /* Search Modal */
@@ -384,18 +384,18 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #212245;
+  color: #1A1A1A;
   transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-  color: #ffc000;
+  color: #4DB7E3;
 }
 
 .search-container h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #212245;
+  color: #1A3A6E;
 }
 
 .search-form {
@@ -406,7 +406,7 @@
 .search-input {
   flex: 1;
   padding: 0.75rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid #E3E6EB;
   border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -414,13 +414,13 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #ffc000;
+  border-color: #4DB7E3;
 }
 
 .search-submit {
   padding: 0.75rem 1.5rem;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A1A1A;
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -432,7 +432,7 @@
 }
 
 .search-submit:hover {
-  background-color: #ffb300;
+  background-color: #3CA2D3;
 }
 
 /* Transitions */

@@ -89,7 +89,7 @@ const addToCart = (product) => {
 .featured-products-section {
   width: 100%;
   padding: 3rem 0;
-   background-color: #f5f5f5;
+   background-color: #F7F9FC;
 }
 
 .container {
@@ -103,7 +103,7 @@ const addToCart = (product) => {
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #212245;
+  color: #1A3A6E;
 }
 
 .products-grid {
@@ -116,7 +116,7 @@ const addToCart = (product) => {
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #e9ecef;
+  border: 1px solid #E3E6EB;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -130,7 +130,7 @@ const addToCart = (product) => {
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background-color: #f8f9fa;
+  background-color: #F7F9FC;
 }
 
 .product-image {
@@ -151,8 +151,8 @@ const addToCart = (product) => {
   right: 0;
   width: 100%;
   padding: 0.75rem;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A1A1A;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -170,7 +170,7 @@ const addToCart = (product) => {
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ffb300;
+  background-color: #3CA2D3;
 }
 
 .product-info {
@@ -180,7 +180,7 @@ const addToCart = (product) => {
 .product-name {
   font-size: 1rem;
   font-weight: 600;
-  color: #212245;
+  color: #1A1A1A;
   margin-bottom: 0.75rem;
   line-height: 1.4;
   min-height: 2.4em;
@@ -194,12 +194,12 @@ const addToCart = (product) => {
 }
 
 .star {
-  color: #e9ecef;
+  color: #E3E6EB;
   font-size: 0.8rem;
 }
 
 .star.filled {
-  color: #ffc000;
+  color: #F4C20D;
 }
 
 .review-count {
@@ -217,7 +217,7 @@ const addToCart = (product) => {
 .price {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #ffc000;
+  color: #F4C20D;
 }
 
 @media (max-width: 768px) {

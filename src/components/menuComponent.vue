@@ -169,7 +169,7 @@ onUnmounted(() => {
 
 /* Nav Link Styling */
 .nav-link {
-  color: #4a5568;
+  color: #1A1A1A;
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
@@ -179,8 +179,8 @@ onUnmounted(() => {
 }
 
 .nav-link:hover, .active-link {
-  color: #1a202c;
-  background-color: rgba(0, 0, 0, 0.04);
+  color: #4DB7E3;
+  background-color: rgba(77, 183, 227, 0.08);
 }
 
 /* Dropdown Container */
@@ -192,7 +192,7 @@ onUnmounted(() => {
 .dropdown-btn {
   background: none;
   border: none;
-  color: #4a5568;
+  color: #1A1A1A;
   font-weight: 500;
   font-size: 15px;
   padding: 8px 16px;
@@ -205,8 +205,8 @@ onUnmounted(() => {
 }
 
 .dropdown-btn:hover, .dropdown-active {
-  color: #1a202c;
-  background-color: rgba(0, 0, 0, 0.04);
+  color: #4DB7E3;
+  background-color: rgba(77, 183, 227, 0.08);
 }
 
 .chevron {
@@ -229,7 +229,7 @@ onUnmounted(() => {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(227, 230, 235, 0.8);
   border-radius: 12px;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 
               0 8px 10px -6px rgba(0, 0, 0, 0.05);
@@ -256,22 +256,22 @@ onUnmounted(() => {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(79, 70, 229, 0.05); /* very soft indigo highlight */
-  border-color: rgba(79, 70, 229, 0.1);
+  background-color: rgba(77, 183, 227, 0.05); /* very soft secondary highlight */
+  border-color: rgba(77, 183, 227, 0.1);
 }
 
 .active-item {
-  background-color: rgba(79, 70, 229, 0.08) !important;
-  border-color: rgba(79, 70, 229, 0.15);
+  background-color: rgba(77, 183, 227, 0.08) !important;
+  border-color: rgba(77, 183, 227, 0.15);
 }
 
 .active-item .item-title {
-  color: #4f46e5;
+  color: #4DB7E3;
   font-weight: 600;
 }
 
 .item-title {
-  color: #2d3748;
+  color: #1A1A1A;
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 2px;
@@ -279,11 +279,11 @@ onUnmounted(() => {
 }
 
 .dropdown-item:hover .item-title {
-  color: #4f46e5; /* indigo-600 */
+  color: #4DB7E3; /* secondary highlight */
 }
 
 .item-desc {
-  color: #718096;
+  color: rgba(26, 26, 26, 0.6);
   font-size: 11px;
   line-height: 1.3;
 }

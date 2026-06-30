@@ -96,7 +96,7 @@ const handleNewsletterSubmit = () => {
 
 <style scoped>
 .footer {
-  background-color: #212245;
+  background-color: #1A3A6E;
   color: #ffffff;
   margin-top: 5rem;
 }
@@ -121,7 +121,7 @@ const handleNewsletterSubmit = () => {
 .footer-section h5 {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #ffc000;
+  color: #F4C20D;
 }
 
 .footer-section ul {
@@ -133,12 +133,12 @@ const handleNewsletterSubmit = () => {
 }
 
 .footer-section a {
-  color: #a8a8a8;
+  color: #E3E6EB;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #ffc000;
+  color: #4DB7E3;
 }
 
 .social-icons {
@@ -153,14 +153,14 @@ const handleNewsletterSubmit = () => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 192, 0, 0.1);
-  color: #ffc000;
+  background-color: rgba(77, 183, 227, 0.1);
+  color: #4DB7E3;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A3A6E;
 }
 
 .newsletter-form {
@@ -184,8 +184,8 @@ const handleNewsletterSubmit = () => {
 
 .newsletter-form button {
   padding: 0.75rem 1.5rem;
-  background-color: #ffc000;
-  color: #212245;
+  background-color: #4DB7E3;
+  color: #1A1A1A;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
@@ -193,7 +193,7 @@ const handleNewsletterSubmit = () => {
 }
 
 .newsletter-form button:hover {
-  background-color: #ffb300;
+  background-color: #3CA2D3;
 }
 
 .footer-bottom {

@@ -22,6 +22,6 @@ const login = () => {
 
 <style scoped>
 .login-container {
-    border: 2px solid green;
+    border: 2px solid #43A047;
 }
 </style>
