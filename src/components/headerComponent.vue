@@ -1,43 +1,44 @@
 <script setup>
-  import { ref } from "vue";
-  import { RouterLink } from "vue-router";
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
+import logoH from "../assets/img/logo h.jpg";
 
-  const isMenuOpen = ref(false);
-  const isSearchOpen = ref(false);
-  const searchQuery = ref("");
+const isMenuOpen = ref(false);
+const isSearchOpen = ref(false);
+const searchQuery = ref("");
 
-  const toggleMenu = () => {
-    isMenuOpen.value = !isMenuOpen.value;
-  };
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
-  const closeMenu = () => {
-    isMenuOpen.value = false;
-  };
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
 
-  const toggleSearch = () => {
-    isSearchOpen.value = !isSearchOpen.value;
-    if (isSearchOpen.value) {
-      setTimeout(() => {
-        const input = document.querySelector(".search-modal input");
-        if (input) input.focus();
-      }, 0);
-    }
-  };
+const toggleSearch = () => {
+  isSearchOpen.value = !isSearchOpen.value;
+  if (isSearchOpen.value) {
+    setTimeout(() => {
+      const input = document.querySelector(".search-modal input");
+      if (input) input.focus();
+    }, 0);
+  }
+};
 
-  const handleSearch = () => {
-    if (searchQuery.value) {
-      console.log("Search:", searchQuery.value);
-      searchQuery.value = "";
-      isSearchOpen.value = false;
-    }
-  };
+const handleSearch = () => {
+  if (searchQuery.value) {
+    console.log("Search:", searchQuery.value);
+    searchQuery.value = "";
+    isSearchOpen.value = false;
+  }
+};
 
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Shop", path: "#" },
-    { name: "About", path: "#" },
-    { name: "Contact", path: "#" },
-  ];
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Shop", path: "#" },
+  { name: "About", path: "#" },
+  { name: "Contact", path: "#" },
+];
 </script>
 
 <template>
@@ -73,29 +74,20 @@
       <div class="header-content">
         <div class="logo">
           <RouterLink to="/" class="logo-text">
-            IMAX<span class="highlight">Shop</span>
+            <img :src="logoH" alt="IMAX Shop" class="logo-img" />
           </RouterLink>
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="main-nav desktop-nav">
-          <RouterLink
-            v-for="item in navItems"
-            :key="item.name"
-            :to="item.path"
-            class="nav-link"
-          >
+          <RouterLink v-for="item in navItems" :key="item.name" :to="item.path" class="nav-link">
             {{ item.name }}
           </RouterLink>
         </nav>
 
         <!-- Header Icons -->
         <div class="header-icons">
-          <button
-            class="icon-btn search-btn"
-            @click="toggleSearch"
-            title="Search"
-          >
+          <button class="icon-btn search-btn" @click="toggleSearch" title="Search">
             <i class="fas fa-search"></i>
           </button>
           <button class="icon-btn cart-btn" title="Cart">
@@ -105,12 +97,7 @@
           <button class="icon-btn user-btn" title="User">
             <i class="fas fa-user"></i>
           </button>
-          <button
-            class="icon-btn menu-toggle"
-            @click="toggleMenu"
-            :class="{ active: isMenuOpen }"
-            title="Menu"
-          >
+          <button class="icon-btn menu-toggle" @click="toggleMenu" :class="{ active: isMenuOpen }" title="Menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -120,13 +107,8 @@
     <!-- Mobile Navigation -->
     <div v-if="isMenuOpen" class="mobile-nav">
       <div class="mobile-nav-content">
-        <RouterLink
-          v-for="item in navItems"
-          :key="item.name"
-          :to="item.path"
-          class="mobile-nav-link"
-          @click="closeMenu"
-        >
+        <RouterLink v-for="item in navItems" :key="item.name" :to="item.path" class="mobile-nav-link"
+          @click="closeMenu">
           {{ item.name }}
         </RouterLink>
       </div>
@@ -143,12 +125,7 @@
         <div class="search-container">
           <h2>Search Products</h2>
           <form @submit.prevent="handleSearch" class="search-form">
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Enter search term..."
-              class="search-input"
-            />
+            <input v-model="searchQuery" type="text" placeholder="Enter search term..." class="search-input" />
             <button type="submit" class="search-submit">
               <i class="fas fa-search"></i> Search
             </button>
@@ -223,7 +200,7 @@
 .main-header {
   background-color: #ffffff;
   border-bottom: 1px solid #E3E6EB;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -255,6 +232,12 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.logo-img {
+  max-height: 60px;
+  width: auto;
+  display: block;
 }
 
 .logo-text .highlight {
@@ -483,6 +466,7 @@
 }
 
 @media (max-width: 576px) {
+
   .top-left,
   .top-right {
     font-size: 0.75rem;
