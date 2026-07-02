@@ -34,10 +34,10 @@ const handleSearch = () => {
 };
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Shop", path: "#" },
-  { name: "About", path: "#" },
-  { name: "Contact", path: "#" },
+  { name: "Inicio", path: "/" },
+  { name: "Soluciones", path: "#" },
+  { name: "Asesoramiento", path: "#" },
+  { name: "Condiciones de venta", path: "#" },
 ];
 </script>
 
@@ -49,11 +49,12 @@ const navItems = [
         <div class="top-left">
           <span class="contact-info">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:hello@imax.com">hello@imax.com</a>
+            <a href="mailto:hello@imax.com">info@imaxpc.es</a>
           </span>
           <span class="contact-info">
             <i class="fas fa-phone"></i>
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
+            <a href="tel:91 401 75 16">91 401 75 16</a> / 
+            <a href="tel:91 309 05 03">91 309 05 03</a>
           </span>
         </div>
         <div class="top-right">
@@ -90,13 +91,13 @@ const navItems = [
           <button class="icon-btn search-btn" @click="toggleSearch" title="Search">
             <i class="fas fa-search"></i>
           </button>
-          <button class="icon-btn cart-btn" title="Cart">
+          <!-- <button class="icon-btn cart-btn" title="Cart">
             <i class="fas fa-shopping-cart"></i>
             <span class="badge">0</span>
-          </button>
-          <button class="icon-btn user-btn" title="User">
+          </button> -->
+          <!-- <button class="icon-btn user-btn" title="User">
             <i class="fas fa-user"></i>
-          </button>
+          </button> -->
           <button class="icon-btn menu-toggle" @click="toggleMenu" :class="{ active: isMenuOpen }" title="Menu">
             <i class="fas fa-bars"></i>
           </button>
@@ -260,10 +261,14 @@ const navItems = [
   border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  /* color: #4DB7E3; */
+  border-bottom-color: #4DB7E3;
+}
+
 .nav-link.router-link-active {
   color: #4DB7E3;
-  border-bottom-color: #4DB7E3;
+  /* border-bottom-color: #4DB7E3; */
 }
 
 .header-icons {
