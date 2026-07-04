@@ -8,23 +8,23 @@ const slides = ref([
   {
     id: 1,
     image: '/src/assets/img/banner_img_01.jpg',
-    title: 'Summer Collection',
-    description: 'Discover the latest trends',
-    button: 'Shop Now',
+    title: 'EXPERIENCIA',
+    description: 'Nuestra experiencia nos ha permitido reducir los tiempos de respuesta y los costes de reparación, lo que ha generado más de 200 particulares, autónomos y PYMES confíen en nosotros.',
+    // button: 'Shop Now',
   },
   {
     id: 2,
     image: '/src/assets/img/banner_img_02.jpg',
-    title: 'New Arrivals',
-    description: 'Fresh items added daily',
-    button: 'Shop Now',
+    title: 'SERVICIO PERSONALIZADO',
+    description: 'Cada vez son más las empresas y particulares que solicitan que el técnico conozca el historial de reparaciones y las necesidades que tienen cada día, por eso en Imax PC asignamos un  técnico a cada servicio de mantenimiento y reparaciones.',
+    // button: 'Shop Now',
   },
   {
     id: 3,
     image: '/src/assets/img/banner_img_03.jpg',
-    title: 'Best Sellers',
-    description: 'Customer favorites',
-    button: 'Shop Now',
+    title: 'GARANTÍA',
+    description: 'Para su tranquilidad todos nuestros servicios de reparación están garantizados',
+    // button: 'Shop Now',
   },
 ]);
 
@@ -89,7 +89,7 @@ onUnmounted(() => {
           <div class="slide-content">
             <h2 class="slide-title">{{ slide.title }}</h2>
             <p class="slide-description">{{ slide.description }}</p>
-            <button class="slide-button">{{ slide.button }}</button>
+            <!-- <button class="slide-button">{{ slide.button }}</button> -->
           </div>
           <img :src="slide.image" :alt="slide.title" class="slide-image" />
 
