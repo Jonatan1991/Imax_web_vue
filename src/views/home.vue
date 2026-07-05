@@ -1,17 +1,12 @@
 <script setup>
-import HeroCarousel from '../components/home/HeroCarousel.vue';
-import Categories from '../components/home/Categories.vue';
-import FeaturedProducts from '../components/home/FeaturedProducts.vue';
 </script>
 
 <template>
   <div class="home-page">
-    <HeroCarousel />
     <div class="container-home">
-      <Categories />
+      JONatan CDEW32
     </div>
     <div class="container-home-grey">
-      <FeaturedProducts />
     </div>
   </div>
 </template>
