@@ -38,3 +38,6 @@ para las rutas
 
 npm install pinia
 para el manejo de estados
+
+npm install vuetify@3
+npm install sass sass-loader -D
