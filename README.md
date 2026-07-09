@@ -1,43 +1,83 @@
-# Vue 3 + Vite
+# imaxweb
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Scaffolded with Vuetify CLI.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## ❗️ Documentation
 
-npm run dev para iniciar el servidor de desarrollo
-npm run build para compilar la aplicación
-npm run preview para previsualizar la aplicación compilada
+- Primary docs: https://vuetifyjs.com/
+- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
+- Community support: https://community.vuetifyjs.com/
+- Issue tracker: https://issues.vuetifyjs.com/
 
-npm run lint para ejecutar el linter
-npm run lint-fix para ejecutar el linter y arreglar los errores
+## 🧱 Stack
 
+- Framework: Vue 3 + Vite
+- UI Library: Vuetify
+- Language: TypeScript
+- Package manager: npm
 
-Instalar dependencias:
+## 🧭 Start Here
 
+- Main entry: `src/main.ts`
+- Main app component: `src/App.vue`
+- Main styles: `src/styles/`
+- Plugin setup: `src/plugins/`
+
+## 📁 Project Structure
+
+- `src/main.ts` — application entry point
+- `src/App.vue` — root component
+- `src/components/` — reusable Vue components
+- `src/plugins/` — plugin registration and setup
+- `src/styles/` — global styles and theme settings
+- `public/` — static public files
+
+## ✨ Enabled Features
+
+- ESLint
+- Pinia
+- Vue I18n
+- Vuetify MCP
+- Vue Router
+
+## 💿 Install
+
+Use your selected package manager (npm) to install dependencies:
+
+```bash
 npm install
-Ejecutar el servidor de desarrollo:
+```
 
+## 🚀 Quick Start
+
+```bash
+npm install
 npm run dev
-npm run dev -- --host 0.0.0.0
+```
 
-Compilar la aplicación:
+## 🏗️ Build
 
+```bash
 npm run build
-Ejecutar la aplicación compilada:
+```
 
-npm run preview
-Ejecutar el linter:
+## 🧪 Available Scripts
 
-npm run lint
-Ejecutar el linter y arreglar los errores:
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
+- `npm run build-only`
+- `npm run type-check`
+- `npm run lint`
+- `npm run lint:fix`
+- `npm run mcp`
+- `npm run mcp:revert`
 
-npm run lint-fix
+## 💪 Support Vuetify Development
 
-npm install vue-router
-para las rutas
+This project uses Vuetify - an MIT licensed Open Source project. We are glad to welcome contributors and any support for ongoing development:
 
-npm install pinia
-para el manejo de estados
-
-npm install vuetify@3
-npm install sass sass-loader -D
+- Contribute to Vuetify and ecosystem projects: https://github.com/vuetifyjs
+- Request enterprise support: https://support.vuetifyjs.com/
+- Sponsor on GitHub: https://github.com/sponsors/vuetifyjs
+- Support on Open Collective: https://opencollective.com/vuetify
