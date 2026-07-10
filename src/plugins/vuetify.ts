@@ -1,15 +1,15 @@
 /**
  * plugins/vuetify.ts
- *
- * Framework documentation: https://vuetifyjs.com`
- */
+*
+* Framework documentation: https://vuetifyjs.com`
+*/
 
 // Composables
 import { createVuetify } from 'vuetify'
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
-
 import 'vuetify/styles'
+
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
@@ -31,7 +31,7 @@ export default createVuetify({
           warning: '#fdd835',   // amarillo IMAX
           error: '#e53935',     // rojo IMAX
           background2: '#d8d8d8', // gris IMAX
-          menuTop: '#1a1c2c', // gris IMAX
+          menuTop: '#202336', // gris IMAX
           footer: '#1a1c2c', // gris IMAX
           accent: '#E53935',       // Rojo IMAX
           success: '#43A047',      // Verde IMAX

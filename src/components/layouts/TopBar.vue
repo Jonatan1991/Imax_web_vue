@@ -1,12 +1,21 @@
 <template>
-    <v-app-bar color="#1A1A1A" height="30" class="d-flex align-center px-15">
+    <v-app-bar color="menuTop" height="35" class="d-flex align-center px-15" scroll-behavior="hide">
         <!-- IZQUIERDA -->
         <div class="d-flex align-center gap-4">
-            <span class="text-white text-title-small font-weight-light">
-                📧 contacto@imaxpc.com
+            <span class="text-white text-label-small font-weight-light">
+                <v-icon>
+                    mdi-email
+                </v-icon> info@imaxpc.com
             </span>
-            <span class="text-white text-title-small font-weight-light">
-                📞 +34 600 000 000
+            
+            <!-- espacio vacio entre elementos -->
+
+            
+            
+            <span class="text-white text-label-small font-weight-light ms-4">
+                <v-icon>
+                    mdi-phone
+                </v-icon> 91 309 05 03 | +34 661750034
             </span>
         </div>
 
