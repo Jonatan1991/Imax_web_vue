@@ -1,138 +1,208 @@
 <template>
-  <v-carousel
-    cycle
-    height="480"
-    hide-delimiter-background
-    show-arrows="hover"
-    class="hero-carousel elevation-1"
-    style="background-color: #F7F9FC;"
-  >
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
-    >
-      <v-container class="fill-height py-0">
-        <v-row align="center" class="fill-height">
-          <!-- Left Column: Content -->
-          <v-col cols="12" md="7" lg="6" class="px-6 px-md-12 text-left">
-            <!-- Label / Category -->
-            <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary mb-2 d-inline-block tracking-widest">
-              {{ slide.category }}
-            </span>
-            
-            <!-- Main Title -->
-            <h1 class="text-h4 text-md-h3 font-weight-black text-primary mb-4 leading-tight">
-              {{ slide.title }}
-            </h1>
-            
-            <!-- Description -->
-            <p class="text-body-1 text-md-body-1 font-weight-regular text-grey-darken-3 mb-6 max-w-xl">
-              {{ slide.text }}
-            </p>
-            
-            <!-- Action Button -->
-            <v-btn
-              color="primary"
-              size="large"
-              class="font-weight-bold px-8 elevation-2 hover-scale text-white"
-              :to="slide.to"
-            >
-              {{ slide.actionText }}
-              <v-icon end>mdi-arrow-right</v-icon>
-            </v-btn>
-          </v-col>
+  <div>
+    <!-- Hero Carousel -->
+    <carousel />
 
-          <!-- Right Column: Simple Minimalist Image -->
-          <v-col cols="12" md="5" lg="6" class="d-none d-md-flex justify-center align-center">
-            <v-img
-              :src="slide.image"
-              max-height="350"
-              max-width="100%"
-              contain
-              class="carousel-image"
-            />
+    <!-- Sección de Soluciones -->
+    <v-sheet class="py-16 bg-white" id="solutions-section">
+      <v-container>
+        <!-- Cabecera de la Sección -->
+        <v-row justify="center" class="text-center mb-12">
+          <v-col cols="12" md="10" lg="8">
+            <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3">
+              LO QUE OFRECEMOS
+            </span>
+            <h2 class="text-h4 text-md-h3 font-weight-black text-primary mb-4 leading-tight">
+              Soluciones Tecnológicas Integrales
+            </h2>
+            <div class="divider mx-auto mb-6"></div>
+            <p class="text-body-1 text-md-h6 font-weight-regular text-grey-darken-3 leading-relaxed">
+              En <strong>Imax PC</strong> somos conocidos por la excelencia y la máxima calidad de nuestro servicio técnico. 
+              Con el respaldo de un equipo altamente cualificado y una dilatada trayectoria profesional, aportamos soluciones eficientes y a medida en todas las áreas tecnológicas.
+            </p>
+          </v-col>
+        </v-row>
+
+        <!-- Cuadrícula de Servicios/Soluciones -->
+        <v-row class="mt-4" justify="center">
+          <v-col 
+            v-for="(service, index) in services" 
+            :key="index" 
+            cols="12" 
+            sm="6" 
+            md="4" 
+            lg="3"
+            class="d-flex"
+          >
+            <v-card
+              class="service-card flex-grow-1 d-flex flex-column rounded-xl pa-6 border elevation-0"
+              :class="{ 'featured-card': service.featured }"
+            >
+              <!-- Contenedor del Icono -->
+              <div 
+                class="icon-wrapper mb-6 d-flex align-center justify-center rounded-lg" 
+                :class="service.featured ? 'bg-secondary' : 'bg-grey-lighten-4'"
+              >
+                <v-icon :color="service.featured ? 'white' : 'primary'" size="32">
+                  {{ service.icon }}
+                </v-icon>
+              </div>
+
+              <!-- Título del Servicio -->
+              <h3 class="text-h6 font-weight-bold text-primary mb-3">
+                {{ service.title }}
+              </h3>
+              
+              <!-- Descripción -->
+              <p class="text-body-2 text-grey-darken-2 flex-grow-1 mb-4 leading-normal">
+                {{ service.description }}
+              </p>
+              
+              <!-- Enlace de Acción -->
+              <div 
+                class="d-flex align-center mt-auto font-weight-bold text-caption cursor-pointer hover-link"
+                :class="service.featured ? 'text-secondary' : 'text-primary'"
+              >
+                <span>Saber más</span>
+                <v-icon size="16" class="ms-1 arrow-icon">mdi-chevron-right</v-icon>
+              </div>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
-    </v-carousel-item>
-  </v-carousel>
+    </v-sheet>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import imgExperiencia from '@/assets/images/carousel_experiencia_simple.png'
-import imgServicio from '@/assets/images/carousel_servicio_simple.png'
-import imgGarantia from '@/assets/images/carousel_garantia_simple.png'
+import Carousel from '@/components/ui/carousel.vue'
 
-const slides = ref([
+const services = ref([
   {
-    category: 'Experiencia',
-    title: 'Años de confianza a tu servicio',
-    text: 'Optimizamos los tiempos de respuesta y minimizamos los costes de reparación. Más de 200 particulares, autónomos y PYMES confían en nuestro soporte técnico especializado.',
-    image: imgExperiencia,
-    actionText: 'Ver Servicios',
+    title: 'Reparación',
+    icon: 'mdi-wrench-cog',
+    description: 'Diagnóstico y reparación exprés de ordenadores, servidores y portátiles. Solución de averías físicas y lógicas con la máxima garantía.',
+    featured: true,
     to: '/servicios'
   },
   {
-    category: 'Servicio Personalizado',
-    title: 'Tu propio técnico de confianza',
-    text: 'Asignamos un técnico dedicado a tu cuenta para que conozca a fondo tu historial de equipos y necesidades diarias. Atención rápida, eficiente y sin explicaciones repetitivas.',
-    image: imgServicio,
-    actionText: 'Mantenimiento a Medida',
+    title: 'Mantenimiento',
+    icon: 'mdi-shield-sync',
+    description: 'Planes correctivos y preventivos adaptados a empresas, autónomos y particulares. Aseguramos la continuidad y seguridad de tu negocio.',
+    featured: true,
     to: '/servicios'
   },
   {
-    category: 'Garantía',
-    title: 'Tu tranquilidad es nuestra prioridad',
-    text: 'Para tu total tranquilidad, todas nuestras reparaciones y mantenimientos están respaldados por nuestra garantía de satisfacción y calidad certificada.',
-    image: imgGarantia,
-    actionText: 'Contactar Ahora',
-    to: '/contacto'
+    title: 'Puesta a punto',
+    icon: 'mdi-rocket-launch',
+    description: 'Limpieza e instalación optimizada de hardware y software para recuperar la velocidad, estabilidad y rendimiento máximo de tu equipo.',
+    featured: false,
+    to: '/servicios'
+  },
+  {
+    title: 'Revisiones',
+    icon: 'mdi-clipboard-check',
+    description: 'Auditorías informáticas de hardware, seguridad y redes. Identificamos problemas silenciosos antes de que causen fallos críticos.',
+    featured: false,
+    to: '/servicios'
+  },
+  {
+    title: 'Instalación de redes',
+    icon: 'mdi-lan-connect',
+    description: 'Diseño, cableado estructurado y configuración de redes locales (LAN) y sistemas Wi-Fi corporativos rápidos y estables.',
+    featured: false,
+    to: '/servicios'
+  },
+  {
+    title: 'Asistencia a domicilio',
+    icon: 'mdi-home-assistant',
+    description: 'Desplazamiento rápido de nuestros técnicos homologados a tu hogar u oficina para solucionar cualquier incidencia técnica in situ.',
+    featured: false,
+    to: '/servicios'
+  },
+  {
+    title: 'Pago por uso / Impresión',
+    icon: 'mdi-printer-cog',
+    description: 'Sistemas optimizados de coste por copia o por suministro. Reduce costes con la gestión y mantenimiento automatizado de tus impresoras.',
+    featured: false,
+    to: '/servicios'
+  },
+  {
+    title: 'Soporte Remoto',
+    icon: 'mdi-headset',
+    description: 'Resolución de incidencias de software, configuración y virus a distancia mediante conexión segura inmediata y sin esperas.',
+    featured: false,
+    to: '/servicios'
   }
 ])
 </script>
 
 <style scoped>
-.hero-carousel {
-  /* Delimitadores oscuros para fondo claro */
-  --v-carousel-delimiter-color: #1A3A6E;
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #4DB7E3; /* Color secundario (celeste) */
+  border-radius: 2px;
+}
+
+.service-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-color: #E3E6EB !important;
+  background-color: #FFFFFF;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(26, 58, 110, 0.08) !important;
+  border-color: #4DB7E3 !important;
+}
+
+.featured-card {
+  background: linear-gradient(135deg, #1A3A6E 0%, #202336 100%) !important;
+  border-color: #1A3A6E !important;
+}
+
+.featured-card h3 {
+  color: #FFFFFF !important;
+}
+
+.featured-card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.hover-link {
+  transition: color 0.2s ease;
+}
+
+.hover-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.leading-normal {
+  line-height: 1.5;
 }
 
 .tracking-widest {
   letter-spacing: 0.15em !important;
 }
-
-.max-w-xl {
-  max-width: 580px;
-  line-height: 1.6;
-}
-
-.hover-scale {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.hover-scale:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0px 6px 18px rgba(26, 58, 110, 0.25) !important;
-}
-
-.leading-tight {
-  line-height: 1.2;
-}
-
-.carousel-image {
-  filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.05));
-  transition: transform 0.5s ease-in-out;
-}
-
-.hero-carousel :deep(.v-window__controls) {
-  padding: 0 16px;
-}
-
-/* Flechas con color primario */
-.hero-carousel :deep(.v-btn--icon) {
-  color: #1A3A6E !important;
-}
 </style>
+
+
+
 
 
