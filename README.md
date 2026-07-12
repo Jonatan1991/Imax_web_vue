@@ -53,6 +53,8 @@ npm install
 ```bash
 npm install
 npm run dev
+npm run dev -- --host 0.0.0.0
+
 ```
 
 ## 🏗️ Build
