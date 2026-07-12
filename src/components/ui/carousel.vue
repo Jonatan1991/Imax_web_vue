@@ -33,44 +33,32 @@ const slides = ref([
 </script>
 
 <template>
-    <v-carousel
-    cycle
-    height="480"
-    hide-delimiter-background
-    show-arrows="hover"
-    class="hero-carousel elevation-1"
-    style="background-color: #F7F9FC;"
-  >
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
-    >
+  <v-carousel cycle height="480" hide-delimiter-background show-arrows="hover" class="hero-carousel elevation-1"
+    style="background-color: #F7F9FC;">
+    <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-container class="fill-height py-0">
         <v-row align="center" class="fill-height">
           <!-- Left Column: Content -->
           <v-col cols="12" md="6" class="px-6 px-md-12 text-left">
             <!-- Label / Category -->
-            <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary mb-2 d-inline-block tracking-widest">
+            <span
+              class="text-subtitle-1 text-uppercase font-weight-bold text-secondary mb-2 d-inline-block tracking-widest">
               {{ slide.category }}
             </span>
-            
+
             <!-- Main Title -->
             <h1 class="text-h4 text-md-h3 font-weight-black text-primary mb-4 leading-tight">
               {{ slide.title }}
             </h1>
-            
+
             <!-- Description -->
             <p class="text-body-1 text-md-body-1 font-weight-regular text-grey-darken-3 mb-6 max-w-xl">
               {{ slide.text }}
             </p>
-            
+
             <!-- Action Button -->
-            <v-btn
-              color="primary"
-              size="large"
-              class="font-weight-bold px-8 elevation-2 hover-scale text-white"
-              :to="slide.to"
-            >
+            <v-btn color="primary" size="large" class="font-weight-bold px-8 elevation-2 hover-scale text-white"
+              :to="slide.to">
               {{ slide.actionText }}
               <v-icon end>mdi-arrow-right</v-icon>
             </v-btn>
@@ -78,13 +66,7 @@ const slides = ref([
 
           <!-- Right Column: Simple Minimalist Image -->
           <v-col cols="12" md="6" class="d-none d-md-flex justify-center align-center">
-            <v-img
-              :src="slide.image"
-              max-height="420"
-              max-width="100%"
-              contain
-              class="carousel-image"
-            />
+            <v-img :src="slide.image" max-height="420" max-width="100%" contain class="carousel-image" />
           </v-col>
         </v-row>
       </v-container>
@@ -121,7 +103,7 @@ const slides = ref([
 }
 
 .carousel-image {
-  filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.05));
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.05));
   transition: transform 0.5s ease-in-out;
 }
 

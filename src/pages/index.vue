@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Hero Carousel -->
+    <!-- Sección Carousel -->
     <carousel />
 
     <!-- Sección de Soluciones -->
