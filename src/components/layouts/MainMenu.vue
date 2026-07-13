@@ -1,49 +1,26 @@
 <template>
-  <v-app-bar
-    color="white"
-    flat
-    height="90"
-    class="px-8"
-  >
+  <v-app-bar color="white" flat height="90" class="px-8">
     <!-- LOGO -->
     <RouterLink to="/" class="d-flex align-center ml-4">
-      <img
-        src="../../assets/images/logo.jpg"
-        alt="IMAX Logo"
-        style="height: 60px"
-      />
+      <img src="../../assets/images/logo.jpg" alt="IMAX Logo" style="height: 80px" />
     </RouterLink>
 
     <!-- MENÚ CENTRADO -->
     <div class="flex-grow-1 d-flex justify-center">
-      <v-btn
-        v-for="item in mainMenu"
-        :key="item.label"
-        :to="item.to"
-        variant="text"
-        class="mx-3 text-black"
-      >
+      <v-btn v-for="item in mainMenu" :key="item.label" :to="item.to" variant="text" class="mx-3 text-black">
         {{ item.label }}
       </v-btn>
 
       <!-- DESPLEGABLE PRINCIPAL -->
       <v-menu>
         <template #activator="{ props }">
-          <v-btn
-            v-bind="props"
-            variant="text"
-            class="mx-3 text-black"
-          >
+          <v-btn v-bind="props" variant="text" class="mx-3 text-black">
             Más opciones
           </v-btn>
         </template>
 
         <v-list>
-          <v-list-item
-            v-for="item in dropdownMenu"
-            :key="item.label"
-            :to="item.to"
-          >
+          <v-list-item v-for="item in dropdownMenu" :key="item.label" :to="item.to">
             <v-list-item-title>{{ item.label }}</v-list-item-title>
           </v-list-item>
 
@@ -56,11 +33,7 @@
             </template>
 
             <v-list>
-              <v-list-item
-                v-for="sub in subDropdown"
-                :key="sub.label"
-                :to="sub.to"
-              >
+              <v-list-item v-for="sub in subDropdown" :key="sub.label" :to="sub.to">
                 <v-list-item-title>{{ sub.label }}</v-list-item-title>
               </v-list-item>
             </v-list>
@@ -70,15 +43,8 @@
     </div>
 
     <!-- BUSCADOR A LA DERECHA -->
-    <v-text-field
-      v-model="search"
-      placeholder="Buscar..."
-      variant="outlined"
-      density="compact"
-      hide-details
-      class="ml-8"
-      style="max-width: 220px"
-    >
+    <v-text-field v-model="search" placeholder="Buscar..." variant="outlined" density="compact" hide-details
+      class="ml-8" style="max-width: 220px">
       <template #append-inner>
         <v-icon>mdi-magnify</v-icon>
       </template>
@@ -107,4 +73,3 @@ const subDropdown = [
   { label: 'Documentación', to: '/docs' },
 ]
 </script>
-

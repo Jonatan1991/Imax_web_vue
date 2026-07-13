@@ -5,17 +5,19 @@
             <span class="text-white text-label-small font-weight-light">
                 <v-icon>
                     mdi-email
-                </v-icon> info@imaxpc.com
+                </v-icon><a style="text-decoration: none; color: inherit;" href="mailto:info@imaxpc.com">
+                    info@imaxpc.com</a>
             </span>
-            
+
             <!-- espacio vacio entre elementos -->
 
-            
-            
+
+
             <span class="text-white text-label-small font-weight-light ms-4">
                 <v-icon>
                     mdi-phone
-                </v-icon> 91 309 05 03 | +34 661750034
+                </v-icon> <a style="text-decoration: none; color: inherit;" href="tel:+34913090503"> 91 309 05 03</a> |
+                <a style="text-decoration: none; color: inherit;" href="tel:+34661750034"> +34 661750034</a>
             </span>
         </div>
 

@@ -5,15 +5,11 @@ import TopBar from '../components/layouts/TopBar.vue';
 
 <template>
     <v-app>
-
         <top-bar />
         <main-menu />
-
         <v-main>
             <router-view />
         </v-main>
-
-
         <v-footer color="footer" app>
             <v-col class="text-center white--text">
                 © 2026 IMAX Web
