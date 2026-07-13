@@ -6,14 +6,14 @@ const services = ref([
         title: 'Reparación',
         icon: 'mdi-wrench-cog',
         description: 'Diagnóstico y reparación exprés de ordenadores, servidores y portátiles. Solución de averías físicas y lógicas con la máxima garantía.',
-        featured: true,
+        featured: false,
         to: '/servicios'
     },
     {
         title: 'Mantenimiento',
         icon: 'mdi-shield-sync',
         description: 'Planes correctivos y preventivos adaptados a empresas, autónomos y particulares. Aseguramos la continuidad y seguridad de tu negocio.',
-        featured: true,
+        featured: false,
         to: '/servicios'
     },
     {
@@ -46,7 +46,7 @@ const services = ref([
     },
     {
         title: 'Pago por uso / Impresión',
-        icon: 'mdi-printer-cog',
+        icon: 'mdi-printer',
         description: 'Sistemas optimizados de coste por copia o por suministro. Reduce costes con la gestión y mantenimiento automatizado de tus impresoras.',
         featured: false,
         to: '/servicios'
