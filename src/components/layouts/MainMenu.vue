@@ -61,6 +61,7 @@ const mainMenu = [
   { label: 'Inicio', to: '/' },
   { label: 'Servicios', to: '/servicios' },
   { label: 'Productos', to: '/productos' },
+  { label: 'Condiciones de Venta', to: '/condiciones-ventas' },
 ]
 
 const dropdownMenu = [
