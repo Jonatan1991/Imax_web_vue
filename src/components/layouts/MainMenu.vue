@@ -12,7 +12,7 @@
       </v-btn>
 
       <!-- DESPLEGABLE PRINCIPAL -->
-      <v-menu>
+      <v-me..3000000.nu>
         <template #activator="{ props }">
           <v-btn v-bind="props" variant="text" class="mx-3 text-black">
             Más opciones
@@ -39,7 +39,7 @@
             </v-list>
           </v-menu>
         </v-list>
-      </v-menu>
+        </v-menu>
     </div>
 
     <!-- BUSCADOR A LA DERECHA -->
@@ -72,5 +72,17 @@ const dropdownMenu = [
 const subDropdown = [
   { label: 'Guías técnicas', to: '/guias' },
   { label: 'Documentación', to: '/docs' },
+]
+
+const dropdownBrother = [
+  { label: 'Impresoras', to: '/productos/portatiles' },
+  { label: 'Consumibles', to: '/productos/ordenadores' },
+
+]
+
+const dropdownHp = [
+  { label: 'Ordenadores', to: '/productos/portatiles' },
+  { label: 'Portátiles', to: '/productos/ordenadores' },
+
 ]
 </script>
