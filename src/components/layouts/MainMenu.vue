@@ -7,39 +7,45 @@
 
     <!-- MENÚ CENTRADO -->
     <div class="flex-grow-1 d-flex justify-center">
-      <v-btn v-for="item in mainMenu" :key="item.label" :to="item.to" variant="text" class="mx-3 text-black">
-        {{ item.label }}
-      </v-btn>
+      <template v-for="item in mainMenu" :key="item.label">
 
-      <!-- DESPLEGABLE PRINCIPAL -->
-      <v-me..3000000.nu>
-        <template #activator="{ props }">
-          <v-btn v-bind="props" variant="text" class="mx-3 text-black">
-            Más opciones
+        <div class="text-center">
+          <v-btn color="primary">
+            Open menu
+
+            <v-menu activator="parent">
+              <v-list>
+                <v-list-item v-for="i in 5" :key="i" link>
+                  <v-list-item-title>Item {{ i }}</v-list-item-title>
+                  <template v-slot:append>
+                    <v-icon icon="mdi-menu-right" size="x-small"></v-icon>
+                  </template>
+
+                  <v-menu :open-on-focus="false" activator="parent" open-on-hover submenu>
+                    <v-list>
+                      <v-list-item v-for="j in 5" :key="j" link>
+                        <v-list-item-title>Item {{ i }} - {{ j }}</v-list-item-title>
+                        <template v-slot:append>
+                          <v-icon icon="mdi-menu-right" size="x-small"></v-icon>
+                        </template>
+
+                        <v-menu :open-on-focus="false" activator="parent" open-on-hover submenu>
+                          <v-list>
+                            <v-list-item v-for="k in 5" :key="k" link>
+                              <v-list-item-title>Item {{ i }} - {{ j }} - {{ k }}</v-list-item-title>
+                            </v-list-item>
+                          </v-list>
+                        </v-menu>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </v-list-item>
+              </v-list>
+            </v-menu>
           </v-btn>
-        </template>
+        </div>
+      </template>
 
-        <v-list>
-          <v-list-item v-for="item in dropdownMenu" :key="item.label" :to="item.to">
-            <v-list-item-title>{{ item.label }}</v-list-item-title>
-          </v-list-item>
-
-          <!-- SUB-DESPLEGABLE -->
-          <v-menu location="end">
-            <template #activator="{ props }">
-              <v-list-item v-bind="props">
-                <v-list-item-title>Submenú avanzado</v-list-item-title>
-              </v-list-item>
-            </template>
-
-            <v-list>
-              <v-list-item v-for="sub in subDropdown" :key="sub.label" :to="sub.to">
-                <v-list-item-title>{{ sub.label }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-list>
-        </v-menu>
     </div>
 
     <!-- BUSCADOR A LA DERECHA -->

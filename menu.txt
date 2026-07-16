@@ -1,0 +1,68 @@
+<v-menu v-if="item.label === 'Productos'" open-on-hover>
+          <template #activator="{ props }">
+            <v-btn v-bind="props" variant="text" class="mx-3 text-black">
+              {{ item.label }}
+              <v-icon size="small" class="ml-1">mdi-chevron-down</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <!-- Brother Dropdown -->
+            <v-menu location="end" open-on-hover>
+              <template #activator="{ props }">
+                <v-list-item v-bind="props" title="Brother" append-icon="mdi-chevron-right" />
+              </template>
+              <v-list>
+                <v-list-item v-for="sub in dropdownBrother" :key="sub.label" :to="sub.to">
+                  <v-list-item-title>{{ sub.label }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+
+            <!-- HP Dropdown -->
+            <v-menu location="end" open-on-hover>
+              <template #activator="{ props }">
+                <v-list-item v-bind="props" title="HP" append-icon="mdi-chevron-right" />
+              </template>
+              <v-list>
+                <v-list-item v-for="sub in dropdownHp" :key="sub.label" :to="sub.to">
+                  <v-list-item-title>{{ sub.label }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </v-list>
+        </v-menu>
+
+        <v-btn v-else :to="item.to" variant="text" class="mx-3 text-black">
+          {{ item.label }}
+        </v-btn>
+
+ <!-- DESPLEGABLE PRINCIPAL -->
+      <v-menu>
+        <template #activator="{ props }">
+          <v-btn v-bind="props" variant="text" class="mx-3 text-black">
+            Más opciones
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item v-for="item in dropdownMenu" :key="item.label" :to="item.to">
+            <v-list-item-title>{{ item.label }}</v-list-item-title>
+          </v-list-item>
+
+          <!-- SUB-DESPLEGABLE -->
+          <v-menu location="end">
+            <template #activator="{ props }">
+              <v-list-item v-bind="props">
+                <v-list-item-title>Submenú avanzado</v-list-item-title>
+              </v-list-item>
+            </template>
+
+            <v-list>
+              <v-list-item v-for="sub in subDropdown" :key="sub.label" :to="sub.to">
+                <v-list-item-title>{{ sub.label }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-list>
+      </v-menu>
