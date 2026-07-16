@@ -16,6 +16,7 @@ import ScrollToTop from '../components/common/ScrollToTop.vue';
                 © 2026 IMAX Web
             </v-col>
         </v-footer>
+        <!-- Boton para volver arriba de la pagina -->
         <scroll-to-top />
     </v-app>
 </template>
