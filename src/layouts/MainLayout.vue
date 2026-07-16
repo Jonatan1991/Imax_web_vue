@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import MainMenu from '../components/layouts/MainMenu.vue';
 import TopBar from '../components/layouts/TopBar.vue';
+import ScrollToTop from '../components/common/ScrollToTop.vue';
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import TopBar from '../components/layouts/TopBar.vue';
                 © 2026 IMAX Web
             </v-col>
         </v-footer>
+        <scroll-to-top />
     </v-app>
 </template>
