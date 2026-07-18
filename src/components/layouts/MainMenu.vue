@@ -11,33 +11,17 @@
       <template v-for="item in mainMenu" :key="item.label">
         <div class="text-center">
           <!-- Botón de navegación del primer nivel. Si no tiene submenú, navega directamente a la ruta. Usamos variant="text" para un diseño limpio y moderno. -->
-          <v-btn
-            :to="item.to"
-            variant="text"
-            color="primary"
-            class="mx-1 font-weight-medium"
-          >
+          <v-btn :to="item.to" variant="text" color="primary" class="mx-1 font-weight-medium">
             {{ item.label }}
-            
+
             <!-- Muestra una pequeña flecha hacia abajo únicamente si el elemento tiene un submenú -->
             <v-icon v-if="item.submenu" end size="x-small">mdi-chevron-down</v-icon>
 
             <!-- Desplegable del menú (Segundo Nivel). Se activa al pasar el ratón (open-on-hover) si hay submenú disponible -->
-            <v-menu
-              v-if="item.submenu"
-              activator="parent"
-              open-on-hover
-              :open-delay="50"
-              :close-delay="100"
-            >
+            <v-menu v-if="item.submenu" activator="parent" open-on-hover :open-delay="50" :close-delay="100">
               <v-list class="py-1" elevation="3">
                 <!-- Iteramos sobre el array de submenús del elemento actual -->
-                <v-list-item
-                  v-for="subItem in item.submenu"
-                  :key="subItem.label"
-                  :to="subItem.to"
-                  link
-                >
+                <v-list-item v-for="subItem in item.submenu" :key="subItem.label" :to="subItem.to" link>
                   <v-list-item-title>{{ subItem.label }}</v-list-item-title>
 
                   <!-- Si el subelemento tiene a su vez un submenú, mostramos una flecha hacia la derecha -->
@@ -46,23 +30,12 @@
                   </template>
 
                   <!-- Desplegable del submenú (Tercer Nivel). Se posiciona a la derecha (location="end") y se activa al pasar el ratón -->
-                  <v-menu
-                    v-if="subItem.submenu"
-                    activator="parent"
-                    open-on-hover
-                    submenu
-                    location="end"
-                    :open-delay="50"
-                    :close-delay="100"
-                  >
+                  <v-menu v-if="subItem.submenu" activator="parent" open-on-hover submenu location="end"
+                    :open-delay="50" :close-delay="100">
                     <v-list class="py-1" elevation="3">
                       <!-- Iteramos sobre el tercer nivel de submenús -->
-                      <v-list-item
-                        v-for="subSubItem in subItem.submenu"
-                        :key="subSubItem.label"
-                        :to="subSubItem.to"
-                        link
-                      >
+                      <v-list-item v-for="subSubItem in subItem.submenu" :key="subSubItem.label" :to="subSubItem.to"
+                        link>
                         <v-list-item-title>{{ subSubItem.label }}</v-list-item-title>
                       </v-list-item>
                     </v-list>
@@ -125,30 +98,30 @@ const mainMenu: MenuItem[] = [
     to: '/productos',
     submenu: [
       {
-        label: 'Producto 1',
-        to: '/productos/producto1',
+        label: 'Brother',
+        to: '/productos/brother',
         submenu: [
           {
-            label: 'Producto 1.1',
-            to: '/productos/producto1.1',
+            label: 'Impresoras',
+            to: '/productos/brother/impresoras',
           },
           {
-            label: 'Producto 1.2',
-            to: '/productos/producto1.2'
+            label: 'Consumibles',
+            to: '/productos/brother/consumibles'
           },
         ]
       },
       {
-        label: 'Producto 2',
-        to: '/productos/producto2',
+        label: 'Hp',
+        to: '/productos/hp',
         submenu: [
           {
-            label: 'Producto 2.1',
-            to: '/productos/producto2.1',
+            label: 'Impresoras',
+            to: '/productos/hp/impresoras',
           },
           {
-            label: 'Producto 2.2',
-            to: '/productos/producto2.2'
+            label: 'Consumibles',
+            to: '/productos/hp/consumibles'
           },
         ]
       },
