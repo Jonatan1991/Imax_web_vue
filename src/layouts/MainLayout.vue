@@ -1,6 +1,6 @@
-<script lang="ts" setup>
-import MainMenu from '../components/layouts/MainMenu.vue';
+<script setup lang="ts">
 import TopBar from '../components/layouts/TopBar.vue';
+import MainMenu from '../components/layouts/MainMenu.vue';
 import ScrollToTop from '../components/common/ScrollToTop.vue';
 </script>
 

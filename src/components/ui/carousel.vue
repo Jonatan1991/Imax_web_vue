@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import imgExperiencia from '@/assets/images/carousel_experiencia_f7f9fc.png'
 import imgServicio from '@/assets/images/carousel_servicio_f7f9fc.png'

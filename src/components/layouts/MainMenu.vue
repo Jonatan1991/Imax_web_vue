@@ -7,35 +7,63 @@
 
     <!-- MENÚ CENTRADO -->
     <div class="flex-grow-1 d-flex justify-center">
+      <!-- Bucle principal para iterar sobre los elementos del menú (Primer Nivel) -->
       <template v-for="item in mainMenu" :key="item.label">
-
         <div class="text-center">
-          <v-btn color="primary">
-            Open menu
+          <!-- Botón de navegación del primer nivel. Si no tiene submenú, navega directamente a la ruta. Usamos variant="text" para un diseño limpio y moderno. -->
+          <v-btn
+            :to="item.to"
+            variant="text"
+            color="primary"
+            class="mx-1 font-weight-medium"
+          >
+            {{ item.label }}
+            
+            <!-- Muestra una pequeña flecha hacia abajo únicamente si el elemento tiene un submenú -->
+            <v-icon v-if="item.submenu" end size="x-small">mdi-chevron-down</v-icon>
 
-            <v-menu activator="parent">
-              <v-list>
-                <v-list-item v-for="i in 5" :key="i" link>
-                  <v-list-item-title>Item {{ i }}</v-list-item-title>
-                  <template v-slot:append>
-                    <v-icon icon="mdi-menu-right" size="x-small"></v-icon>
+            <!-- Desplegable del menú (Segundo Nivel). Se activa al pasar el ratón (open-on-hover) si hay submenú disponible -->
+            <v-menu
+              v-if="item.submenu"
+              activator="parent"
+              open-on-hover
+              :open-delay="50"
+              :close-delay="100"
+            >
+              <v-list class="py-1" elevation="3">
+                <!-- Iteramos sobre el array de submenús del elemento actual -->
+                <v-list-item
+                  v-for="subItem in item.submenu"
+                  :key="subItem.label"
+                  :to="subItem.to"
+                  link
+                >
+                  <v-list-item-title>{{ subItem.label }}</v-list-item-title>
+
+                  <!-- Si el subelemento tiene a su vez un submenú, mostramos una flecha hacia la derecha -->
+                  <template v-slot:append v-if="subItem.submenu">
+                    <v-icon icon="mdi-chevron-right" size="x-small" class="ms-2"></v-icon>
                   </template>
 
-                  <v-menu :open-on-focus="false" activator="parent" open-on-hover submenu>
-                    <v-list>
-                      <v-list-item v-for="j in 5" :key="j" link>
-                        <v-list-item-title>Item {{ i }} - {{ j }}</v-list-item-title>
-                        <template v-slot:append>
-                          <v-icon icon="mdi-menu-right" size="x-small"></v-icon>
-                        </template>
-
-                        <v-menu :open-on-focus="false" activator="parent" open-on-hover submenu>
-                          <v-list>
-                            <v-list-item v-for="k in 5" :key="k" link>
-                              <v-list-item-title>Item {{ i }} - {{ j }} - {{ k }}</v-list-item-title>
-                            </v-list-item>
-                          </v-list>
-                        </v-menu>
+                  <!-- Desplegable del submenú (Tercer Nivel). Se posiciona a la derecha (location="end") y se activa al pasar el ratón -->
+                  <v-menu
+                    v-if="subItem.submenu"
+                    activator="parent"
+                    open-on-hover
+                    submenu
+                    location="end"
+                    :open-delay="50"
+                    :close-delay="100"
+                  >
+                    <v-list class="py-1" elevation="3">
+                      <!-- Iteramos sobre el tercer nivel de submenús -->
+                      <v-list-item
+                        v-for="subSubItem in subItem.submenu"
+                        :key="subSubItem.label"
+                        :to="subSubItem.to"
+                        link
+                      >
+                        <v-list-item-title>{{ subSubItem.label }}</v-list-item-title>
                       </v-list-item>
                     </v-list>
                   </v-menu>
@@ -58,37 +86,125 @@
   </v-app-bar>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const search = ref('')
 
-const mainMenu = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Servicios', to: '/servicios' },
-  { label: 'Productos', to: '/productos' },
-  { label: 'Condiciones de Venta', to: '/condiciones-ventas' },
+interface MenuItem {
+  label: string
+  to: string
+  submenu?: MenuItem[]
+}
+
+const mainMenu: MenuItem[] = [
+  {
+    label: 'Inicio',
+    to: '/'
+  },
+  {
+    label: 'Servicios',
+    to: '/servicios',
+    submenu: [
+      {
+        label: 'Servicio 1',
+        to: '/servicios/servicio1',
+      },
+      {
+        label: 'Servicio 2',
+        to: '/servicios/servicio2'
+      },
+      {
+        label: 'Servicio 3',
+        to: '/servicios/servicio3'
+      },
+    ]
+  },
+  {
+    label: 'Productos',
+    to: '/productos',
+    submenu: [
+      {
+        label: 'Producto 1',
+        to: '/productos/producto1',
+        submenu: [
+          {
+            label: 'Producto 1.1',
+            to: '/productos/producto1.1',
+          },
+          {
+            label: 'Producto 1.2',
+            to: '/productos/producto1.2'
+          },
+        ]
+      },
+      {
+        label: 'Producto 2',
+        to: '/productos/producto2',
+        submenu: [
+          {
+            label: 'Producto 2.1',
+            to: '/productos/producto2.1',
+          },
+          {
+            label: 'Producto 2.2',
+            to: '/productos/producto2.2'
+          },
+        ]
+      },
+      {
+        label: 'Producto 3',
+        to: '/productos/producto3',
+        submenu: [
+          {
+            label: 'Producto 3.1',
+            to: '/productos/producto3.1',
+          },
+          {
+            label: 'Producto 3.2',
+            to: '/productos/producto3.2'
+          },
+          {
+            label: 'Producto 3.3',
+            to: '/productos/producto3.3'
+          },
+          {
+            label: 'Producto 3.4',
+            to: '/productos/producto3.4'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    label: 'Condiciones de Venta',
+    to: '/condiciones-ventas'
+  },
+  {
+    label: 'Contacto',
+    to: '/contacto'
+  }
 ]
 
-const dropdownMenu = [
-  { label: 'Blog', to: '/blog' },
-  { label: 'Contacto', to: '/contacto' },
-]
+// const dropdownMenu = [
+//   { label: 'Blog', to: '/blog' },
+//   { label: 'Contacto', to: '/contacto' },
+// ]
 
-const subDropdown = [
-  { label: 'Guías técnicas', to: '/guias' },
-  { label: 'Documentación', to: '/docs' },
-]
+// const subDropdown = [
+//   { label: 'Guías técnicas', to: '/guias' },
+//   { label: 'Documentación', to: '/docs' },
+// ]
 
-const dropdownBrother = [
-  { label: 'Impresoras', to: '/productos/portatiles' },
-  { label: 'Consumibles', to: '/productos/ordenadores' },
+// const dropdownBrother = [
+//   { label: 'Impresoras', to: '/productos/portatiles' },
+//   { label: 'Consumibles', to: '/productos/ordenadores' },
 
-]
+// ]
 
-const dropdownHp = [
-  { label: 'Ordenadores', to: '/productos/portatiles' },
-  { label: 'Portátiles', to: '/productos/ordenadores' },
+// const dropdownHp = [
+//   { label: 'Ordenadores', to: '/productos/portatiles' },
+//   { label: 'Portátiles', to: '/productos/ordenadores' },
 
-]
+// ]
 </script>
