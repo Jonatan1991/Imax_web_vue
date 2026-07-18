@@ -1,48 +1,55 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import imgExperiencia from '@/assets/images/carousel_experiencia_f7f9fc.png'
-import imgServicio from '@/assets/images/carousel_servicio_f7f9fc.png'
-import imgGarantia from '@/assets/images/carousel_garantia_f7f9fc.png'
+  import { ref } from 'vue'
+  import imgExperiencia from '@/assets/images/carousel_experiencia_f7f9fc.png'
+  import imgGarantia from '@/assets/images/carousel_garantia_f7f9fc.png'
+  import imgServicio from '@/assets/images/carousel_servicio_f7f9fc.png'
 
-const slides = ref([
-  {
-    category: 'Experiencia',
-    title: 'Años de confianza a tu servicio',
-    text: 'Optimizamos los tiempos de respuesta y minimizamos los costes de reparación. Más de 200 particulares, autónomos y PYMES confían en nuestro soporte técnico especializado.',
-    image: imgExperiencia,
-    actionText: 'Ver Servicios',
-    to: '/servicios'
-  },
-  {
-    category: 'Servicio Personalizado',
-    title: 'Tu propio técnico de confianza',
-    text: 'Asignamos un técnico dedicado a tu cuenta para que conozca a fondo tu historial de equipos y necesidades diarias. Atención rápida, eficiente y sin explicaciones repetitivas.',
-    image: imgServicio,
-    actionText: 'Mantenimiento a Medida',
-    to: '/servicios'
-  },
-  {
-    category: 'Garantía',
-    title: 'Tu tranquilidad es nuestra prioridad',
-    text: 'Para tu total tranquilidad, todas nuestras reparaciones y mantenimientos están respaldados por nuestra garantía de satisfacción y calidad certificada.',
-    image: imgGarantia,
-    actionText: 'Contactar Ahora',
-    to: '/contacto'
-  }
-])
+  const slides = ref([
+    {
+      category: 'Experiencia',
+      title: 'Años de confianza a tu servicio',
+      text: 'Optimizamos los tiempos de respuesta y minimizamos los costes de reparación. Más de 200 particulares, autónomos y PYMES confían en nuestro soporte técnico especializado.',
+      image: imgExperiencia,
+      actionText: 'Ver Servicios',
+      to: '/servicios',
+    },
+    {
+      category: 'Servicio Personalizado',
+      title: 'Tu propio técnico de confianza',
+      text: 'Asignamos un técnico dedicado a tu cuenta para que conozca a fondo tu historial de equipos y necesidades diarias. Atención rápida, eficiente y sin explicaciones repetitivas.',
+      image: imgServicio,
+      actionText: 'Mantenimiento a Medida',
+      to: '/servicios',
+    },
+    {
+      category: 'Garantía',
+      title: 'Tu tranquilidad es nuestra prioridad',
+      text: 'Para tu total tranquilidad, todas nuestras reparaciones y mantenimientos están respaldados por nuestra garantía de satisfacción y calidad certificada.',
+      image: imgGarantia,
+      actionText: 'Contactar Ahora',
+      to: '/contacto',
+    },
+  ])
 </script>
 
 <template>
-  <v-carousel cycle height="480" hide-delimiter-background show-arrows="hover" class="hero-carousel elevation-1"
-    style="background-color: #F7F9FC;">
+  <v-carousel
+    class="hero-carousel elevation-1"
+    cycle
+    height="480"
+    hide-delimiter-background
+    show-arrows="hover"
+    style="background-color: #F7F9FC;"
+  >
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-container class="fill-height py-0">
         <v-row align="center" class="fill-height">
           <!-- Left Column: Content -->
-          <v-col cols="12" md="6" class="px-6 px-md-12 text-left">
+          <v-col class="px-6 px-md-12 text-left" cols="12" md="6">
             <!-- Label / Category -->
             <span
-              class="text-subtitle-1 text-uppercase font-weight-bold text-secondary mb-2 d-inline-block tracking-widest">
+              class="text-subtitle-1 text-uppercase font-weight-bold text-secondary mb-2 d-inline-block tracking-widest"
+            >
               {{ slide.category }}
             </span>
 
@@ -57,16 +64,26 @@ const slides = ref([
             </p>
 
             <!-- Action Button -->
-            <v-btn color="primary" size="large" class="font-weight-bold px-8 elevation-2 hover-scale text-white"
-              :to="slide.to">
+            <v-btn
+              class="font-weight-bold px-8 elevation-2 hover-scale text-white"
+              color="primary"
+              size="large"
+              :to="slide.to"
+            >
               {{ slide.actionText }}
               <v-icon end>mdi-arrow-right</v-icon>
             </v-btn>
           </v-col>
 
           <!-- Right Column: Simple Minimalist Image -->
-          <v-col cols="12" md="6" class="d-none d-md-flex justify-center align-center">
-            <v-img :src="slide.image" max-height="420" max-width="100%" contain class="carousel-image" />
+          <v-col class="d-none d-md-flex justify-center align-center" cols="12" md="6">
+            <v-img
+              contain
+              class="carousel-image"
+              max-height="420"
+              max-width="100%"
+              :src="slide.image"
+            />
           </v-col>
         </v-row>
       </v-container>

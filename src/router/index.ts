@@ -6,27 +6,27 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from '@/pages/index.vue'
 import CondicionesVentasPage from '@/pages/CondicionesVentasPage.vue'
-import MaintenancePage from '@/pages/MaintenancePage.vue';
-import NotFoundPage from '@/pages/NotFoundPage.vue';
+import Index from '@/pages/index.vue'
+import MaintenancePage from '@/pages/MaintenancePage.vue'
+import NotFoundPage from '@/pages/NotFoundPage.vue'
 
 // --- CONFIGURACIÓN DE MANTENIMIENTO ---
 // Cambia este valor a true para poner TODO el sitio web en mantenimiento.
-export const EN_MANTENIMIENTO_GLOBAL = false;
+export const EN_MANTENIMIENTO_GLOBAL = false
 
 // Configuración de mantenimiento individual por ruta existente.
 // true  = Activa la pantalla de mantenimiento para esta ruta.
 // false = La ruta está activa y accesible.
 export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
-  '/': false,                         // Inicio
-  '/condiciones-ventas': false,       // Condiciones de Venta
-  '/contacto': true,                 // Contacto (En construcción)
-  '/servicios': true,                 // Servicios (En construcción)
+  '/': false, // Inicio
+  '/condiciones-ventas': false, // Condiciones de Venta
+  '/contacto': true, // Contacto (En construcción)
+  '/servicios': true, // Servicios (En construcción)
   '/servicios/servicio1': true,
   '/servicios/servicio2': true,
   '/servicios/servicio3': true,
-  '/productos': true,                 // Productos (En construcción)
+  '/productos': true, // Productos (En construcción)
   '/productos/brother': true,
   '/productos/brother/impresoras': true,
   '/productos/brother/consumibles': true,
@@ -165,19 +165,19 @@ router.beforeEach((to, from, next) => {
   // Comprobamos si la ruta de destino existe entre las registradas
   // Si coincide con NotFound, significa que el enlace no existe en nuestra app.
   if (to.name === 'NotFound') {
-    return next();
+    return next()
   }
 
   // Si la ruta sí existe, comprobamos si está en mantenimiento (global o específica)
-  const estaEnMantenimiento = EN_MANTENIMIENTO_GLOBAL || RUTAS_MANTENIMIENTO[to.path] === true;
+  const estaEnMantenimiento = EN_MANTENIMIENTO_GLOBAL || RUTAS_MANTENIMIENTO[to.path] === true
 
   if (estaEnMantenimiento && to.path !== '/mantenimiento') {
     // Redirigimos a la pantalla de mantenimiento
-    return next({ name: 'Mantenimiento' });
+    return next({ name: 'Mantenimiento' })
   }
 
   // Si no está en mantenimiento y la ruta existe, permitimos el acceso normal
-  next();
+  next()
 })
 
 export default router

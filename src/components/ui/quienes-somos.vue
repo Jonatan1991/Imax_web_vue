@@ -1,50 +1,59 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import imgQuienesSomos from '@/assets/images/quienes_somos.png'
+  import { ref } from 'vue'
+  import imgQuienesSomos from '@/assets/images/quienes_somos.png'
 
-const items = ref([
-  {
-    title: 'Calidad y Profesionalidad',
-    description: 'En Imax PC, la calidad del servicio y un asesoramiento profesional riguroso son nuestras premisas fundamentales en cada proyecto.',
-    icon: 'mdi-certificate-outline',
-    color: 'primary'
-  },
-  {
-    title: 'Atención Personalizada',
-    description: 'Nos tomamos el tiempo necesario para atenderle individualmente, escuchar sus necesidades y responder a todas sus dudas sin prisas.',
-    icon: 'mdi-account-heart-outline',
-    color: 'primary'
-  },
-  {
-    title: 'Equipos a su Medida',
-    description: 'Siempre buscamos y seleccionamos el dispositivo o componente informático que mejor se ajuste a lo que realmente necesita.',
-    icon: 'mdi-laptop',
-    color: 'primary'
-  },
-  {
-    title: 'Soporte Especializado',
-    description: 'Si tiene problemas con sus equipos o necesita asesoramiento experto para su negocio, en Imax PC estamos listos para ayudarle.',
-    icon: 'mdi-help-network-outline',
-    color: 'primary'
-  }
-])
+  const items = ref([
+    {
+      title: 'Calidad y Profesionalidad',
+      description: 'En Imax PC, la calidad del servicio y un asesoramiento profesional riguroso son nuestras premisas fundamentales en cada proyecto.',
+      icon: 'mdi-certificate-outline',
+      color: 'primary',
+    },
+    {
+      title: 'Atención Personalizada',
+      description: 'Nos tomamos el tiempo necesario para atenderle individualmente, escuchar sus necesidades y responder a todas sus dudas sin prisas.',
+      icon: 'mdi-account-heart-outline',
+      color: 'primary',
+    },
+    {
+      title: 'Equipos a su Medida',
+      description: 'Siempre buscamos y seleccionamos el dispositivo o componente informático que mejor se ajuste a lo que realmente necesita.',
+      icon: 'mdi-laptop',
+      color: 'primary',
+    },
+    {
+      title: 'Soporte Especializado',
+      description: 'Si tiene problemas con sus equipos o necesita asesoramiento experto para su negocio, en Imax PC estamos listos para ayudarle.',
+      icon: 'mdi-help-network-outline',
+      color: 'primary',
+    },
+  ])
 </script>
 
 <template>
-  <v-sheet class="py-16 bg-background" id="about-section">
+  <v-sheet id="about-section" class="py-16 bg-background">
     <v-container>
       <v-row align="center" justify="center">
         <!-- Columna de Imagen -->
-        <v-col cols="12" md="5" class="order-last order-md-first">
+        <v-col class="order-last order-md-first" cols="12" md="5">
           <v-hover v-slot="{ isHovering, props }">
-            <v-card v-bind="props" class="image-card rounded-xl overflow-hidden elevation-3 border"
-              :class="{ 'elevation-12': isHovering }">
-              <v-img :src="imgQuienesSomos" height="450" cover alt="Quiénes Somos - Imax PC"
+            <v-card
+              v-bind="props"
+              class="image-card rounded-xl overflow-hidden elevation-3 border"
+              :class="{ 'elevation-12': isHovering }"
+            >
+              <v-img
+                alt="Quiénes Somos - Imax PC"
                 class="transition-transform duration-500"
-                :style="{ transform: isHovering ? 'scale(1.03)' : 'scale(1)' }">
+                cover
+                height="450"
+                :src="imgQuienesSomos"
+                :style="{ transform: isHovering ? 'scale(1.03)' : 'scale(1)' }"
+              >
                 <!-- Overlay con gradiente decorativo en hover -->
                 <div class="fill-height d-flex flex-column justify-end text-white pa-6 gradient-overlay">
                   <div class="text-h5 font-weight-black mb-1">Imax PC</div>
+
                   <div class="text-subtitle-2 text-secondary font-weight-bold">
                     Tu partner tecnológico de confianza
                   </div>
@@ -55,13 +64,15 @@ const items = ref([
         </v-col>
 
         <!-- Columna de Texto -->
-        <v-col cols="12" md="7" class="ps-md-10">
+        <v-col class="ps-md-10" cols="12" md="7">
           <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
             Quiénes Somos
           </span>
+
           <h2 class="text-h4 text-md-h3 font-weight-black text-primary mb-6 leading-tight">
             Comprometidos con tu tranquilidad tecnológica
           </h2>
+
           <p class="text-body-1 text-grey-darken-3 mb-8 leading-relaxed">
             En <strong>Imax PC</strong> entendemos que la informática debe ser una solución, no un problema.
             Por eso, nos esforzamos en ofrecer una atención cercana y un servicio técnico de máxima calidad,
@@ -70,16 +81,28 @@ const items = ref([
 
           <!-- Lista de Características/Valores -->
           <v-row>
-            <v-col v-for="(item, index) in items" :key="index" cols="12" sm="6" class="d-flex">
+            <v-col
+              v-for="(item, index) in items"
+              :key="index"
+              class="d-flex"
+              cols="12"
+              sm="6"
+            >
               <div class="d-flex align-start mb-4">
-                <v-avatar :class="item.color === 'primary' ? 'bg-primary-lighten-5' : 'bg-secondary-lighten-5'"
-                  rounded="lg" size="48" class="me-4 border-avatar">
+                <v-avatar
+                  class="me-4 border-avatar"
+                  :class="item.color === 'primary' ? 'bg-primary-lighten-5' : 'bg-secondary-lighten-5'"
+                  rounded="lg"
+                  size="48"
+                >
                   <v-icon :color="item.color" size="24">{{ item.icon }}</v-icon>
                 </v-avatar>
+
                 <div>
                   <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">
                     {{ item.title }}
                   </h4>
+
                   <p class="text-body-2 text-grey-darken-2 leading-normal">
                     {{ item.description }}
                   </p>

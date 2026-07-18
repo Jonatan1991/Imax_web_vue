@@ -13,10 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import Carousel from '@/components/ui/carousel.vue'
-import QuienesSomos from '@/components/ui/quienes-somos.vue'
-import Soluciones from '@/components/ui/soluciones.vue'
-
+  import Carousel from '@/components/ui/carousel.vue'
+  import QuienesSomos from '@/components/ui/quienes-somos.vue'
+  import Soluciones from '@/components/ui/soluciones.vue'
 
 </script>
 

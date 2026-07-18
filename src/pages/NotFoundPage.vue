@@ -1,10 +1,10 @@
 <template>
   <!-- Contenedor principal centrado, con fondo degradado sutil de la paleta IMAX -->
   <v-container class="fill-height d-flex align-center justify-center text-center px-4">
-    <v-card max-width="500" flat class="bg-transparent">
+    <v-card class="bg-transparent" flat max-width="500">
       <!-- Icono animado/visual llamativo para error 404 -->
-      <v-avatar size="140" color="ui" class="mb-6 elevation-1 animate-pulse">
-        <v-icon size="80" color="primary">mdi-map-search-outline</v-icon>
+      <v-avatar class="mb-6 elevation-1 animate-pulse" color="ui" size="140">
+        <v-icon color="primary" size="80">mdi-map-search-outline</v-icon>
       </v-avatar>
 
       <!-- Título de error -->
@@ -23,8 +23,13 @@
       </p>
 
       <!-- Botón para regresar a la página de inicio -->
-      <v-btn to="/" color="primary" size="large" class="px-8 font-weight-bold elevation-2 hover-scale text-white"
-        prepend-icon="mdi-home">
+      <v-btn
+        class="px-8 font-weight-bold elevation-2 hover-scale text-white"
+        color="primary"
+        prepend-icon="mdi-home"
+        size="large"
+        to="/"
+      >
         Volver al Inicio
       </v-btn>
     </v-card>

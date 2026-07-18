@@ -2,41 +2,41 @@
   <v-fade-transition>
     <v-btn
       v-show="isVisible"
-      class="scroll-to-top-btn"
-      icon
-      elevation="6"
-      @click="scrollToTop"
       aria-label="Volver arriba"
+      class="scroll-to-top-btn"
+      elevation="6"
+      icon
+      @click="scrollToTop"
     >
-      <v-icon size="32" class="scroll-to-top-icon">mdi-chevron-up</v-icon>
+      <v-icon class="scroll-to-top-icon" size="32">mdi-chevron-up</v-icon>
     </v-btn>
   </v-fade-transition>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+  import { onMounted, onUnmounted, ref } from 'vue'
 
-const isVisible = ref(false)
+  const isVisible = ref(false)
 
-const handleScroll = () => {
-  // Show button when user has scrolled down 300px
-  isVisible.value = window.scrollY > 300
-}
+  function handleScroll () {
+    // Show button when user has scrolled down 300px
+    isVisible.value = window.scrollY > 300
+  }
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+  function scrollToTop () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
+  onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
   })
-}
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+  })
 </script>
 
 <style scoped>
