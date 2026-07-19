@@ -333,7 +333,7 @@ function scrollToAudit() {
                 { title: 'Empleados parados', desc: 'Personal esperando soporte durante horas por incidencias simples que podrían resolverse al instante.', icon: 'mdi-account-clock-outline' },
                 { title: 'Reparaciones costosas', desc: 'Tarifas abusivas por servicios urgentes cuando ocurre un problema imprevisto grave.', icon: 'mdi-cash-remove' },
               ]" :key="i" cols="12" md="4">
-                <v-card class="problem-card border-left-danger pa-6 elevation-1">
+                <v-card class="problem-card border-left-danger pa-5 elevation-1">
                   <div class="d-flex align-center gap-4 mb-4">
                     <div class="problem-icon-wrapper rounded-circle">
                       <v-icon color="error" size="28">{{ prob.icon }}</v-icon>
@@ -400,7 +400,7 @@ function scrollToAudit() {
 
                 <v-col class="py-4 position-relative" cols="12" md="7">
                   <!-- Dashboard de Simulación del Mantenimiento Exitoso -->
-                  <v-card class="solution-preview-card pa-6 glassmorphism elevation-4">
+                  <v-card class="solution-preview-card pa-5 glassmorphism elevation-4">
                     <div class="d-flex align-center justify-space-between mb-6 pb-4 border-bottom">
                       <div class="d-flex align-center gap-2">
                         <div class="status-pulse-green" />
@@ -468,7 +468,7 @@ function scrollToAudit() {
         <v-row class="align-stretch">
           <!-- Pilar 1: Preventivo -->
           <v-col class="d-flex" cols="12" md="4">
-            <v-card class="pilar-card w-100 pa-6 d-flex flex-column justify-space-between elevation-3 rounded-xl">
+            <v-card class="pilar-card w-100 pa-5 d-flex flex-column justify-space-between elevation-3 rounded-xl">
               <div>
                 <div class="pilar-icon-container bg-blue-lighten-5 mb-6">
                   <v-icon color="primary" size="32">mdi-shield-search</v-icon>
@@ -499,7 +499,7 @@ function scrollToAudit() {
 
           <!-- Pilar 2: Correctivo -->
           <v-col class="d-flex" cols="12" md="4">
-            <v-card class="pilar-card w-100 pa-6 d-flex flex-column justify-space-between elevation-3 rounded-xl">
+            <v-card class="pilar-card w-100 pa-5 d-flex flex-column justify-space-between elevation-3 rounded-xl">
               <div>
                 <div class="pilar-icon-container bg-red-lighten-5 mb-6">
                   <v-icon color="error" size="32">mdi-wrench</v-icon>
@@ -553,7 +553,7 @@ function scrollToAudit() {
 
           <!-- Pilar 3: Predictivo -->
           <v-col class="d-flex" cols="12" md="4">
-            <v-card class="pilar-card w-100 pa-6 d-flex flex-column justify-space-between elevation-3 rounded-xl">
+            <v-card class="pilar-card w-100 pa-5 d-flex flex-column justify-space-between elevation-3 rounded-xl">
               <div>
                 <div class="pilar-icon-container bg-green-lighten-5 mb-6">
                   <v-icon color="success" size="32">mdi-chart-timeline-variant</v-icon>
@@ -650,7 +650,7 @@ function scrollToAudit() {
             </div>
 
             <!-- Contenido del Paso -->
-            <v-card class="timeline-card pa-6 elevation-2 rounded-lg">
+            <v-card class="timeline-card pa-5 elevation-2 rounded-lg">
               <h3 class="text-h6 font-weight-bold mb-2 text-primary">{{ step.title }}</h3>
               <p class="text-body-2 text-grey-darken-2 leading-relaxed mb-0">{{ step.desc }}</p>
             </v-card>
@@ -678,7 +678,7 @@ function scrollToAudit() {
             </p>
 
             <!-- Card de detalles del elemento interactivo seleccionado -->
-            <div class="interactive-info-panel glassmorphism pa-6 rounded-xl border border-lighten-1">
+            <div class="interactive-info-panel glassmorphism pa-5 rounded-xl border border-lighten-1">
               <template v-if="selectedProtectedNode !== null">
                 <div class="d-flex align-center gap-3 mb-3">
                   <div class="selected-node-icon bg-secondary-lighten-4 rounded-circle pa-3">
@@ -798,7 +798,7 @@ function scrollToAudit() {
             { title: 'Continuidad de Negocio', desc: 'Garantizamos que tu oficina siga operativa pase lo que pase mediante planes de contingencia eficaces.', icon: 'mdi-update' },
             { title: 'Planificación Tecnológica', desc: 'Te asesoramos en la renovación del hardware y licencias para que inviertas de manera inteligente.', icon: 'mdi-calendar-range' },
           ]" :key="index" cols="12" md="4" sm="6">
-            <v-card class="benefit-card pa-6 h-100 elevation-1 rounded-xl transition-all hover-lift">
+            <v-card class="benefit-card pa-5 h-100 elevation-1 rounded-xl transition-all hover-lift">
               <div class="benefit-icon-box mb-4">
                 <v-icon color="primary" size="28">{{ benefit.icon }}</v-icon>
               </div>
@@ -840,7 +840,7 @@ function scrollToAudit() {
             { title: 'Control de Garantías', desc: 'Tramitamos directamente con fabricantes (Dell, HP, Lenovo) la reparación de equipos en garantía.', icon: 'mdi-card-text' },
             { title: 'Consultoría Tecnológica Anual', desc: 'Analizamos el estado de tu informática y proponemos una hoja de ruta anual para tu transformación digital.', icon: 'mdi-lightbulb-on' },
           ]" :key="idx" cols="12" md="4" sm="6">
-            <v-card class="diferencia-card pa-6 h-100 glassmorphism border-lighten-1 rounded-xl transition-all">
+            <v-card class="diferencia-card pa-5 h-100 glassmorphism border-lighten-1 rounded-xl transition-all">
               <v-icon class="mb-4" color="secondary" size="32">{{ dif.icon }}</v-icon>
               <h3 class="text-h6 font-weight-bold mb-2 text-white">{{ dif.title }}</h3>
               <p class="text-body-2 text-grey-lighten-2 leading-relaxed mb-0">{{ dif.desc }}</p>
@@ -877,7 +877,7 @@ function scrollToAudit() {
               { freq: 'Limpiezas Trimestrales', desc: 'Mantenimiento físico preventivo en las visitas in-situ: soplado de polvo, ordenación de cableado y revisión de ventilaciones.', icon: 'mdi-calendar-multiselect', color: 'secondary' },
               { freq: 'Auditorías Semestrales', desc: 'Pruebas de restauración real de copias, auditorías de permisos compartidos de archivos y testeo de velocidad de red.', icon: 'mdi-shield-check-outline', color: 'warning' },
               { freq: 'Inventario Anual', desc: 'Revisión y actualización del inventario general de activos, análisis del ciclo de vida de los equipos y planificación de mejoras.', icon: 'mdi-clipboard-list', color: 'primary' },
-            ]" :key="i" class="calendar-card pa-6 elevation-2 rounded-xl">
+            ]" :key="i" class="calendar-card pa-5 elevation-2 rounded-xl">
               <div class="d-flex align-center justify-space-between mb-4">
                 <v-chip class="text-uppercase tracking-wider font-weight-bold" :color="cal.color" size="small"
                   variant="flat">
@@ -915,7 +915,7 @@ function scrollToAudit() {
         <v-row class="justify-center">
           <v-col v-for="(metric, idx) in metrics" :key="idx" class="d-flex" cols="12" md="3" sm="6">
             <v-card
-              class="metric-widget w-100 pa-6 glassmorphism border-lighten-1 rounded-xl text-center d-flex flex-column justify-space-between">
+              class="metric-widget w-100 pa-5 glassmorphism border-lighten-1 rounded-xl text-center d-flex flex-column justify-space-between">
               <v-icon class="mx-auto mb-4" color="secondary" size="36">mdi-chart-line</v-icon>
 
               <div>
@@ -957,7 +957,7 @@ function scrollToAudit() {
               velará por la seguridad, disponibilidad y rendimiento continuo de toda tu infraestructura.
             </p>
 
-            <v-card class="pa-6 glassmorphism border-lighten-1 rounded-xl">
+            <v-card class="pa-5 glassmorphism border-lighten-1 rounded-xl">
               <h3 class="text-h6 font-weight-bold mb-4 text-white d-flex align-center gap-2">
                 <v-icon color="secondary">mdi-check-decagram</v-icon>
                 ¿Qué incluye la Auditoría Gratuita?
