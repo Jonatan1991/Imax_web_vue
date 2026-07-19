@@ -96,6 +96,16 @@ export const useMainMenuStore = defineStore('MainMenu', {
         ],
       },
       {
+        icon: 'mdi-account-plus',
+        label: 'Hágase Cliente',
+        to: '/cliente',
+      },
+      {
+        icon: 'mdi-newspaper',
+        label: 'Blog',
+        to: '/blog',
+      },
+      {
         icon: 'mdi-information',
         label: 'Condiciones de Venta',
         to: '/condiciones-ventas',

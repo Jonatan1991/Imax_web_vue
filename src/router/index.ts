@@ -21,6 +21,7 @@ export const EN_MANTENIMIENTO_GLOBAL = false
 export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
   '/': false, // Inicio
   '/condiciones-ventas': false, // Condiciones de Venta
+  '/cliente': false, // Hágase Cliente
   '/contacto': true, // Contacto (En construcción)
   '/servicios': true, // Servicios (En construcción)
   '/servicios/servicio1': true,
@@ -53,6 +54,11 @@ const router = createRouter({
       path: '/condiciones-ventas',
       name: 'CondicionesVentas',
       component: CondicionesVentasPage,
+    },
+    {
+      path: '/cliente',
+      name: 'HagaseCliente',
+      component: () => import('@/pages/ClientePage.vue'),
     },
     // Las rutas de abajo están registradas pero apuntan temporalmente a Index o MaintenancePage
     // mientras se crean sus componentes finales, lo que previene errores de compilación.

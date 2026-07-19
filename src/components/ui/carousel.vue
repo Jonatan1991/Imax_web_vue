@@ -78,8 +78,8 @@
           <!-- Right Column: Simple Minimalist Image -->
           <v-col class="d-none d-md-flex justify-center align-center" cols="12" md="6">
             <v-img
-              contain
               class="carousel-image"
+              contain
               max-height="420"
               max-width="100%"
               :src="slide.image"

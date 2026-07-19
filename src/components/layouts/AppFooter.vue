@@ -11,7 +11,8 @@
           </div>
 
           <p class="text-body-2 text-grey-lighten-1 mb-4 font-weight-light line-height-relaxed">
-            Especialistas en soluciones informáticas y sistemas de impresión Brother y HP. Ofrecemos el mejor servicio técnico y consumibles de alta calidad.
+            Especialistas en soluciones informáticas y sistemas de impresión Brother y HP. Ofrecemos el mejor servicio
+            técnico y consumibles de alta calidad.
           </p>
 
           <div class="d-flex gap-3">
@@ -87,7 +88,7 @@
             <v-icon class="me-3 mt-1" color="primary">mdi-map-marker-outline</v-icon>
 
             <span class="text-body-2 text-grey-lighten-1 font-weight-light">
-              Calle del Electrodo, 3, Rivas-Vaciamadrid, Madrid
+              C. de Ardemans, 35, Salamanca, 28028 Madrid
             </span>
           </div>
 

@@ -541,7 +541,7 @@
 
   // Desplazarse a una sección
   function scrollTo (id: string) {
-    const element = document.getElementById(id)
+    const element = document.querySelector(`#${id}`)
     if (element) {
       const offset = 140 // Ajuste para el menú superior
       const bodyRect = document.body.getBoundingClientRect().top
@@ -562,10 +562,10 @@
     const scrollPosition = window.scrollY + 180 // Margen superior para activar antes de llegar al borde
 
     for (const item of menuItems) {
-      const element = document.getElementById(item.id)
+      const element = document.querySelector(`#${item.id}`)
       if (element) {
-        const top = element.offsetTop
-        const height = element.offsetHeight
+        const top = (element as HTMLElement).offsetTop
+        const height = (element as HTMLElement).offsetHeight
 
         if (scrollPosition >= top && scrollPosition < top + height) {
           activeSection.value = item.id

@@ -46,8 +46,8 @@
       <v-btn
         class="px-8 font-weight-bold hover-scale"
         color="primary"
-        size="large"
         prepend-icon="mdi-arrow-left"
+        size="large"
         to="/"
         variant="outlined"
       >
