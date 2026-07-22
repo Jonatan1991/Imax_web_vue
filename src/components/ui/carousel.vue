@@ -1,35 +1,16 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import imgExperiencia from '@/assets/images/carousel_experiencia_f7f9fc.png'
-  import imgGarantia from '@/assets/images/carousel_garantia_f7f9fc.png'
-  import imgServicio from '@/assets/images/carousel_servicio_f7f9fc.png'
+  import { computed } from 'vue'
+  import { type Slide, useOffersStore } from '@/stores/offersStore'
 
-  const slides = ref([
-    {
-      category: 'Experiencia',
-      title: 'Años de confianza a tu servicio',
-      text: 'Optimizamos los tiempos de respuesta y minimizamos los costes de reparación. Más de 200 particulares, autónomos y PYMES confían en nuestro soporte técnico especializado.',
-      image: imgExperiencia,
-      actionText: 'Ver Servicios',
-      to: '/servicios',
-    },
-    {
-      category: 'Servicio Personalizado',
-      title: 'Tu propio técnico de confianza',
-      text: 'Asignamos un técnico dedicado a tu cuenta para que conozca a fondo tu historial de equipos y necesidades diarias. Atención rápida, eficiente y sin explicaciones repetitivas.',
-      image: imgServicio,
-      actionText: 'Mantenimiento a Medida',
-      to: '/servicios',
-    },
-    {
-      category: 'Garantía',
-      title: 'Tu tranquilidad es nuestra prioridad',
-      text: 'Para tu total tranquilidad, todas nuestras reparaciones y mantenimientos están respaldados por nuestra garantía de satisfacción y calidad certificada.',
-      image: imgGarantia,
-      actionText: 'Contactar Ahora',
-      to: '/contacto',
-    },
-  ])
+  const props = defineProps<{
+    slides?: Slide[]
+  }>()
+
+  const offersStore = useOffersStore()
+
+  const activeSlides = computed(() => {
+    return props.slides && props.slides.length > 0 ? props.slides : offersStore.homeSlides
+  })
 </script>
 
 <template>
@@ -41,7 +22,7 @@
     show-arrows="hover"
     style="background-color: #F7F9FC;"
   >
-    <v-carousel-item v-for="(slide, i) in slides" :key="i">
+    <v-carousel-item v-for="(slide, i) in activeSlides" :key="i">
       <v-container class="fill-height py-0">
         <v-row align="center" class="fill-height">
           <!-- Left Column: Content -->
@@ -93,7 +74,6 @@
 
 <style scoped>
 .hero-carousel {
-  /* Delimitadores oscuros para fondo claro */
   --v-carousel-delimiter-color: #1A3A6E;
 }
 
@@ -128,7 +108,6 @@
   padding: 0 16px;
 }
 
-/* Flechas con color primario */
 .hero-carousel :deep(.v-btn--icon) {
   color: #1A3A6E !important;
 }

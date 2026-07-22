@@ -6,6 +6,8 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
+import BrotherConsumiblesPage from '@/pages/BrotherConsumiblesPage.vue'
+import BrotherImpresorasPage from '@/pages/BrotherImpresorasPage.vue'
 import CondicionesVentasPage from '@/pages/CondicionesVentasPage.vue'
 import Index from '@/pages/index.vue'
 import MaintenancePage from '@/pages/MaintenancePage.vue'
@@ -20,25 +22,25 @@ export const EN_MANTENIMIENTO_GLOBAL = false
 // false = La ruta está activa y accesible.
 export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
   '/': false, // Inicio
-  '/condiciones-ventas': false, // Condiciones de Venta
   '/cliente': false, // Hágase Cliente
+  '/condiciones-ventas': false, // Condiciones de Venta
   '/contacto': true, // Contacto (En construcción)
-  '/servicios': true, // Servicios (En construcción)
-  '/servicios/servicio1': true,
-  '/servicios/servicio2': true,
-  '/servicios/servicio3': true,
   '/productos': true, // Productos (En construcción)
   '/productos/brother': true,
-  '/productos/brother/impresoras': true,
-  '/productos/brother/consumibles': true,
+  '/productos/brother/consumibles': false,
+  '/productos/brother/impresoras': false,
   '/productos/hp': true,
-  '/productos/hp/impresoras': true,
   '/productos/hp/consumibles': true,
+  '/productos/hp/impresoras': true,
   '/productos/producto3': true,
   '/productos/producto3.1': true,
   '/productos/producto3.2': true,
   '/productos/producto3.3': true,
   '/productos/producto3.4': true,
+  '/servicios': true, // Servicios (En construcción)
+  '/servicios/servicio1': true,
+  '/servicios/servicio2': true,
+  '/servicios/servicio3': true,
 }
 
 const router = createRouter({
@@ -98,14 +100,14 @@ const router = createRouter({
       component: MaintenancePage,
     },
     {
-      path: '/productos/brother/impresoras',
-      name: 'BrotherImpresoras',
-      component: MaintenancePage,
-    },
-    {
       path: '/productos/brother/consumibles',
       name: 'BrotherConsumibles',
-      component: MaintenancePage,
+      component: BrotherConsumiblesPage,
+    },
+    {
+      path: '/productos/brother/impresoras',
+      name: 'BrotherImpresoras',
+      component: BrotherImpresorasPage,
     },
     {
       path: '/productos/hp',
