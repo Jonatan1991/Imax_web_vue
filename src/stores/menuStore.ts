@@ -29,12 +29,27 @@ export const useMainMenuStore = defineStore('MainMenu', {
             to: '/servicios/servicio2',
           },
           {
-            label: 'Tu Ordenador a Medida',
+            label: 'Ordenadores',
             to: '/servicios/servicio3',
+            submenu: [
+              {
+                label: 'Ordenadores a medida',
+                to: '/servicios/servicio3.1',
+              },
+              {
+                label: 'Reparación de Ordenadores',
+                to: '/servicios/servicio4',
+              },
+              {
+                label: 'Renovación de Ordenadores',
+                to: '/servicios/servicio5',
+              },
+            ]
           },
+
           {
             label: 'Software a Medida',
-            to: '/servicios/servicio4',
+            to: '/servicios/servicio5',
           },
           {
             label: 'Microsoft 365',
