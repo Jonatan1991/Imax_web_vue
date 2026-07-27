@@ -24,7 +24,7 @@ export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
   '/': false, // Inicio
   '/cliente': false, // Hágase Cliente
   '/condiciones-ventas': false, // Condiciones de Venta
-  '/contacto': true, // Contacto (En construcción)
+  '/contacto': false, // Contacto
   '/productos': true, // Productos (En construcción)
   '/productos/brother': true,
   '/productos/brother/consumibles': false,
@@ -67,7 +67,7 @@ const router = createRouter({
     {
       path: '/contacto',
       name: 'Contacto',
-      component: MaintenancePage,
+      component: () => import('@/pages/ContactoPage.vue'),
     },
     {
       path: '/servicios',
