@@ -144,7 +144,6 @@
   background: linear-gradient(135deg, #1A3A6E 0%, #1a1c2c 100%);
   position: relative;
   overflow: hidden;
-  border-radius: 0 0 24px 24px;
 }
 
 .legal-hero::before {

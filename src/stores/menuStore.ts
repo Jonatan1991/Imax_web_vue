@@ -44,7 +44,7 @@ export const useMainMenuStore = defineStore('MainMenu', {
                 label: 'Renovación de Ordenadores',
                 to: '/servicios/servicio5',
               },
-            ]
+            ],
           },
 
           {
