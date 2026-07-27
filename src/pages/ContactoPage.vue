@@ -6,7 +6,8 @@
         <v-row justify="center">
           <v-col cols="12" md="8">
             <span
-              class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3 animate-fade-in">
+              class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3 animate-fade-in"
+            >
               ¿En qué podemos ayudarte?
             </span>
 
@@ -38,6 +39,7 @@
 
               <div>
                 <h2 class="text-h5 font-weight-bold text-primary">Envíanos un mensaje</h2>
+
                 <p class="text-caption text-grey-darken-1">Te responderemos en un plazo máximo de 24 horas laborables.
                 </p>
               </div>
@@ -71,57 +73,104 @@
                   <v-col cols="12" sm="6">
                     <div class="input-label mb-1">Nombre completo *</div>
 
-                    <v-text-field v-model="form.name" class="rounded-lg" color="primary" density="comfortable"
-                      placeholder="Tu nombre" prepend-inner-icon="mdi-account-outline" required :rules="rules.name"
-                      variant="outlined" />
+                    <v-text-field
+                      v-model="form.name"
+                      class="rounded-lg"
+                      color="primary"
+                      density="comfortable"
+                      placeholder="Tu nombre"
+                      prepend-inner-icon="mdi-account-outline"
+                      required
+                      :rules="rules.name"
+                      variant="outlined"
+                    />
                   </v-col>
 
                   <!-- Campo: Teléfono -->
                   <v-col cols="12" sm="6">
                     <div class="input-label mb-1">Teléfono de contacto</div>
 
-                    <v-text-field v-model="form.phone" class="rounded-lg" color="primary" density="comfortable"
-                      placeholder="Ej. 600 000 000" prepend-inner-icon="mdi-phone-outline" :rules="rules.phone"
-                      variant="outlined" />
+                    <v-text-field
+                      v-model="form.phone"
+                      class="rounded-lg"
+                      color="primary"
+                      density="comfortable"
+                      placeholder="Ej. 600 000 000"
+                      prepend-inner-icon="mdi-phone-outline"
+                      :rules="rules.phone"
+                      variant="outlined"
+                    />
                   </v-col>
 
                   <!-- Campo: Email -->
                   <v-col cols="12">
                     <div class="input-label mb-1">Correo electrónico *</div>
 
-                    <v-text-field v-model="form.email" class="rounded-lg" color="primary" density="comfortable"
-                      placeholder="ejemplo@correo.com" prepend-inner-icon="mdi-email-outline" required
-                      :rules="rules.email" variant="outlined" />
+                    <v-text-field
+                      v-model="form.email"
+                      class="rounded-lg"
+                      color="primary"
+                      density="comfortable"
+                      placeholder="ejemplo@correo.com"
+                      prepend-inner-icon="mdi-email-outline"
+                      required
+                      :rules="rules.email"
+                      variant="outlined"
+                    />
                   </v-col>
 
                   <!-- Campo: Asunto -->
                   <v-col cols="12">
                     <div class="input-label mb-1">Asunto de la consulta *</div>
 
-                    <v-select v-model="form.subject" class="rounded-lg" color="primary" density="comfortable"
-                      :items="subjects" placeholder="Selecciona una opción"
-                      prepend-inner-icon="mdi-format-list-bulleted" required :rules="rules.subject"
-                      variant="outlined" />
+                    <v-select
+                      v-model="form.subject"
+                      class="rounded-lg"
+                      color="primary"
+                      density="comfortable"
+                      :items="subjects"
+                      placeholder="Selecciona una opción"
+                      prepend-inner-icon="mdi-format-list-bulleted"
+                      required
+                      :rules="rules.subject"
+                      variant="outlined"
+                    />
                   </v-col>
 
                   <!-- Campo: Mensaje -->
                   <v-col cols="12">
                     <div class="input-label mb-1">Tu mensaje *</div>
 
-                    <v-textarea v-model="form.message" class="rounded-lg" color="primary" density="comfortable"
+                    <v-textarea
+                      v-model="form.message"
+                      class="rounded-lg"
+                      color="primary"
+                      density="comfortable"
                       placeholder="Describe detalladamente tu consulta, duda o solicitud de presupuesto..."
-                      prepend-inner-icon="mdi-message-text-outline" required rows="4" :rules="rules.message"
-                      variant="outlined" />
+                      prepend-inner-icon="mdi-message-text-outline"
+                      required
+                      rows="4"
+                      :rules="rules.message"
+                      variant="outlined"
+                    />
                   </v-col>
 
                   <!-- Campo: Aceptación de Políticas -->
                   <v-col class="py-0" cols="12">
-                    <v-checkbox v-model="form.acceptTerms" color="primary" density="comfortable" required
-                      :rules="rules.acceptTerms">
+                    <v-checkbox
+                      v-model="form.acceptTerms"
+                      color="primary"
+                      density="comfortable"
+                      required
+                      :rules="rules.acceptTerms"
+                    >
                       <template #label>
                         <span class="text-body-2 text-grey-darken-3">
-                          Acepto la <a class="text-primary text-decoration-underline font-weight-medium"
-                            href="/condiciones-ventas" target="_blank">política de privacidad y protección de datos</a>.
+                          Acepto la <a
+                            class="text-primary text-decoration-underline font-weight-medium"
+                            href="/condiciones-ventas"
+                            target="_blank"
+                          >política de privacidad y protección de datos</a>.
                         </span>
                       </template>
                     </v-checkbox>
@@ -129,8 +178,15 @@
 
                   <!-- Botón de Envío -->
                   <v-col class="pt-4" cols="12">
-                    <v-btn block class="rounded-lg font-weight-bold py-3 hover-scale text-white elevation-1"
-                      color="primary" :disabled="!isFormValid" :loading="loading" size="large" type="submit">
+                    <v-btn
+                      block
+                      class="rounded-lg font-weight-bold py-3 hover-scale text-white elevation-1"
+                      color="primary"
+                      :disabled="!isFormValid"
+                      :loading="loading"
+                      size="large"
+                      type="submit"
+                    >
                       <span>Enviar Mensaje</span>
                       <v-icon class="ms-2" end>mdi-send</v-icon>
                     </v-btn>
@@ -162,9 +218,15 @@
                   C. de Ardemans, 35, Salamanca, 28028 Madrid
                 </div>
 
-                <v-btn class="px-0 font-weight-bold text-none hover-link" color="secondary" density="comfortable"
-                  href="https://maps.google.com/?q=Calle+de+Ardemans+35+28028+Madrid" size="small" target="_blank"
-                  variant="text">
+                <v-btn
+                  class="px-0 font-weight-bold text-none hover-link"
+                  color="secondary"
+                  density="comfortable"
+                  href="https://maps.google.com/?q=Calle+de+Ardemans+35+28028+Madrid"
+                  size="small"
+                  target="_blank"
+                  variant="text"
+                >
                   Cómo llegar
                   <v-icon class="ms-1" end size="small">mdi-open-in-new</v-icon>
                 </v-btn>
@@ -180,8 +242,10 @@
               <div>
                 <div class="text-caption font-weight-bold text-grey-darken-1">Teléfono</div>
 
-                <a class="text-body-1 font-weight-black text-primary text-decoration-none contact-tel"
-                  href="tel:+34913090503">
+                <a
+                  class="text-body-1 font-weight-black text-primary text-decoration-none contact-tel"
+                  href="tel:+34913090503"
+                >
                   91 309 05 03
                 </a>
 
@@ -198,8 +262,10 @@
               <div>
                 <div class="text-caption font-weight-bold text-grey-darken-1">Correo Electrónico</div>
 
-                <a class="text-body-2 font-weight-bold text-primary text-decoration-none hover-underline"
-                  href="mailto:info@imaxpc.com">
+                <a
+                  class="text-body-2 font-weight-bold text-primary text-decoration-none hover-underline"
+                  href="mailto:info@imaxpc.com"
+                >
                   info@imaxpc.com
                 </a>
 
@@ -231,9 +297,15 @@
             </h3>
 
             <div class="map-container overflow-hidden rounded-lg">
-              <iframe allowfullscreen="true" height="320" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              <iframe
+                allowfullscreen="true"
+                height="320"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.288277259424!2d-3.6738914234407886!3d40.435728654452144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228c2be416ab1%3A0x67dbfd88fe656fa7!2sCalle%20de%20Ardemans%2C%2035%2C%20Salamanca%2C%2028028%20Madrid!5e0!3m2!1ses!2ses!4v1722111111111!5m2!1ses!2ses"
-                style="border:0;" width="100%" />
+                style="border:0;"
+                width="100%"
+              />
             </div>
           </v-card>
         </v-col>
@@ -243,95 +315,95 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+  import { onMounted, ref } from 'vue'
 
-// Establecer título de página al montar
-onMounted(() => {
-  document.title = 'Contacto | Imax PC'
-})
+  // Establecer título de página al montar
+  onMounted(() => {
+    document.title = 'Contacto | Imax PC'
+  })
 
-// Controladores de estado
-const contactForm = ref()
-const isFormValid = ref(false)
-const loading = ref(false)
-const submitted = ref(false)
+  // Controladores de estado
+  const contactForm = ref()
+  const isFormValid = ref(false)
+  const loading = ref(false)
+  const submitted = ref(false)
 
-// Opciones de Asunto
-const subjects = [
-  'Soporte Técnico Informático',
-  'Sistemas de Impresión (Brother / HP)',
-  'Solicitud de Presupuesto',
-  'Consumibles y Suministros',
-  'Información General',
-  'Otra consulta',
-]
+  // Opciones de Asunto
+  const subjects = [
+    'Soporte Técnico Informático',
+    'Sistemas de Impresión (Brother / HP)',
+    'Solicitud de Presupuesto',
+    'Consumibles y Suministros',
+    'Información General',
+    'Otra consulta',
+  ]
 
-// Modelo del formulario
-const form = ref({
-  name: '',
-  phone: '',
-  email: '',
-  subject: null,
-  message: '',
-  acceptTerms: false,
-})
-
-// Reglas de Validación
-const rules = {
-  name: [
-    (v: string) => !!v || 'El nombre es obligatorio',
-    (v: string) => v.length >= 3 || 'El nombre debe tener al menos 3 caracteres',
-  ],
-  phone: [
-    (v: string) => !v || /^[0-9\s+-]{9,15}$/.test(v) || 'Formato de teléfono no válido',
-  ],
-  email: [
-    (v: string) => !!v || 'El correo electrónico es obligatorio',
-    (v: string) => /.[^\n\r@\u2028\u2029]*@.+\..+/.test(v) || 'Introduce un correo electrónico válido',
-  ],
-  subject: [
-    (v: any) => !!v || 'Selecciona un asunto para tu consulta',
-  ],
-  message: [
-    (v: string) => !!v || 'El mensaje es obligatorio',
-    (v: string) => v.length >= 10 || 'El mensaje debe tener al menos 10 caracteres',
-  ],
-  acceptTerms: [
-    (v: boolean) => v === true || 'Debes aceptar la política de privacidad para continuar',
-  ],
-}
-
-// Enviar el formulario
-async function handleSubmit() {
-  if (!contactForm.value) return
-
-  const { valid } = await contactForm.value.validate()
-
-  if (valid) {
-    loading.value = true
-    // Simular llamada a API / Envío de email
-    setTimeout(() => {
-      loading.value = false
-      submitted.value = true
-    }, 1500)
-  }
-}
-
-// Resetear el formulario
-function resetForm() {
-  submitted.value = false
-  form.value = {
+  // Modelo del formulario
+  const form = ref({
     name: '',
     phone: '',
     email: '',
     subject: null,
     message: '',
     acceptTerms: false,
+  })
+
+  // Reglas de Validación
+  const rules = {
+    name: [
+      (v: string) => !!v || 'El nombre es obligatorio',
+      (v: string) => v.length >= 3 || 'El nombre debe tener al menos 3 caracteres',
+    ],
+    phone: [
+      (v: string) => !v || /^[0-9\s+-]{9,15}$/.test(v) || 'Formato de teléfono no válido',
+    ],
+    email: [
+      (v: string) => !!v || 'El correo electrónico es obligatorio',
+      (v: string) => /.[^\n\r@\u2028\u2029]*@.+\..+/.test(v) || 'Introduce un correo electrónico válido',
+    ],
+    subject: [
+      (v: any) => !!v || 'Selecciona un asunto para tu consulta',
+    ],
+    message: [
+      (v: string) => !!v || 'El mensaje es obligatorio',
+      (v: string) => v.length >= 10 || 'El mensaje debe tener al menos 10 caracteres',
+    ],
+    acceptTerms: [
+      (v: boolean) => v === true || 'Debes aceptar la política de privacidad para continuar',
+    ],
   }
-  if (contactForm.value) {
-    contactForm.value.resetValidation()
+
+  // Enviar el formulario
+  async function handleSubmit () {
+    if (!contactForm.value) return
+
+    const { valid } = await contactForm.value.validate()
+
+    if (valid) {
+      loading.value = true
+      // Simular llamada a API / Envío de email
+      setTimeout(() => {
+        loading.value = false
+        submitted.value = true
+      }, 1500)
+    }
   }
-}
+
+  // Resetear el formulario
+  function resetForm () {
+    submitted.value = false
+    form.value = {
+      name: '',
+      phone: '',
+      email: '',
+      subject: null,
+      message: '',
+      acceptTerms: false,
+    }
+    if (contactForm.value) {
+      contactForm.value.resetValidation()
+    }
+  }
 </script>
 
 <style scoped>

@@ -21,17 +21,30 @@ export const useMainMenuStore = defineStore('MainMenu', {
         to: '/servicios',
         submenu: [
           {
-            label: 'Servicio 1',
+            label: 'Soporte Técnico Informático',
             to: '/servicios/servicio1',
           },
           {
-            label: 'Servicio 2',
+            label: 'Soporte Técnico Brother',
             to: '/servicios/servicio2',
           },
           {
-            label: 'Servicio 3',
+            label: 'Tu Ordenador a Medida',
             to: '/servicios/servicio3',
           },
+          {
+            label: 'Software a Medida',
+            to: '/servicios/servicio4',
+          },
+          {
+            label: 'Microsoft 365',
+            to: '/servicios/servicio5',
+          },
+          {
+            label: 'Automatiza tu Empresa',
+            to: '/servicios/servicio6',
+          },
+
         ],
       },
       {

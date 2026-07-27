@@ -7,13 +7,13 @@
     <v-container class="position-relative z-index-2">
       <v-row align="center" justify="space-between">
         <v-col class="text-left py-8" cols="12" md="6">
-          <div class="premium-tag mb-4">SERVICIO DE MANTENIMIENTO CORPORATIVO</div>
+          <div class="premium-tag mb-4 animate-fade-in">SERVICIO DE MANTENIMIENTO CORPORATIVO</div>
 
-          <h1 class="text-h2 font-weight-black mb-4 text-gradient">
+          <h1 class="text-h2 font-weight-black mb-4 text-gradient animate-slide-up">
             Mantenimiento Informático Profesional
           </h1>
 
-          <p class="text-h5 font-weight-regular text-light-blue-grey-2 mb-8 leading-relaxed">
+          <p class="text-h5 font-weight-regular text-light-blue-grey-2 mb-8 leading-relaxed animate-fade-in-delayed">
             Cuidamos la tecnología de tu empresa para que tú solo tengas que preocuparte por hacer crecer tu negocio.
           </p>
 
@@ -457,5 +457,43 @@
 
 .gap-2 {
   gap: 8px;
+}
+
+/* Animations for Hero elements */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-delayed {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

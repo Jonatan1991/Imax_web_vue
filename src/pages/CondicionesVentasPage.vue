@@ -5,17 +5,17 @@
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8">
-            <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3">
+            <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3 animate-fade-in">
               Información Legal
             </span>
 
-            <h1 class="text-h3 text-md-h2 font-weight-black mb-4 title-glow">
+            <h1 class="text-h3 text-md-h2 font-weight-black mb-4 title-glow animate-slide-up">
               Condiciones de Venta y Uso
             </h1>
 
             <div class="divider mx-auto mb-6" />
 
-            <p class="text-body-1 text-blue-lighten-4 leading-relaxed max-w-600 mx-auto">
+            <p class="text-body-1 text-blue-lighten-4 leading-relaxed max-w-600 mx-auto animate-fade-in-delayed">
               Le rogamos que lea atentamente estas condiciones antes de utilizar esta página web o realizar un pedido.
             </p>
           </v-col>
@@ -257,5 +257,43 @@
 
 .tracking-widest {
   letter-spacing: 0.15em !important;
+}
+
+/* Animations for Hero Section */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-delayed {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
