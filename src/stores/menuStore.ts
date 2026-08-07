@@ -52,8 +52,22 @@ export const useMainMenuStore = defineStore('MainMenu', {
             to: '/servicios/servicio5',
           },
           {
-            label: 'Microsoft 365',
-            to: '/servicios/servicio5',
+            label: 'Soluciones Microsoft',
+            to: '/servicios/microsoft-copilot',
+            submenu: [
+              {
+                label: 'Microsoft 365 Copilot & IA',
+                to: '/servicios/microsoft-copilot',
+              },
+              {
+                label: 'Seguridad M365 (Defender & Purview)',
+                to: '/servicios/seguridad-microsoft-365',
+              },
+              {
+                label: 'Microsoft Fabric & Big Data',
+                to: '/servicios/microsoft-fabric',
+              },
+            ]
           },
           {
             label: 'Automatiza tu Empresa',

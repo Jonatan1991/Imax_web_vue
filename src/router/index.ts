@@ -41,6 +41,9 @@ export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
   '/servicios/servicio1': true,
   '/servicios/servicio2': true,
   '/servicios/servicio3': true,
+  '/servicios/microsoft-copilot': false,
+  '/servicios/seguridad-microsoft-365': false,
+  '/servicios/microsoft-fabric': false,
 }
 
 const router = createRouter({
@@ -88,6 +91,21 @@ const router = createRouter({
       path: '/servicios/servicio3',
       name: 'Servicio3',
       component: MaintenancePage,
+    },
+    {
+      path: '/servicios/microsoft-copilot',
+      name: 'MicrosoftCopilot',
+      component: () => import('@/pages/MicrosoftCopilotPage.vue'),
+    },
+    {
+      path: '/servicios/seguridad-microsoft-365',
+      name: 'MicrosoftSecurity',
+      component: () => import('@/pages/MicrosoftSecurityPage.vue'),
+    },
+    {
+      path: '/servicios/microsoft-fabric',
+      name: 'MicrosoftFabric',
+      component: () => import('@/pages/MicrosoftFabricPage.vue'),
     },
     {
       path: '/productos',
