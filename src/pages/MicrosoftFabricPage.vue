@@ -16,14 +16,16 @@
               Donde hay un dato, hay una oportunidad
             </h2>
             <p class="text-h6 text-grey-lighten-2 mb-8 leading-relaxed font-weight-regular max-w-650">
-              Rompe los silos de información de tu organización. Conecta, unifica, gobierna y visualiza todos tus datos empresariales en un único lago abierto para impulsar tu transformación de IA.
+              Rompe los silos de información de tu organización. Conecta, unifica, gobierna y visualiza todos tus datos
+              empresariales en un único lago abierto para impulsar tu transformación de IA.
             </p>
             <div class="d-flex flex-wrap gap-4">
               <v-btn class="cta-primary-glow px-8" color="secondary" size="large" to="/contacto">
                 Solicitar una Demo
                 <v-icon end>mdi-database-eye</v-icon>
               </v-btn>
-              <v-btn class="cta-secondary-outline px-8" size="large" variant="outlined" @click="scrollToSection('#garbage')">
+              <v-btn class="cta-secondary-outline px-8" size="large" variant="outlined"
+                @click="scrollToSection('#garbage')">
                 Ver Importancia de Datos
               </v-btn>
             </div>
@@ -34,7 +36,9 @@
             <div class="data-flow-container">
               <div class="grid-animation"></div>
               <v-card class="glassmorphism-card pa-6 text-center rounded-xl elevation-10">
-                <v-icon color="secondary" size="80" class="mb-4 animate-float">mdi-database-settings</v-icon>
+                <!-- <v-icon color="secondary" size="80" class="mb-4 animate-float">mdi-database-settings</v-icon> -->
+                <v-img :src="imgOneLake" alt="OneLake Catalog" width="100" height="100"
+                  class="mx-auto mb-4 animate-pulse" contain />
                 <h3 class="text-h5 font-weight-bold text-white mb-2">OneLake Catalog</h3>
                 <p class="text-caption text-grey-lighten-1 mb-4">
                   Un único catálogo para descubrir, gobernar y proteger tus datos.
@@ -63,19 +67,18 @@
             Tu Inteligencia Artificial es tan buena como tus datos
           </h2>
           <p class="text-body-1 text-grey-darken-2 mb-4 leading-relaxed">
-            Implementar asistentes o agentes de IA sin limpiar tus fuentes de información es contraproducente. Si los datos de entrada son incorrectos, están duplicados o desactualizados, los resultados de la IA serán imprecisos (el concepto clásico en informática: <strong>"Garbage In, Garbage Out"</strong>).
+            Implementar asistentes o agentes de IA sin limpiar tus fuentes de información es contraproducente. Si los
+            datos de entrada son incorrectos, están duplicados o desactualizados, los resultados de la IA serán
+            imprecisos (el concepto clásico en informática: <strong>"Garbage In, Garbage Out"</strong>).
           </p>
           <p class="text-body-1 text-grey-darken-2 mb-6 leading-relaxed">
-            Microsoft Fabric actúa como la capa unificada que elimina los silos, limpia tus bases de datos y les añade gobernanza para que la IA actúe sobre información real y de confianza.
+            Microsoft Fabric actúa como la capa unificada que elimina los silos, limpia tus bases de datos y les añade
+            gobernanza para que la IA actúe sobre información real y de confianza.
           </p>
-          <v-alert
-            border="start"
-            color="primary"
-            class="rounded-xl font-weight-bold border-opacity-100"
-            variant="tonal"
-            icon="mdi-lightbulb-on"
-          >
-            "La clave de la IA no está solo en el modelo matemático, sino en conectar los datos correctos con la capa de confianza empresarial."
+          <v-alert border="start" color="primary" class="rounded-xl font-weight-bold border-opacity-100" variant="tonal"
+            icon="mdi-lightbulb-on">
+            "La clave de la IA no está solo en el modelo matemático, sino en conectar los datos correctos con la capa de
+            confianza empresarial."
           </v-alert>
         </v-col>
 
@@ -89,7 +92,8 @@
             <div class="step-data d-flex align-center gap-4 mb-4">
               <v-chip color="primary" variant="flat" size="small" class="font-weight-bold">1</v-chip>
               <div>
-                <strong>Centralizar un lago de datos:</strong> Integrar fuentes dispersas en OneLake sin duplicados ni ETLs costosos.
+                <strong>Centralizar un lago de datos:</strong> Integrar fuentes dispersas en OneLake sin duplicados ni
+                ETLs costosos.
               </div>
             </div>
             <div class="step-data d-flex align-center gap-4 mb-4">
@@ -101,13 +105,15 @@
             <div class="step-data d-flex align-center gap-4 mb-4">
               <v-chip color="primary" variant="flat" size="small" class="font-weight-bold">3</v-chip>
               <div>
-                <strong>Crear Agentes de Datos:</strong> Preparar las bases de conocimiento para la consulta en lenguaje natural.
+                <strong>Crear Agentes de Datos:</strong> Preparar las bases de conocimiento para la consulta en lenguaje
+                natural.
               </div>
             </div>
             <div class="step-data d-flex align-center gap-4">
               <v-chip color="primary" variant="flat" size="small" class="font-weight-bold">4</v-chip>
               <div>
-                <strong>Visualización e IA:</strong> Tomar decisiones más rápidas a través de Power BI y Microsoft Copilot.
+                <strong>Visualización e IA:</strong> Tomar decisiones más rápidas a través de Power BI y Microsoft
+                Copilot.
               </div>
             </div>
           </v-card>
@@ -138,7 +144,8 @@
               <h3 class="text-h5 font-weight-bold text-primary mb-3">OneLake</h3>
               <h4 class="text-subtitle-2 text-secondary mb-3">Un solo lago, una sola copia</h4>
               <p class="text-body-2 text-grey-darken-1 leading-relaxed">
-                Unifica todo el almacenamiento en un lago de datos unificado abierto en cada capa. Conecta bases de datos y archivos de múltiples nubes con cero procesos ETL adicionales.
+                Unifica todo el almacenamiento en un lago de datos unificado abierto en cada capa. Conecta bases de
+                datos y archivos de múltiples nubes con cero procesos ETL adicionales.
               </p>
             </v-card>
           </v-col>
@@ -152,7 +159,8 @@
               <h3 class="text-h5 font-weight-bold text-primary mb-3">Copilot Acelerado</h3>
               <h4 class="text-subtitle-2 text-secondary mb-3">IA integrada en tus reportes</h4>
               <p class="text-body-2 text-grey-darken-1 leading-relaxed">
-                Acelera la visualización de datos empresariales utilizando Copilot. Genera reportes interactivos completos de Power BI simplemente escribiendo instrucciones en lenguaje natural.
+                Acelera la visualización de datos empresariales utilizando Copilot. Genera reportes interactivos
+                completos de Power BI simplemente escribiendo instrucciones en lenguaje natural.
               </p>
             </v-card>
           </v-col>
@@ -166,7 +174,8 @@
               <h3 class="text-h5 font-weight-bold text-primary mb-3">Seguridad y Confianza</h3>
               <h4 class="text-subtitle-2 text-secondary mb-3">Gobernanza centralizada de datos</h4>
               <p class="text-body-2 text-grey-darken-1 leading-relaxed">
-                Unifica los datos con la máxima seguridad. Controla los permisos, analiza el linaje de los archivos y aplica políticas de cumplimiento centralizadas mediante Microsoft Purview.
+                Unifica los datos con la máxima seguridad. Controla los permisos, analiza el linaje de los archivos y
+                aplica políticas de cumplimiento centralizadas mediante Microsoft Purview.
               </p>
             </v-card>
           </v-col>
@@ -178,13 +187,9 @@
     <v-container class="mt-16">
       <v-row align="center">
         <v-col cols="12" md="6" class="text-center py-8">
-          <v-img
-            alt="Data Agents en acción"
+          <v-img alt="Data Agents en acción"
             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-            class="rounded-xl border shadow-lg"
-            max-height="400"
-            cover
-          />
+            class="rounded-xl border shadow-lg" max-height="400" cover />
         </v-col>
 
         <v-col cols="12" md="6" class="ps-md-10 text-left">
@@ -195,10 +200,14 @@
             Descubre los Data Agents
           </h2>
           <p class="text-body-1 text-grey-darken-2 mb-4 leading-relaxed">
-            Los <strong>Agentes de Datos (Data Agents)</strong> de Microsoft Fabric permiten a cualquier usuario de negocio interrogar las bases de datos de la empresa en lenguaje natural y obtener respuestas precisas de forma inmediata.
+            Los <strong>Agentes de Datos (Data Agents)</strong> de Microsoft Fabric permiten a cualquier usuario de
+            negocio interrogar las bases de datos de la empresa en lenguaje natural y obtener respuestas precisas de
+            forma inmediata.
           </p>
           <p class="text-body-1 text-grey-darken-2 mb-6 leading-relaxed">
-            Ya no dependes de la escritura de consultas SQL complejas o de la cola de soporte de IT. Los agentes traducen las preguntas en tiempo real y devuelven explicaciones detalladas, gráficos explicativos, mapas o líneas de tendencia.
+            Ya no dependes de la escritura de consultas SQL complejas o de la cola de soporte de IT. Los agentes
+            traducen las preguntas en tiempo real y devuelven explicaciones detalladas, gráficos explicativos, mapas o
+            líneas de tendencia.
           </p>
 
           <div class="features-list">
@@ -208,11 +217,13 @@
             </div>
             <div class="d-flex align-center gap-2 mb-3">
               <v-icon color="secondary">mdi-check-circle-outline</v-icon>
-              <span class="text-body-2 text-grey-darken-3">Resultados en múltiples formatos (tablas, gráficos, resúmenes)</span>
+              <span class="text-body-2 text-grey-darken-3">Resultados en múltiples formatos (tablas, gráficos,
+                resúmenes)</span>
             </div>
             <div class="d-flex align-center gap-2">
               <v-icon color="secondary">mdi-check-circle-outline</v-icon>
-              <span class="text-body-2 text-grey-darken-3">Consumo directo en Microsoft Teams, Copilot Studio o Power BI</span>
+              <span class="text-body-2 text-grey-darken-3">Consumo directo en Microsoft Teams, Copilot Studio o Power
+                BI</span>
             </div>
           </div>
         </v-col>
@@ -240,7 +251,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Data Factory</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  Crea flujos de datos e integra más de 170 fuentes (locales y en la nube) en lenguaje natural y con guías claras.
+                  Crea flujos de datos e integra más de 170 fuentes (locales y en la nube) en lenguaje natural y con
+                  guías claras.
                 </p>
               </div>
             </v-card>
@@ -253,7 +265,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Data Engineering</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  Refina código en notebooks de Apache Spark de forma acelerada, automatiza tareas rutinarias y acelera el desarrollo.
+                  Refina código en notebooks de Apache Spark de forma acelerada, automatiza tareas rutinarias y acelera
+                  el desarrollo.
                 </p>
               </div>
             </v-card>
@@ -266,7 +279,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Data Science</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  Crea, entrena y realiza el seguimiento de modelos de aprendizaje automático directamente sobre tus datos unificados.
+                  Crea, entrena y realiza el seguimiento de modelos de aprendizaje automático directamente sobre tus
+                  datos unificados.
                 </p>
               </div>
             </v-card>
@@ -279,7 +293,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Data Warehouse</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  Convierte consultas en lenguaje natural a T-SQL complejo, autocompleta código y optimiza las estructuras de tus almacenes.
+                  Convierte consultas en lenguaje natural a T-SQL complejo, autocompleta código y optimiza las
+                  estructuras de tus almacenes.
                 </p>
               </div>
             </v-card>
@@ -292,7 +307,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Real-Time Intelligence</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  Genera reportes y analiza datos en tiempo real provenientes de dispositivos IoT o registros operativos sin escribir código.
+                  Genera reportes y analiza datos en tiempo real provenientes de dispositivos IoT o registros operativos
+                  sin escribir código.
                 </p>
               </div>
             </v-card>
@@ -305,7 +321,8 @@
               <div>
                 <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Power BI</h4>
                 <p class="text-caption text-grey-darken-1 mb-0 leading-normal">
-                  El líder indiscutible de visualización de datos comerciales, completamente integrado para responder a preguntas de Q&A.
+                  El líder indiscutible de visualización de datos comerciales, completamente integrado para responder a
+                  preguntas de Q&A.
                 </p>
               </div>
             </v-card>
@@ -320,7 +337,8 @@
       <v-container class="position-relative z-index-2">
         <h2 class="text-h3 font-weight-black mb-4">¿Preparado para desbloquear el valor de tus datos?</h2>
         <p class="text-h6 font-weight-regular text-grey-lighten-2 max-w-650 mx-auto mb-8 leading-relaxed">
-          En IMAX PC te ayudamos a migrar tus bases de datos, integrar tus silos en OneLake y estructurar tu almacén de datos corporativo para que tu negocio lidere la era de la inteligencia artificial.
+          En IMAX PC te ayudamos a migrar tus bases de datos, integrar tus silos en OneLake y estructurar tu almacén de
+          datos corporativo para que tu negocio lidere la era de la inteligencia artificial.
         </p>
         <v-btn class="cta-secondary-glow px-10 py-3" color="secondary" size="x-large" to="/contacto">
           Quiero Consultar con un Arquitecto de Datos
@@ -332,24 +350,25 @@
 </template>
 
 <script setup lang="ts">
-  import { onMounted } from 'vue'
+import { onMounted } from 'vue'
 
-  onMounted(() => {
-    document.title = 'Microsoft Fabric & Inteligencia de Datos | Imax PC'
-  })
+onMounted(() => {
+  document.title = 'Microsoft Fabric & Inteligencia de Datos | Imax PC'
+})
 
-  function scrollToSection (selector: string) {
-    const el = document.querySelector(selector)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+function scrollToSection(selector: string) {
+  const el = document.querySelector(selector)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
   }
+}
 </script>
 
 <script lang="ts">
-  export default {
-    name: 'MicrosoftFabricPage',
-  }
+import imgOneLake from '@/assets/images/onelake.webp'
+export default {
+  name: 'MicrosoftFabricPage',
+}
 </script>
 
 <style scoped>
@@ -452,6 +471,24 @@
   border-color: white !important;
 }
 
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(77, 183, 227, 0.4));
+    opacity: 0.9;
+  }
+
+  50% {
+    filter: drop-shadow(0 0 20px rgba(77, 183, 227, 0.8));
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
 /* Data Flow Graphic */
 .data-flow-container {
   width: 100%;
@@ -474,8 +511,13 @@
 }
 
 @keyframes rotate-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .glassmorphism-card {
@@ -495,8 +537,15 @@
 }
 
 @keyframes floating-icon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Pilares */
@@ -531,7 +580,7 @@
 .workload-card:hover {
   transform: translateY(-5px);
   border-color: #4DB7E3 !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Call to action */
