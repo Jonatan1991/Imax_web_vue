@@ -113,25 +113,21 @@ export const useMainMenuStore = defineStore('MainMenu', {
             ],
           },
           {
-            icon: 'mdi-package',
-            label: 'Producto 3',
-            to: '/productos/producto3',
+            icon: 'mdi-devices',
+            label: 'Accesorios y Redes',
+            to: '/productos/accesorios',
             submenu: [
               {
-                label: 'Producto 3.1',
-                to: '/productos/producto3.1',
+                label: 'Periféricos',
+                to: '/productos/accesorios/perifericos',
               },
               {
-                label: 'Producto 3.2',
-                to: '/productos/producto3.2',
+                label: 'Almacenamiento',
+                to: '/productos/accesorios/almacenamiento',
               },
               {
-                label: 'Producto 3.3',
-                to: '/productos/producto3.3',
-              },
-              {
-                label: 'Producto 3.4',
-                to: '/productos/producto3.4',
+                label: 'Conectividad y Redes',
+                to: '/productos/accesorios/redes',
               },
             ],
           },
