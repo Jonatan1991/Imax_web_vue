@@ -65,15 +65,15 @@ npm run build
 
 ## 🧪 Available Scripts
 
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
-- `npm run build-only`
-- `npm run type-check`
-- `npm run lint`
-- `npm run lint:fix`
-- `npm run mcp`
-- `npm run mcp:revert`
+- **`npm run dev`**: Inicia el servidor de desarrollo local de Vite con soporte para recarga en caliente (HMR).
+- **`npm run build`**: Compila y optimiza la aplicación para producción, realizando en paralelo la verificación de tipos de TypeScript y la generación del bundle.
+- **`npm run preview`**: Levanta un servidor local para previsualizar la versión de producción compilada en la carpeta `dist`.
+- **`npm run build-only`**: Realiza la compilación con Vite para producción directamente, omitiendo el chequeo de tipos de TypeScript.
+- **`npm run type-check`**: Ejecuta el compilador de TypeScript (`vue-tsc`) para realizar una comprobación estática de tipos en el proyecto.
+- **`npm run lint`**: Ejecuta ESLint para analizar el código en busca de problemas de estilo, sintaxis y reglas de desarrollo.
+- **`npm run lint:fix`**: Ejecuta ESLint y corrige automáticamente los errores de formato y estilo que sean corregibles.
+- **`npm run mcp`**: Aplica las reglas y configuraciones del proyecto a través de la herramienta `@intellectronica/ruler` (Vuetify MCP).
+- **`npm run mcp:revert`**: Revierte y deshace los cambios o reglas aplicadas mediante la herramienta de Ruler.
 
 ## 💪 Support Vuetify Development
 
