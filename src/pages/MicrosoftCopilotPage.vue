@@ -7,46 +7,65 @@
 
       <v-container class="position-relative z-index-2 py-16">
         <v-row align="center">
-          <v-col cols="12" md="7" class="text-left animate-slide-up">
+          <v-col class="text-left animate-slide-up" cols="12" md="7">
             <div class="premium-tag mb-4">PRODUCTIVIDAD E INTELIGENCIA ARTIFICIAL</div>
+
             <h1 class="text-h2 font-weight-black mb-4 text-gradient leading-tight">
               Microsoft 365 Copilot
             </h1>
+
             <h2 class="text-h4 font-weight-bold text-secondary mb-6">
               La IA diseñada para el trabajo del futuro
             </h2>
+
             <p class="text-h6 text-grey-lighten-2 mb-8 leading-relaxed font-weight-regular max-w-650">
               Pasa de la simple asistencia conversacional a la automatización agentica real. Empodera a tu equipo con un
               coworker inteligente integrado en sus herramientas diarias y transforma tus procesos de negocio.
             </p>
+
             <div class="d-flex flex-wrap gap-4">
               <v-btn class="cta-primary-glow px-8" color="secondary" size="large" to="/contacto">
                 Comenzar Transformación
                 <v-icon end>mdi-rocket-launch</v-icon>
               </v-btn>
-              <v-btn class="cta-secondary-outline px-8" size="large" variant="outlined"
-                @click="scrollToSection('#comparativa')">
+
+              <v-btn
+                class="cta-secondary-outline px-8"
+                size="large"
+                variant="outlined"
+                @click="scrollToSection('#comparativa')"
+              >
                 Ver Capacidades
               </v-btn>
             </div>
           </v-col>
 
-          <v-col cols="12" md="5" class="d-flex justify-center position-relative py-8">
+          <v-col class="d-flex justify-center position-relative py-8" cols="12" md="5">
             <!-- Representación Visual de Copilot (Glow effects) -->
             <div class="copilot-glow-container">
-              <div class="glow-orb main-orb"></div>
-              <div class="glow-orb secondary-orb"></div>
+              <div class="glow-orb main-orb" />
+              <div class="glow-orb secondary-orb" />
+
               <v-card class="glassmorphism-card pa-6 text-center rounded-xl elevation-10">
-                <v-img :src="imgCopilot" alt="Microsoft Copilot" width="100" height="100"
-                  class="mx-auto mb-4 animate-pulse" contain />
+                <v-img
+                  alt="Microsoft Copilot"
+                  class="mx-auto mb-4 animate-pulse"
+                  contain
+                  height="100"
+                  :src="imgCopilot"
+                  width="100"
+                />
+
                 <h3 class="text-h5 font-weight-bold text-white mb-2">Microsoft IQ Platform</h3>
+
                 <p class="text-caption text-grey-lighten-1 mb-4">
                   Orquestación inteligente entre personas, datos y procesos.
                 </p>
+
                 <div class="d-flex justify-center gap-2 flex-wrap">
-                  <v-chip class="font-weight-medium" size="small" color="secondary" variant="flat">Work IQ</v-chip>
-                  <v-chip class="font-weight-medium" size="small" color="secondary" variant="flat">Foundry IQ</v-chip>
-                  <v-chip class="font-weight-medium" size="small" color="secondary" variant="flat">Fabric IQ</v-chip>
+                  <v-chip class="font-weight-medium" color="secondary" size="small" variant="flat">Work IQ</v-chip>
+                  <v-chip class="font-weight-medium" color="secondary" size="small" variant="flat">Foundry IQ</v-chip>
+                  <v-chip class="font-weight-medium" color="secondary" size="small" variant="flat">Fabric IQ</v-chip>
                 </div>
               </v-card>
             </div>
@@ -61,10 +80,13 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           LA VISIÓN "FRONTIER FIRM"
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           ¿Qué es una Empresa Frontera?
         </h2>
+
         <div class="divider mx-auto mb-4" />
+
         <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
           Es aquella organización que ha integrado la inteligencia artificial no solo como un buscador de información,
           sino como el motor operativo del negocio.
@@ -73,15 +95,18 @@
 
       <v-row justify="center">
         <!-- Tarjeta 1: Productividad -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card class="frontier-card w-100 pa-6 d-flex flex-column rounded-xl border elevation-1 text-center">
             <div class="icon-circle mx-auto mb-6 bg-blue-lighten-5">
               <v-icon color="primary" size="32">mdi-account-star</v-icon>
             </div>
+
             <h3 class="text-h5 font-weight-bold text-primary mb-3">Productividad</h3>
+
             <div class="chip-holder mb-4">
-              <v-chip color="primary" class="font-weight-bold">M365 Copilot</v-chip>
+              <v-chip class="font-weight-bold" color="primary">M365 Copilot</v-chip>
             </div>
+
             <p class="text-body-2 text-grey-darken-1 leading-relaxed">
               Cada persona de tu equipo cuenta con un asistente de IA personalizado que entiende su estilo de trabajo,
               correos, documentos y reuniones.
@@ -90,15 +115,18 @@
         </v-col>
 
         <!-- Tarjeta 2: Automatización -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card class="frontier-card w-100 pa-6 d-flex flex-column rounded-xl border elevation-1 text-center">
             <div class="icon-circle mx-auto mb-6 bg-cyan-lighten-5">
               <v-icon color="secondary" size="32">mdi-robot-industrial</v-icon>
             </div>
+
             <h3 class="text-h5 font-weight-bold text-primary mb-3">Automatización</h3>
+
             <div class="chip-holder mb-4">
-              <v-chip color="secondary" class="font-weight-bold text-white">Copilot + Agentes</v-chip>
+              <v-chip class="font-weight-bold text-white" color="secondary">Copilot + Agentes</v-chip>
             </div>
+
             <p class="text-body-2 text-grey-darken-1 leading-relaxed">
               Los procesos de negocio clave se automatizan de extremo a extremo mediante agentes inteligentes creados
               con Copilot Studio.
@@ -107,15 +135,18 @@
         </v-col>
 
         <!-- Tarjeta 3: Supervisión -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card class="frontier-card w-100 pa-6 d-flex flex-column rounded-xl border elevation-1 text-center">
             <div class="icon-circle mx-auto mb-6 bg-purple-lighten-5">
               <v-icon color="purple" size="32">mdi-account-cog</v-icon>
             </div>
+
             <h3 class="text-h5 font-weight-bold text-primary mb-3">Supervisión</h3>
+
             <div class="chip-holder mb-4">
-              <v-chip color="purple" class="font-weight-bold text-white">Empresa Frontier</v-chip>
+              <v-chip class="font-weight-bold text-white" color="purple">Empresa Frontier</v-chip>
             </div>
+
             <p class="text-body-2 text-grey-darken-1 leading-relaxed">
               Una empresa gestionada por humanos y operada por IA. El control y las directivas críticas siguen en tus
               manos mientras los agentes ejecutan en segundo plano.
@@ -133,15 +164,19 @@
             <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
               MÁS ALLÁ DEL SIMPLE PROMPT
             </span>
+
             <h2 class="text-h3 font-weight-black text-primary mb-6 leading-tight">
               Los 4 Modos de Trabajo en la Era de la IA
             </h2>
+
             <p class="text-body-1 text-grey-darken-2 mb-6 leading-relaxed">
               La IA moderna amplía enormemente quién puede realizar trabajo de alto valor. Dependiendo de la complejidad
               y tu nivel de involucramiento, puedes colaborar con la IA de 4 formas diferentes:
             </p>
+
             <div class="d-flex align-center gap-4 py-4 px-6 rounded-lg bg-white border border-primary-lighten-4 mb-4">
               <span class="text-h4 font-weight-bold text-primary">49%</span>
+
               <p class="text-body-2 text-grey-darken-3 mb-0 leading-normal">
                 de las interacciones corporativas con IA apoyan el <strong>análisis avanzado, el razonamiento y la toma
                   de decisiones críticas</strong>.
@@ -157,6 +192,7 @@
                     <v-icon color="secondary">mdi-bullseye-arrow</v-icon>
                     <h4 class="text-h6 font-weight-bold text-primary mb-0">Delegación</h4>
                   </div>
+
                   <p class="text-caption text-grey-darken-2 mb-0">
                     El humano establece la dirección general y la IA ejecuta procesos estructurados, agendas o
                     generación y adaptación de contenido.
@@ -170,6 +206,7 @@
                     <v-icon color="secondary">mdi-account-group</v-icon>
                     <h4 class="text-h6 font-weight-bold text-primary mb-0">Colaboración</h4>
                   </div>
+
                   <p class="text-caption text-grey-darken-2 mb-0">
                     Co-creación interactiva en varios ciclos. La IA construye análisis paso a paso donde cada resultado
                     refina la siguiente pregunta.
@@ -183,6 +220,7 @@
                     <v-icon color="secondary">mdi-help-circle-outline</v-icon>
                     <h4 class="text-h6 font-weight-bold text-primary mb-0">Consulta</h4>
                   </div>
+
                   <p class="text-caption text-grey-darken-2 mb-0">
                     Búsqueda ágil de datos y definiciones, reescritura de textos para mayor claridad o petición de
                     consejos y revisiones de material en curso.
@@ -196,6 +234,7 @@
                     <v-icon color="secondary">mdi-compass-outline</v-icon>
                     <h4 class="text-h6 font-weight-bold text-primary mb-0">Exploración</h4>
                   </div>
+
                   <p class="text-caption text-grey-darken-2 mb-0">
                     Pruebas e innovación. Evaluar si la IA puede resolver un nuevo proceso de negocio y descubrir los
                     límites autónomos del agente.
@@ -214,10 +253,13 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           LA EVOLUCIÓN AGENTICA
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           M365 Copilot vs Copilot Cowork
         </h2>
+
         <div class="divider mx-auto mb-4" />
+
         <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
           ¿En qué se diferencia un asistente de chat convencional de un agente de ejecución completo?
         </p>
@@ -226,35 +268,43 @@
       <!-- Cuadrícula Comparativa Visual -->
       <v-row class="mt-4" justify="center">
         <!-- Columna 1: Copilot Standard -->
-        <v-col cols="12" md="6" class="d-flex">
+        <v-col class="d-flex" cols="12" md="6">
           <v-card class="compare-card compare-copilot w-100 pa-6 rounded-xl border elevation-2">
             <div class="d-flex align-center justify-space-between mb-6">
               <h3 class="text-h5 font-weight-black text-primary">Microsoft 365 Copilot</h3>
-              <v-chip color="primary" class="font-weight-bold">Asistente conversacional</v-chip>
+              <v-chip class="font-weight-bold" color="primary">Asistente conversacional</v-chip>
             </div>
+
             <div class="compare-bullets">
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="primary" class="mt-1">mdi-chevron-right</v-icon>
+                <v-icon class="mt-1" color="primary">mdi-chevron-right</v-icon>
+
                 <div>
                   <strong>Interacción prompt a prompt:</strong> Responde a tus preguntas directamente en el flujo de
                   trabajo.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="primary" class="mt-1">mdi-chevron-right</v-icon>
+                <v-icon class="mt-1" color="primary">mdi-chevron-right</v-icon>
+
                 <div>
                   <strong>Acciones puntuales:</strong> Excelente para resumir correos, generar borradores o analizar
                   hojas de cálculo individuales.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="primary" class="mt-1">mdi-chevron-right</v-icon>
+                <v-icon class="mt-1" color="primary">mdi-chevron-right</v-icon>
+
                 <div>
                   <strong>Modelos del mercado:</strong> Basado principalmente en los últimos modelos GPT de OpenAI.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="primary" class="mt-1">mdi-chevron-right</v-icon>
+                <v-icon class="mt-1" color="primary">mdi-chevron-right</v-icon>
+
                 <div>
                   <strong>Control individual:</strong> Tú ejecutas y activas cada acción de forma secuencial.
                 </div>
@@ -264,38 +314,48 @@
         </v-col>
 
         <!-- Columna 2: Copilot Cowork -->
-        <v-col cols="12" md="6" class="d-flex">
+        <v-col class="d-flex" cols="12" md="6">
           <v-card
-            class="compare-card compare-cowork w-100 pa-6 rounded-xl border border-secondary elevation-4 position-relative">
+            class="compare-card compare-cowork w-100 pa-6 rounded-xl border border-secondary elevation-4 position-relative"
+          >
             <div class="best-value-badge">VANGUARDIA</div>
+
             <div class="d-flex align-center justify-space-between mb-6">
               <h3 class="text-h5 font-weight-black text-white">Copilot Cowork (Agentic)</h3>
-              <v-chip color="secondary" class="font-weight-bold text-white">Agente de ejecución</v-chip>
+              <v-chip class="font-weight-bold text-white" color="secondary">Agente de ejecución</v-chip>
             </div>
+
             <div class="compare-bullets text-white">
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="secondary" class="mt-1">mdi-check-all</v-icon>
+                <v-icon class="mt-1" color="secondary">mdi-check-all</v-icon>
+
                 <div>
                   <strong>Planificación Autónoma:</strong> Describes un objetivo general y el agente planifica e inicia
                   las tareas necesarias.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="secondary" class="mt-1">mdi-check-all</v-icon>
+                <v-icon class="mt-1" color="secondary">mdi-check-all</v-icon>
+
                 <div>
                   <strong>Flujos multipaso:</strong> Realiza trabajos complejos de larga duración interactuando entre
                   múltiples aplicaciones y sistemas de forma autónoma.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="secondary" class="mt-1">mdi-check-all</v-icon>
+                <v-icon class="mt-1" color="secondary">mdi-check-all</v-icon>
+
                 <div>
                   <strong>Multimodelo (GPT + Claude):</strong> Aprovecha la increíble capacidad de razonamiento de
                   Anthropic Claude y la redacción de GPT de forma integrada.
                 </div>
               </div>
+
               <div class="bullet-item d-flex gap-3 mb-4">
-                <v-icon color="secondary" class="mt-1">mdi-check-all</v-icon>
+                <v-icon class="mt-1" color="secondary">mdi-check-all</v-icon>
+
                 <div>
                   <strong>Seguridad y Aprobaciones:</strong> Pide aprobación humana previa antes de realizar cualquier
                   acción sensible o crítica.
@@ -312,24 +372,31 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" md="6">
-            <v-img alt="Microsoft Agentic AI"
+            <v-img
+              alt="Microsoft Agentic AI"
+              class="rounded-xl border shadow-lg"
+              cover
+              max-height="400"
               src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
-              class="rounded-xl border shadow-lg" max-height="400" cover />
+            />
           </v-col>
 
-          <v-col cols="12" md="6" class="ps-md-10">
+          <v-col class="ps-md-10" cols="12" md="6">
             <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
               APLICACIÓN PRÁCTICA
             </span>
+
             <h2 class="text-h3 font-weight-black text-primary mb-6 leading-tight">
               ¿Qué puedes lograr con Copilot?
             </h2>
 
             <div class="use-case-list">
               <div class="d-flex gap-4 mb-5">
-                <v-icon color="primary" class="mt-1" size="24">mdi-email-fast</v-icon>
+                <v-icon class="mt-1" color="primary" size="24">mdi-email-fast</v-icon>
+
                 <div>
                   <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Redacción y Comunicación</h4>
+
                   <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
                     Escribe correos profesionales, propuestas para clientes y resúmenes de reuniones largas en segundos,
                     adaptando el tono y enfoque automáticamente.
@@ -338,9 +405,11 @@
               </div>
 
               <div class="d-flex gap-4 mb-5">
-                <v-icon color="primary" class="mt-1" size="24">mdi-file-chart</v-icon>
+                <v-icon class="mt-1" color="primary" size="24">mdi-file-chart</v-icon>
+
                 <div>
                   <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Análisis e Informes Financieros</h4>
+
                   <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
                     Extrae tendencias de Excel, genera predicciones de ventas y visualizaciones complejas sin escribir
                     una sola fórmula de forma manual.
@@ -349,9 +418,11 @@
               </div>
 
               <div class="d-flex gap-4">
-                <v-icon color="primary" class="mt-1" size="24">mdi-shield-lock-outline</v-icon>
+                <v-icon class="mt-1" color="primary" size="24">mdi-shield-lock-outline</v-icon>
+
                 <div>
                   <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Gobernanza del Cumplimiento (GDPR)</h4>
+
                   <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
                     Tus datos corporativos nunca se utilizan para entrenar los modelos públicos. Todo el procesamiento
                     se realiza de forma aislada dentro de tu propio inquilino de M365 (Data Boundary de la UE).
@@ -370,28 +441,35 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           INVERSIÓN E INCENTIVOS
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           Nuestras Ofertas de Copilot
         </h2>
+
         <div class="divider mx-auto mb-4" />
+
         <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
           Licencias flexibles y promociones exclusivas del canal de socios para acelerar tu adopción digital.
         </p>
       </div>
 
-      <v-row justify="center" align="stretch">
+      <v-row align="stretch" justify="center">
         <!-- Plan Chat -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card
-            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1">
+            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1"
+          >
             <div>
               <h3 class="text-h5 font-weight-bold text-primary mb-2">Copilot Chat</h3>
               <p class="text-caption text-grey mb-6">Asistente básico de chat web seguro</p>
+
               <div class="price-container mb-6">
                 <span class="text-h4 font-weight-black text-primary">Incluido</span>
                 <span class="text-caption text-grey d-block">Con tu licencia Microsoft 365 elegible</span>
               </div>
+
               <v-divider class="mb-6" />
+
               <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                 <li class="mb-2">Chat de IA seguro basado en la web (LLM)</li>
                 <li class="mb-2">Protección de datos empresariales integrada</li>
@@ -399,26 +477,38 @@
                 <li class="mb-2 text-decoration-line-through text-grey">Sin acceso a tus datos de trabajo (Graph)</li>
               </ul>
             </div>
-            <v-btn block color="primary" variant="outlined" class="mt-6 rounded-lg font-weight-bold" to="/contacto">
+
+            <v-btn
+              block
+              class="mt-6 rounded-lg font-weight-bold"
+              color="primary"
+              to="/contacto"
+              variant="outlined"
+            >
               Consultar Licencia M365
             </v-btn>
           </v-card>
         </v-col>
 
         <!-- Plan Business (Más Vendido) -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card
-            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border border-secondary elevation-3 position-relative">
+            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border border-secondary elevation-3 position-relative"
+          >
             <div class="popular-tag">MÁS POPULAR</div>
+
             <div>
               <h3 class="text-h5 font-weight-bold text-primary mb-2">Copilot Business</h3>
               <p class="text-caption text-grey mb-6">Productividad integrada en aplicaciones Office</p>
+
               <div class="price-container mb-6">
                 <span class="text-h4 font-weight-black text-primary">21 USD</span>
                 <span class="text-caption text-grey"> / usuario / mes (anual)</span>
                 <div class="promo-pill mt-2">~15% OFF Promo CSP Active</div>
               </div>
+
               <v-divider class="mb-6" />
+
               <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                 <li class="mb-2">Acceso completo a tus datos vía Microsoft Graph</li>
                 <li class="mb-2">Integrado en Word, Excel, PPT, Outlook y Teams</li>
@@ -426,26 +516,35 @@
                 <li class="mb-2">Creación de agentes básicos con Copilot Studio</li>
               </ul>
             </div>
-            <v-btn block color="secondary" class="mt-6 rounded-lg font-weight-bold text-white elevation-1"
-              to="/contacto">
+
+            <v-btn
+              block
+              class="mt-6 rounded-lg font-weight-bold text-white elevation-1"
+              color="secondary"
+              to="/contacto"
+            >
               Activar Licencia
             </v-btn>
           </v-card>
         </v-col>
 
         <!-- Plan Enterprise -->
-        <v-col cols="12" md="4" class="d-flex">
+        <v-col class="d-flex" cols="12" md="4">
           <v-card
-            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1">
+            class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1"
+          >
             <div>
               <h3 class="text-h5 font-weight-bold text-primary mb-2">Copilot Enterprise</h3>
               <p class="text-caption text-grey mb-6">IA agentica corporativa sin limitaciones</p>
+
               <div class="price-container mb-6">
                 <span class="text-h4 font-weight-black text-primary">30 USD</span>
                 <span class="text-caption text-grey"> / usuario / mes (anual)</span>
                 <div class="promo-pill promo-blue mt-2">Hasta 40% de descuento por volumen</div>
               </div>
+
               <v-divider class="mb-6" />
+
               <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                 <li class="mb-2">Todo lo incluido en Copilot Business</li>
                 <li class="mb-2">Sin límite de usuarios contratados</li>
@@ -453,7 +552,14 @@
                 <li class="mb-2">Capacidades agenticas multimodelo a gran escala</li>
               </ul>
             </div>
-            <v-btn block color="primary" variant="outlined" class="mt-6 rounded-lg font-weight-bold" to="/contacto">
+
+            <v-btn
+              block
+              class="mt-6 rounded-lg font-weight-bold"
+              color="primary"
+              to="/contacto"
+              variant="outlined"
+            >
               Pedir Presupuesto
             </v-btn>
           </v-card>
@@ -463,14 +569,18 @@
 
     <!-- 7. FOOTER CALL TO ACTION -->
     <v-sheet
-      class="call-to-action-section bg-primary text-white py-16 mt-16 position-relative overflow-hidden text-center">
+      class="call-to-action-section bg-primary text-white py-16 mt-16 position-relative overflow-hidden text-center"
+    >
       <div class="cta-overlay" />
+
       <v-container class="position-relative z-index-2">
         <h2 class="text-h3 font-weight-black mb-4">¿Preparado para convertirte en una Frontier Firm?</h2>
+
         <p class="text-h6 font-weight-regular text-grey-lighten-2 max-w-650 mx-auto mb-8 leading-relaxed">
           En IMAX PC no solo te vendemos las licencias. Te acompañamos en todo el proceso de adopción, auditoría de
           datos, seguridad corporativa y capacitación de tu equipo.
         </p>
+
         <v-btn class="cta-secondary-glow px-10 py-3" color="secondary" size="x-large" to="/contacto">
           Quiero una Consultoría Gratuita
           <v-icon end size="20">mdi-headset</v-icon>
@@ -481,25 +591,25 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import imgCopilot from '@/assets/images/15129177.webp'
+  import { onMounted } from 'vue'
+  import imgCopilot from '@/assets/images/15129177.webp'
 
-onMounted(() => {
-  document.title = 'Microsoft 365 Copilot & IA | Imax PC'
-})
+  onMounted(() => {
+    document.title = 'Microsoft 365 Copilot & IA | Imax PC'
+  })
 
-function scrollToSection(selector: string) {
-  const el = document.querySelector(selector)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
+  function scrollToSection (selector: string) {
+    const el = document.querySelector(selector)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
   }
-}
 </script>
 
 <script lang="ts">
-export default {
-  name: 'MicrosoftCopilotPage',
-}
+  export default {
+    name: 'MicrosoftCopilotPage',
+  }
 </script>
 
 <style scoped>

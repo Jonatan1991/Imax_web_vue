@@ -67,7 +67,7 @@ export const useMainMenuStore = defineStore('MainMenu', {
                 label: 'Microsoft Fabric & Big Data',
                 to: '/servicios/microsoft-fabric',
               },
-            ]
+            ],
           },
           {
             label: 'Automatiza tu Empresa',

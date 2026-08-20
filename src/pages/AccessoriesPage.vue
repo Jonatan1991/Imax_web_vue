@@ -168,16 +168,29 @@
   const searchQuery = ref('')
   const selectedCategory = ref('All')
 
-  const updateCategoryFromQuery = () => {
+  function updateCategoryFromQuery () {
     const catQuery = route.query.cat
-    if (catQuery === 'Perifericos' || catQuery === 'Periféricos') {
-      selectedCategory.value = 'Periféricos'
-    } else if (catQuery === 'Almacenamiento') {
-      selectedCategory.value = 'Almacenamiento'
-    } else if (catQuery === 'Redes' || catQuery === 'Conectividad y Redes') {
-      selectedCategory.value = 'Redes'
-    } else {
-      selectedCategory.value = 'All'
+    switch (catQuery) {
+      case 'Perifericos':
+      case 'Periféricos': {
+        selectedCategory.value = 'Periféricos'
+
+        break
+      }
+      case 'Almacenamiento': {
+        selectedCategory.value = 'Almacenamiento'
+
+        break
+      }
+      case 'Redes':
+      case 'Conectividad y Redes': {
+        selectedCategory.value = 'Redes'
+
+        break
+      }
+      default: {
+        selectedCategory.value = 'All'
+      }
     }
   }
 

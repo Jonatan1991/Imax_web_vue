@@ -3,13 +3,16 @@
     <!-- HERO SECTION -->
     <header class="hero-section text-white d-flex align-center position-relative overflow-hidden">
       <div class="gradient-overlay" />
+
       <v-container class="position-relative z-index-2 py-16 text-center">
         <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3">
           TALLER INFORMÁTICO Y VENTA
         </span>
+
         <h1 class="text-h2 font-weight-black mb-4 text-gradient leading-tight">
           Especialistas en Ordenadores
         </h1>
+
         <p class="text-h6 text-grey-lighten-2 mb-8 leading-relaxed font-weight-regular max-w-750 mx-auto">
           Desde ordenadores a medida de alta gama hasta reparaciones express en taller y planes de renovación para dar una segunda vida a tus equipos viejos.
         </p>
@@ -18,16 +21,25 @@
 
     <!-- TABBED NAVIGATION -->
     <v-container class="mt-8">
-      <v-tabs v-model="activeTab" bg-color="transparent" color="secondary" align-tabs="center" grow class="border-bottom mb-8">
-        <v-tab value="medida" class="font-weight-bold text-body-1">
+      <v-tabs
+        v-model="activeTab"
+        align-tabs="center"
+        bg-color="transparent"
+        class="border-bottom mb-8"
+        color="secondary"
+        grow
+      >
+        <v-tab class="font-weight-bold text-body-1" value="medida">
           <v-icon start>mdi-desktop-classic</v-icon>
           Ordenadores a Medida
         </v-tab>
-        <v-tab value="reparacion" class="font-weight-bold text-body-1">
+
+        <v-tab class="font-weight-bold text-body-1" value="reparacion">
           <v-icon start>mdi-wrench</v-icon>
           Reparación de Ordenadores
         </v-tab>
-        <v-tab value="renovacion" class="font-weight-bold text-body-1">
+
+        <v-tab class="font-weight-bold text-body-1" value="renovacion">
           <v-icon start>mdi-rocket-launch</v-icon>
           Renovación y Ampliaciones
         </v-tab>
@@ -39,34 +51,43 @@
         <v-window-item value="medida">
           <div class="text-center mb-12">
             <h2 class="text-h3 font-weight-black text-primary mb-3">Diseño y Montaje de Equipos Especializados</h2>
+
             <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
               Configuramos y ensamblamos ordenadores a medida utilizando los mejores componentes del mercado. Testeo intensivo de 24h para garantizar estabilidad absoluta.
             </p>
           </div>
 
           <v-row>
-            <v-col cols="12" md="4" class="d-flex" v-for="pc in customPcs" :key="pc.title">
+            <v-col
+              v-for="pc in customPcs"
+              :key="pc.title"
+              class="d-flex"
+              cols="12"
+              md="4"
+            >
               <v-card class="pc-card w-100 rounded-xl border elevation-1 d-flex flex-column justify-space-between">
                 <div>
                   <div class="pc-card-header pa-6 text-white text-center position-relative" :style="{ background: pc.bg }">
-                    <v-icon size="48" class="mb-2">mdi-desktop-tower</v-icon>
+                    <v-icon class="mb-2" size="48">mdi-desktop-tower</v-icon>
                     <h3 class="text-h5 font-weight-black">{{ pc.title }}</h3>
                     <span class="text-subtitle-2 opacity-80">{{ pc.sub }}</span>
                   </div>
+
                   <div class="pa-6">
                     <p class="text-body-2 text-grey-darken-2 mb-6 leading-relaxed">{{ pc.description }}</p>
-                    
+
                     <h4 class="text-caption text-uppercase font-weight-bold text-grey-darken-1 mb-3">Configuración Recomendada</h4>
                     <v-divider class="mb-3" />
-                    
-                    <div class="spec-item mb-2 d-flex align-center gap-2" v-for="spec in pc.specs" :key="spec">
+
+                    <div v-for="spec in pc.specs" :key="spec" class="spec-item mb-2 d-flex align-center gap-2">
                       <v-icon color="secondary" size="18">mdi-chevron-right</v-icon>
                       <span class="text-body-2 text-primary font-weight-medium">{{ spec }}</span>
                     </div>
                   </div>
                 </div>
+
                 <div class="pa-6 pt-0">
-                  <v-btn color="secondary" block class="text-white font-weight-bold rounded-lg" to="/contacto">
+                  <v-btn block class="text-white font-weight-bold rounded-lg" color="secondary" to="/contacto">
                     Solicitar Presupuesto
                   </v-btn>
                 </div>
@@ -79,20 +100,29 @@
         <v-window-item value="reparacion">
           <div class="text-center mb-12">
             <h2 class="text-h3 font-weight-black text-primary mb-3">Servicio de Reparación Express en Taller</h2>
+
             <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
               Diagnosticamos y reparamos ordenadores de sobremesa y portátiles de cualquier marca. Presupuesto sin compromiso. Asistencia en taller o a domicilio.
             </p>
           </div>
 
           <v-row>
-            <v-col cols="12" md="6" class="d-flex" v-for="rep in repairs" :key="rep.problem">
+            <v-col
+              v-for="rep in repairs"
+              :key="rep.problem"
+              class="d-flex"
+              cols="12"
+              md="6"
+            >
               <v-card class="repair-card w-100 pa-6 rounded-xl border elevation-1 d-flex gap-4 align-start">
                 <div class="icon-avatar pa-3 rounded-lg" :style="{ backgroundColor: rep.color + '15' }">
                   <v-icon :color="rep.color" size="32">{{ rep.icon }}</v-icon>
                 </div>
+
                 <div class="flex-grow-1">
                   <h3 class="text-h6 font-weight-bold text-primary mb-2">{{ rep.problem }}</h3>
                   <p class="text-body-2 text-grey-darken-2 mb-4 leading-relaxed">{{ rep.solution }}</p>
+
                   <div class="d-flex justify-space-between align-center">
                     <span class="text-caption font-weight-bold text-uppercase text-grey-darken-1">Estimación:</span>
                     <span class="text-subtitle-1 font-weight-black text-secondary">{{ rep.price }}</span>
@@ -103,14 +133,23 @@
           </v-row>
 
           <v-card class="mt-12 pa-8 bg-blue-lighten-5 rounded-xl border-0 text-center max-w-700 mx-auto">
-            <v-icon color="primary" class="mb-3" size="48">mdi-alert-circle-outline</v-icon>
+            <v-icon class="mb-3" color="primary" size="48">mdi-alert-circle-outline</v-icon>
             <h3 class="text-h5 font-weight-black text-primary mb-2">¿Tu ordenador no enciende o tiene un fallo grave?</h3>
+
             <p class="text-body-1 text-grey-darken-3 mb-6">
               Tráelo directamente a nuestro taller en la <strong>Calle de Ardemans, 35, Madrid</strong> (Barrio de Salamanca). Realizamos un diagnóstico inicial rápido y te damos presupuesto ajustado sin compromiso alguno.
             </p>
+
             <div class="d-flex justify-center gap-4 flex-wrap">
-              <v-btn color="primary" class="font-weight-bold px-6" size="large" to="/contacto">Contactar con Taller</v-btn>
-              <v-btn variant="outlined" color="primary" class="font-weight-bold px-6" size="large" href="tel:+34915555555">Llamar 91 555 55 55</v-btn>
+              <v-btn class="font-weight-bold px-6" color="primary" size="large" to="/contacto">Contactar con Taller</v-btn>
+
+              <v-btn
+                class="font-weight-bold px-6"
+                color="primary"
+                href="tel:+34915555555"
+                size="large"
+                variant="outlined"
+              >Llamar 91 555 55 55</v-btn>
             </div>
           </v-card>
         </v-window-item>
@@ -119,32 +158,41 @@
         <v-window-item value="renovacion">
           <div class="text-center mb-12">
             <h2 class="text-h3 font-weight-black text-primary mb-3">Plan Renove: Dale una Nueva Vida a tu PC</h2>
+
             <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
               No compres un ordenador nuevo si puedes renovar el actual. Al cambiar el disco duro a SSD y ampliar la RAM, tu equipo irá hasta 10 veces más rápido por una fracción del coste de un ordenador nuevo.
             </p>
           </div>
 
           <v-row class="justify-center">
-            <v-col cols="12" md="4" class="d-flex" v-for="pack in renewalPacks" :key="pack.name">
+            <v-col
+              v-for="pack in renewalPacks"
+              :key="pack.name"
+              class="d-flex"
+              cols="12"
+              md="4"
+            >
               <v-card class="pack-card w-100 pa-6 rounded-xl border elevation-2 d-flex flex-column justify-space-between text-center relative">
                 <div v-if="pack.popular" class="popular-badge text-white font-weight-black text-caption py-1 px-3 bg-secondary rounded-pill">
                   EL MÁS RECOMENDADO
                 </div>
+
                 <div>
-                  <v-icon color="secondary" size="40" class="mb-4">{{ pack.icon }}</v-icon>
+                  <v-icon class="mb-4" color="secondary" size="40">{{ pack.icon }}</v-icon>
                   <h3 class="text-h5 font-weight-black text-primary mb-2">{{ pack.name }}</h3>
                   <p class="text-body-2 text-grey-darken-2 mb-6 leading-relaxed">{{ pack.description }}</p>
-                  
+
                   <v-divider class="mb-4" />
-                  
-                  <div class="pack-feature text-caption text-grey-darken-3 mb-2 font-weight-medium" v-for="feat in pack.features" :key="feat">
-                    <v-icon color="secondary" size="14" class="me-1">mdi-check</v-icon> {{ feat }}
+
+                  <div v-for="feat in pack.features" :key="feat" class="pack-feature text-caption text-grey-darken-3 mb-2 font-weight-medium">
+                    <v-icon class="me-1" color="secondary" size="14">mdi-check</v-icon> {{ feat }}
                   </div>
                 </div>
-                
+
                 <div class="mt-6">
                   <div class="text-h4 font-weight-black text-primary mb-4">{{ pack.price }}</div>
-                  <v-btn color="primary" block class="font-weight-bold rounded-lg" to="/contacto">
+
+                  <v-btn block class="font-weight-bold rounded-lg" color="primary" to="/contacto">
                     Solicitar Ampliación
                   </v-btn>
                 </div>
@@ -176,8 +224,8 @@
         'Memoria RAM: 16 GB DDR4',
         'Almacenamiento: 512 GB SSD NVMe M.2',
         'Gráficos: Integrados Intel / AMD Radeon',
-        'Chasis silencioso y fuente eficiente certificada'
-      ]
+        'Chasis silencioso y fuente eficiente certificada',
+      ],
     },
     {
       title: 'Gaming & Streaming',
@@ -189,8 +237,8 @@
         'Memoria RAM: 32 GB DDR5 Dual Channel',
         'Almacenamiento: 1 TB SSD NVMe PCIe 4.0',
         'Gráfica: NVIDIA RTX 4060 Ti / RTX 4070',
-        'Caja cristal templado y refrigeración líquida'
-      ]
+        'Caja cristal templado y refrigeración líquida',
+      ],
     },
     {
       title: 'Workstation Profesional',
@@ -202,9 +250,9 @@
         'Memoria RAM: 64 GB / 128 GB DDR5 ECC',
         'Almacenamiento: 2 TB SSD Gen4 + HDD 4TB',
         'Gráfica: NVIDIA RTX 4080 / RTX 4090 / RTX Ada',
-        'Fuente 1000W Platino y caja aislada acústicamente'
-      ]
-    }
+        'Fuente 1000W Platino y caja aislada acústicamente',
+      ],
+    },
   ]
 
   // Typical PC repairs in shop
@@ -214,29 +262,29 @@
       solution: 'Revisión y sustitución de fuentes de alimentación defectuosas, reparación de placas base o cambio de pasta térmica por sobrecalentamiento.',
       icon: 'mdi-power-plug-off',
       color: 'red',
-      price: 'Desde 45€ + Componentes'
+      price: 'Desde 45€ + Componentes',
     },
     {
       problem: 'Infección por Virus, Troyanos o Malware',
       solution: 'Desinfección completa del sistema sin perder tus archivos personales, instalación de antivirus corporativo y optimización de seguridad.',
       icon: 'mdi-virus-outline',
       color: 'amber-darken-3',
-      price: 'Desde 50€ (Precio Cerrado)'
+      price: 'Desde 50€ (Precio Cerrado)',
     },
     {
       problem: 'Pantalla rota o fallos en portátiles',
       solution: 'Sustitución de paneles LED/LCD agrietados, reemplazo de teclados, conectores de carga sueltos y sustitución de baterías degradadas.',
       icon: 'mdi-laptop',
       color: 'primary',
-      price: 'Bajo presupuesto (Diagnóstico gratis)'
+      price: 'Bajo presupuesto (Diagnóstico gratis)',
     },
     {
       problem: 'Fallo de disco duro y pérdida de datos',
       solution: 'Instalación de sistema operativo de cero y recuperación de datos de discos dañados utilizando herramientas profesionales de taller.',
       icon: 'mdi-harddisk-plus',
       color: 'green-darken-2',
-      price: 'Desde 60€ (Consúltanos)'
-    }
+      price: 'Desde 60€ (Consúltanos)',
+    },
   ]
 
   // Renewal/upgrade packages
@@ -249,10 +297,10 @@
         'Sustitución física de disco',
         'SSD de 500GB NVMe o SATA incluido',
         'Clonación exacta de tus programas',
-        'Limpieza física interna básica'
+        'Limpieza física interna básica',
       ],
       price: '89€',
-      popular: false
+      popular: false,
     },
     {
       name: 'Pack Renovación Total',
@@ -262,10 +310,10 @@
         'SSD de 1TB de alta velocidad incluido',
         'Ampliación a 16 GB de RAM incluida',
         'Limpieza interna y cambio de pasta térmica',
-        'Optimización y desinfección de sistema'
+        'Optimización y desinfección de sistema',
       ],
       price: '149€',
-      popular: true
+      popular: true,
     },
     {
       name: 'Pack Multitarea',
@@ -275,30 +323,44 @@
         'Análisis de compatibilidad de placa',
         'Instalación de módulo RAM adicional',
         'Ampliación a 8GB o 16GB de RAM',
-        'Pruebas de estabilidad de memoria'
+        'Pruebas de estabilidad de memoria',
       ],
       price: '65€',
-      popular: false
-    }
+      popular: false,
+    },
   ]
 
-  const updateTabFromQuery = () => {
+  function updateTabFromQuery () {
     const tabQuery = route.query.tab
-    if (tabQuery === 'custom' || tabQuery === 'medida') {
-      activeTab.value = 'medida'
-    } else if (tabQuery === 'repair' || tabQuery === 'reparacion') {
-      activeTab.value = 'reparacion'
-    } else if (tabQuery === 'upgrade' || tabQuery === 'renovacion') {
-      activeTab.value = 'renovacion'
-    } else {
-      // Map based on matching specific paths (servicio3.1, servicio4, servicio5)
-      const path = route.path
-      if (path.endsWith('servicio3.1')) {
+    switch (tabQuery) {
+      case 'custom':
+      case 'medida': {
         activeTab.value = 'medida'
-      } else if (path.endsWith('servicio4')) {
+
+        break
+      }
+      case 'repair':
+      case 'reparacion': {
         activeTab.value = 'reparacion'
-      } else if (path.endsWith('servicio5')) {
+
+        break
+      }
+      case 'upgrade':
+      case 'renovacion': {
         activeTab.value = 'renovacion'
+
+        break
+      }
+      default: {
+        // Map based on matching specific paths (servicio3.1, servicio4, servicio5)
+        const path = route.path
+        if (path.endsWith('servicio3.1')) {
+          activeTab.value = 'medida'
+        } else if (path.endsWith('servicio4')) {
+          activeTab.value = 'reparacion'
+        } else if (path.endsWith('servicio5')) {
+          activeTab.value = 'renovacion'
+        }
       }
     }
   }

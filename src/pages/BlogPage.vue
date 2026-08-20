@@ -3,13 +3,16 @@
     <!-- HERO SECTION -->
     <header class="hero-section text-white d-flex align-center position-relative overflow-hidden">
       <div class="gradient-overlay" />
+
       <v-container class="position-relative z-index-2 py-16 text-center">
         <span class="text-subtitle-1 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-3">
           BLOG DE TECNOLOGÍA
         </span>
+
         <h1 class="text-h2 font-weight-black mb-4 text-gradient leading-tight">
           Novedades y Consejos IT
         </h1>
+
         <p class="text-h6 text-grey-lighten-2 mb-8 leading-relaxed font-weight-regular max-w-700 mx-auto">
           Mantente al día sobre ciberseguridad, optimización de hardware, soluciones de impresión eficientes y las últimas novedades en Inteligencia Artificial aplicada a empresas.
         </p>
@@ -22,16 +25,17 @@
         <v-col
           v-for="post in offersStore.blogPosts"
           :key="post.id"
+          class="d-flex"
           cols="12"
           md="6"
-          class="d-flex"
         >
           <v-card class="blog-card w-100 pa-6 rounded-xl border elevation-1 d-flex flex-column justify-space-between">
             <div>
               <div class="d-flex justify-space-between align-center mb-4">
-                <v-chip color="secondary" size="small" class="font-weight-bold text-white">
+                <v-chip class="font-weight-bold text-white" color="secondary" size="small">
                   {{ post.category }}
                 </v-chip>
+
                 <span class="text-caption text-grey">{{ post.date }}</span>
               </div>
 
@@ -46,12 +50,13 @@
 
             <div>
               <v-divider class="mb-4" />
+
               <div class="d-flex justify-space-between align-center">
                 <span class="text-caption text-grey font-weight-medium">
-                  <v-icon start size="14">mdi-clock-outline</v-icon> {{ post.readTime }}
+                  <v-icon size="14" start>mdi-clock-outline</v-icon> {{ post.readTime }}
                 </span>
 
-                <v-btn color="primary" variant="text" class="font-weight-bold" @click="openPost(post)">
+                <v-btn class="font-weight-bold" color="primary" variant="text" @click="openPost(post)">
                   Leer Artículo <v-icon end>mdi-chevron-right</v-icon>
                 </v-btn>
               </div>
@@ -66,16 +71,18 @@
       <v-card v-if="selectedPost" class="rounded-xl pa-6">
         <v-card-title class="px-0 d-flex justify-space-between align-start text-wrap">
           <div>
-            <v-chip color="secondary" size="small" class="font-weight-bold text-white mb-2">
+            <v-chip class="font-weight-bold text-white mb-2" color="secondary" size="small">
               {{ selectedPost.category }}
             </v-chip>
+
             <h2 class="text-h4 font-weight-black text-primary leading-tight">
               {{ selectedPost.title }}
             </h2>
           </div>
-          <v-btn icon="mdi-close" variant="text" color="grey" @click="dialog = false" />
+
+          <v-btn color="grey" icon="mdi-close" variant="text" @click="dialog = false" />
         </v-card-title>
-        
+
         <v-card-text class="px-0 py-6 text-body-1 text-grey-darken-3 leading-relaxed">
           <div class="d-flex align-center gap-3 mb-6 text-caption text-grey">
             <span><strong>Autor:</strong> {{ selectedPost.author }}</span>
@@ -91,10 +98,12 @@
 
           <div class="bg-blue-lighten-5 pa-6 rounded-lg text-center">
             <h3 class="text-h6 font-weight-black text-primary mb-2">¿Te ha gustado el artículo?</h3>
+
             <p class="text-body-2 text-grey-darken-2 mb-4">
               En Imax PC somos especialistas en soporte técnico y transformación digital para tu negocio. Contacta con nosotros para cualquier duda o consulta informática.
             </p>
-            <v-btn color="secondary" class="text-white font-weight-bold rounded-lg" to="/contacto" @click="dialog = false">
+
+            <v-btn class="text-white font-weight-bold rounded-lg" color="secondary" to="/contacto" @click="dialog = false">
               Contactar Soporte Técnico
             </v-btn>
           </div>
@@ -106,14 +115,14 @@
 
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
-  import { useOffersStore, type BlogPost } from '@/stores/offersStore'
+  import { type BlogPost, useOffersStore } from '@/stores/offersStore'
 
   const offersStore = useOffersStore()
-  
+
   const dialog = ref(false)
   const selectedPost = ref<BlogPost | null>(null)
 
-  const openPost = (post: BlogPost) => {
+  function openPost (post: BlogPost) {
     selectedPost.value = post
     dialog.value = true
   }

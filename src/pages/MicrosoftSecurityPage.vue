@@ -7,37 +7,44 @@
 
       <v-container class="position-relative z-index-2 py-16">
         <v-row align="center">
-          <v-col cols="12" md="7" class="text-left animate-slide-up">
+          <v-col class="text-left animate-slide-up" cols="12" md="7">
             <div class="premium-tag mb-4">SEGURIDAD Y CUMPLIMIENTO GLOBAL</div>
+
             <h1 class="text-h2 font-weight-black mb-4 text-gradient leading-tight">
               Seguridad Microsoft 365
             </h1>
+
             <h2 class="text-h4 font-weight-bold text-secondary mb-6">
               Defender detiene el ataque, Purview protege tus datos
             </h2>
+
             <p class="text-h6 text-grey-lighten-2 mb-8 leading-relaxed font-weight-regular max-w-650">
               Protege el perímetro digital de tu pyme frente a amenazas de identidad avanzadas y asegura tus archivos más confidenciales frente a fugas accidentales impulsadas por el uso de herramientas de IA.
             </p>
+
             <div class="d-flex flex-wrap gap-4">
               <v-btn class="cta-primary-glow px-8" color="secondary" size="large" to="/contacto">
                 Auditar mi Seguridad
                 <v-icon end>mdi-shield-check</v-icon>
               </v-btn>
+
               <v-btn class="cta-secondary-outline px-8" size="large" variant="outlined" @click="scrollToSection('#conceptos')">
                 Ver Escenarios
               </v-btn>
             </div>
           </v-col>
 
-          <v-col cols="12" md="5" class="d-flex justify-center position-relative py-8">
+          <v-col class="d-flex justify-center position-relative py-8" cols="12" md="5">
             <!-- Shield Graphic with glowing elements -->
             <div class="security-shield-container">
-              <div class="shield-pulse"></div>
+              <div class="shield-pulse" />
               <v-icon class="shield-icon" color="secondary">mdi-shield-lock</v-icon>
+
               <div class="floating-stat pa-3 text-caption glassmorphism d-flex align-center gap-2" style="top: 15%; right: -5%;">
                 <v-icon color="success" size="16">mdi-check-circle</v-icon>
                 <span>Zero Trust Activo</span>
               </div>
+
               <div class="floating-stat pa-3 text-caption glassmorphism d-flex align-center gap-2" style="bottom: 15%; left: -5%;">
                 <v-icon color="error" size="16">mdi-alert-circle</v-icon>
                 <span>Phishing Bloqueado</span>
@@ -54,10 +61,13 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           LA REALIDAD DE LAS PYMES
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           El Vector de Ataque ha Cambiado
         </h2>
+
         <div class="divider mx-auto mb-4" />
+
         <p class="text-body-1 text-grey-darken-2 max-w-700 mx-auto">
           Los ataques ya no buscan dañar el ordenador directamente con virus; buscan suplantar la identidad digital del empleado y robar datos corporativos.
         </p>
@@ -69,6 +79,7 @@
           <v-card class="stat-card pa-6 text-center rounded-xl border elevation-0">
             <span class="d-block text-h3 font-weight-black text-primary mb-2">80%</span>
             <h4 class="text-subtitle-1 font-weight-bold text-secondary mb-2">Amenazas de Identidad</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               De los ataques actuales están dirigidos a comprometer identidades, saltándose las defensas tradicionales de endpoint.
             </p>
@@ -79,6 +90,7 @@
           <v-card class="stat-card pa-6 text-center rounded-xl border elevation-0">
             <span class="d-block text-h3 font-weight-black text-primary mb-2">75%</span>
             <h4 class="text-subtitle-1 font-weight-bold text-secondary mb-2">Libres de Malware</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               De los ciberataques modernos no usan virus tradicionales, sino credenciales legítimas robadas por phishing o ingeniería social.
             </p>
@@ -89,6 +101,7 @@
           <v-card class="stat-card pa-6 text-center rounded-xl border elevation-0">
             <span class="d-block text-h3 font-weight-black text-primary mb-2">48%</span>
             <h4 class="text-subtitle-1 font-weight-bold text-secondary mb-2">Fuga de Datos por IA</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               De los empleados corporativos han subido datos sensibles e información confidencial a herramientas externas de IA.
             </p>
@@ -101,13 +114,15 @@
     <v-sheet class="bg-grey-lighten-4 py-16 border-y">
       <v-container>
         <v-row align="center">
-          <v-col cols="12" md="6" class="pe-md-10">
+          <v-col class="pe-md-10" cols="12" md="6">
             <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
               LA SOLUCIÓN DE SEGURIDAD MÁS ROBUSTA
             </span>
+
             <h2 class="text-h3 font-weight-black text-primary mb-6 leading-tight">
               Defender + Purview
             </h2>
+
             <p class="text-body-1 text-grey-darken-2 mb-8 leading-relaxed">
               Para lograr una verdadera protección Zero Trust en la era de la inteligencia artificial, necesitas asegurar tanto la entrada a tus sistemas como los datos almacenados en ellos.
             </p>
@@ -117,8 +132,10 @@
                 <div class="icon-box bg-blue-lighten-5 pa-3 rounded-lg">
                   <v-icon color="primary" size="28">mdi-castle</v-icon>
                 </div>
+
                 <div>
                   <h4 class="text-h6 font-weight-bold text-primary mb-1">Microsoft Defender</h4>
+
                   <p class="text-body-2 text-grey-darken-1 mb-0">
                     <strong>Protege las murallas del castillo.</strong> Detiene el ataque perimetral, bloquea los correos de phishing, protege la identidad y analiza la actividad de los endpoints y aplicaciones en la nube en tiempo real.
                   </p>
@@ -131,8 +148,10 @@
                 <div class="icon-box bg-cyan-lighten-5 pa-3 rounded-lg">
                   <v-icon color="secondary" size="28">mdi-safe-square-outline</v-icon>
                 </div>
+
                 <div>
                   <h4 class="text-h6 font-weight-bold text-primary mb-1">Microsoft Purview</h4>
+
                   <p class="text-body-2 text-grey-darken-1 mb-0">
                     <strong>Protege las joyas de la corona.</strong> Protege el dato internamente aplicando etiquetas de sensibilidad automáticas, previene la fuga involuntaria y gestiona las políticas de cumplimiento normativo (GDPR).
                   </p>
@@ -141,14 +160,14 @@
             </v-card>
           </v-col>
 
-          <v-col cols="12" md="6" class="text-center">
+          <v-col class="text-center" cols="12" md="6">
             <!-- Castle and Crown Jewels graphic using Unsplash -->
             <v-img
               alt="Castillo protegido de datos"
-              src="https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?auto=format&fit=crop&w=800&q=80"
               class="rounded-xl border shadow-lg"
-              max-height="450"
               cover
+              max-height="450"
+              src="https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?auto=format&fit=crop&w=800&q=80"
             />
           </v-col>
         </v-row>
@@ -161,19 +180,22 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           CASOS PRÁCTICOS DE PROTECCIÓN
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           Escenarios: Defender y Purview en Acción
         </h2>
+
         <div class="divider mx-auto mb-4" />
       </div>
 
       <v-row>
         <!-- Escenario 1 -->
-        <v-col cols="12" md="6" lg="3" class="d-flex">
+        <v-col class="d-flex" cols="12" lg="3" md="6">
           <v-card class="scenario-card w-100 pa-5 rounded-xl border elevation-0 d-flex flex-column justify-space-between">
             <div>
               <div class="scenario-num font-weight-bold text-secondary mb-4">01</div>
               <h4 class="text-h6 font-weight-bold text-primary mb-2">Detener robo de datos</h4>
+
               <p class="text-body-2 text-grey-darken-2 leading-relaxed">
                 Si un atacante compromete la cuenta de un empleado e intenta descargar listas financieras o de clientes, Defender detecta la intrusión y Purview bloquea la descarga de datos de inmediato.
               </p>
@@ -182,11 +204,12 @@
         </v-col>
 
         <!-- Escenario 2 -->
-        <v-col cols="12" md="6" lg="3" class="d-flex">
+        <v-col class="d-flex" cols="12" lg="3" md="6">
           <v-card class="scenario-card w-100 pa-5 rounded-xl border elevation-0 d-flex flex-column justify-space-between">
             <div>
               <div class="scenario-num font-weight-bold text-secondary mb-4">02</div>
               <h4 class="text-h6 font-weight-bold text-primary mb-2">Contención inmediata</h4>
+
               <p class="text-body-2 text-grey-darken-2 leading-relaxed">
                 Si un usuario inicia sesión desde un país sospechoso, Defender marca el riesgo de identidad y Purview bloquea de inmediato la compartición de archivos adjuntos sin esperar a que el equipo de IT actúe.
               </p>
@@ -194,12 +217,13 @@
           </v-card>
         </v-col>
 
-          <!-- Escenario 3 -->
-        <v-col cols="12" md="6" lg="3" class="d-flex">
+        <!-- Escenario 3 -->
+        <v-col class="d-flex" cols="12" lg="3" md="6">
           <v-card class="scenario-card w-100 pa-5 rounded-xl border elevation-0 d-flex flex-column justify-space-between">
             <div>
               <div class="scenario-num font-weight-bold text-secondary mb-4">03</div>
               <h4 class="text-h6 font-weight-bold text-primary mb-2">Auditoría continua</h4>
+
               <p class="text-body-2 text-grey-darken-2 leading-relaxed">
                 Al detectar una actividad sospechosa, Defender enriquece el evento de seguridad con el contexto del usuario y Purview rastrea cada descarga o acceso a archivos en un registro unificado para auditorías rápidas.
               </p>
@@ -208,11 +232,12 @@
         </v-col>
 
         <!-- Escenario 4 -->
-        <v-col cols="12" md="6" lg="3" class="d-flex">
+        <v-col class="d-flex" cols="12" lg="3" md="6">
           <v-card class="scenario-card w-100 pa-5 rounded-xl border elevation-0 d-flex flex-column justify-space-between">
             <div>
               <div class="scenario-num font-weight-bold text-secondary mb-4">04</div>
               <h4 class="text-h6 font-weight-bold text-primary mb-2">Seguridad para la IA</h4>
+
               <p class="text-body-2 text-grey-darken-2 leading-relaxed">
                 Defender identifica el uso de herramientas externas de IA no aprobadas, mientras que Purview inspecciona en tiempo real las interacciones bloqueando el copiado de datos sensibles en plataformas públicas.
               </p>
@@ -229,24 +254,29 @@
           <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
             PLANES DE PROTECCIÓN PARA PYMES
           </span>
+
           <h2 class="text-h3 font-weight-black text-primary mb-4">
             Ofertas Hero de Seguridad
           </h2>
+
           <div class="divider mx-auto mb-4" />
         </div>
 
-        <v-row justify="center" align="stretch">
+        <v-row align="stretch" justify="center">
           <!-- Addon Defender -->
-          <v-col cols="12" md="4" class="d-flex">
+          <v-col class="d-flex" cols="12" md="4">
             <v-card class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1">
               <div>
                 <h3 class="text-h5 font-weight-bold text-primary mb-2">Add-ons Defender</h3>
                 <p class="text-caption text-grey mb-6">Protección de acceso, endpoints e identidad</p>
+
                 <div class="price-container mb-6">
                   <span class="text-h4 font-weight-black text-primary">10 €</span>
                   <span class="text-caption text-grey"> / usuario / mes</span>
                 </div>
+
                 <v-divider class="mb-6" />
+
                 <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                   <li class="mb-2">Protección EDR (antivirus de última generación)</li>
                   <li class="mb-2">Protección avanzada frente a Phishing en el correo</li>
@@ -254,24 +284,34 @@
                   <li class="mb-2">Seguridad en tiempo real para apps en la nube</li>
                 </ul>
               </div>
-              <v-btn block color="primary" variant="outlined" class="mt-6 rounded-lg font-weight-bold" to="/contacto">
+
+              <v-btn
+                block
+                class="mt-6 rounded-lg font-weight-bold"
+                color="primary"
+                to="/contacto"
+                variant="outlined"
+              >
                 Solicitar Info
               </v-btn>
             </v-card>
           </v-col>
 
           <!-- Addon Purview -->
-          <v-col cols="12" md="4" class="d-flex">
+          <v-col class="d-flex" cols="12" md="4">
             <v-card class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border elevation-1">
               <div>
                 <h3 class="text-h5 font-weight-bold text-primary mb-2">Add-ons Purview</h3>
                 <p class="text-caption text-grey mb-6">Seguridad del dato y cumplimiento normativo</p>
+
                 <div class="price-container mb-6">
                   <span class="text-h4 font-weight-black text-primary">10 €</span>
                   <span class="text-caption text-grey"> / usuario / mes</span>
                   <div class="promo-pill mt-2">¡PROMO 50% OFF COPILOT!</div>
                 </div>
+
                 <v-divider class="mb-6" />
+
                 <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                   <li class="mb-2">Clasificación y etiquetado de datos confidenciales</li>
                   <li class="mb-2">Políticas de prevención de pérdida de datos (DLP)</li>
@@ -279,25 +319,36 @@
                   <li class="mb-2">Informes detallados de cumplimiento legal</li>
                 </ul>
               </div>
-              <v-btn block color="primary" variant="outlined" class="mt-6 rounded-lg font-weight-bold" to="/contacto">
+
+              <v-btn
+                block
+                class="mt-6 rounded-lg font-weight-bold"
+                color="primary"
+                to="/contacto"
+                variant="outlined"
+              >
                 Solicitar Info
               </v-btn>
             </v-card>
           </v-col>
 
           <!-- Bundle (Mejor opción) -->
-          <v-col cols="12" md="4" class="d-flex">
+          <v-col class="d-flex" cols="12" md="4">
             <v-card class="pricing-card w-100 pa-6 d-flex flex-column justify-space-between rounded-xl border border-secondary elevation-3 position-relative">
               <div class="popular-tag">RECOMENDADO</div>
+
               <div>
                 <h3 class="text-h5 font-weight-bold text-primary mb-2">Defender + Purview Bundle</h3>
                 <p class="text-caption text-grey mb-6">Protección integral de extremo a extremo</p>
+
                 <div class="price-container mb-6">
                   <span class="text-h4 font-weight-black text-primary">15 €</span>
                   <span class="text-caption text-grey"> / usuario / mes</span>
                   <div class="promo-pill promo-blue mt-2">Ahorra un 25% contratando el bundle</div>
                 </div>
+
                 <v-divider class="mb-6" />
+
                 <ul class="pricing-features text-body-2 text-grey-darken-3 ps-4">
                   <li class="mb-2">Todas las funciones de Defender</li>
                   <li class="mb-2">Todas las funciones de Purview</li>
@@ -305,7 +356,8 @@
                   <li class="mb-2">Auditorías e investigación del dato unificadas</li>
                 </ul>
               </div>
-              <v-btn block color="secondary" class="mt-6 rounded-lg font-weight-bold text-white elevation-1" to="/contacto">
+
+              <v-btn block class="mt-6 rounded-lg font-weight-bold text-white elevation-1" color="secondary" to="/contacto">
                 Contratar Bundle
               </v-btn>
             </v-card>
@@ -320,9 +372,11 @@
         <span class="text-subtitle-2 text-uppercase font-weight-bold text-secondary tracking-widest d-block mb-2">
           MANTENIMIENTO ADMINISTRADO IMAX PC
         </span>
+
         <h2 class="text-h3 font-weight-black text-primary mb-4">
           Nivel de Madurez de tu Seguridad
         </h2>
+
         <div class="divider mx-auto mb-4" />
       </div>
 
@@ -331,8 +385,10 @@
           <template #opposite>
             <span class="text-h6 font-weight-bold text-primary">NIVEL 1</span>
           </template>
+
           <v-card class="pa-4 rounded-xl border elevation-0">
             <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Fundación (Mantenimiento Básico)</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               Configuración y endurecimiento inicial de la línea base, etiquetas de sensibilidad básicas, monitoreo de antivirus 8x5 e informe mensual de higiene.
             </p>
@@ -343,8 +399,10 @@
           <template #opposite>
             <span class="text-h6 font-weight-bold text-secondary">NIVEL 2</span>
           </template>
+
           <v-card class="pa-4 rounded-xl border elevation-0">
             <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Operativo (Seguridad Activa)</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               Detección y respuesta gestionada ligera, monitoreo de amenazas a identidades de usuarios, gestión de superficies de ataque y políticas DLP de datos en tránsito.
             </p>
@@ -355,8 +413,10 @@
           <template #opposite>
             <span class="text-h6 font-weight-bold text-purple">NIVEL 3</span>
           </template>
+
           <v-card class="pa-4 rounded-xl border elevation-0">
             <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Avanzado (Protección Proactiva)</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               Servicio de respuesta a incidentes MDR 24/7, búsqueda proactiva de amenazas (Threat Hunting), optimización de la postura de confianza cero y gobernanza avanzada.
             </p>
@@ -367,8 +427,10 @@
           <template #opposite>
             <span class="text-h6 font-weight-bold text-success">NIVEL 4</span>
           </template>
+
           <v-card class="pa-4 rounded-xl border elevation-0">
             <h4 class="text-subtitle-1 font-weight-bold text-primary mb-1">Estratégico (Habilitación del Negocio)</h4>
+
             <p class="text-body-2 text-grey-darken-1 mb-0 leading-relaxed">
               Simulación de ciberataques y brechas de seguridad periódicas, preparación de los datos para la IA/Copilot, alineamiento a normativas internacionales y apoyo legal de eDiscovery.
             </p>
@@ -380,11 +442,14 @@
     <!-- 7. FOOTER CALL TO ACTION -->
     <v-sheet class="call-to-action-section bg-primary text-white py-16 mt-16 position-relative overflow-hidden text-center">
       <div class="cta-overlay" />
+
       <v-container class="position-relative z-index-2">
         <h2 class="text-h3 font-weight-black mb-4">¿Tu infraestructura está realmente protegida?</h2>
+
         <p class="text-h6 font-weight-regular text-grey-lighten-2 max-w-650 mx-auto mb-8 leading-relaxed">
           Las pymes sufren más del 50% de los incidentes reales de ciberseguridad cada año. No te conviertas en una estadística. Permítenos realizar una auditoría de seguridad de tu inquilino de Microsoft 365.
         </p>
+
         <v-btn class="cta-secondary-glow px-10 py-3" color="secondary" size="x-large" to="/contacto">
           Solicitar Auditoría de Seguridad Gratis
           <v-icon end size="20">mdi-shield-check</v-icon>
