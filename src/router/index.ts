@@ -17,33 +17,35 @@ import NotFoundPage from '@/pages/NotFoundPage.vue'
 // Cambia este valor a true para poner TODO el sitio web en mantenimiento.
 export const EN_MANTENIMIENTO_GLOBAL = false
 
-// Configuración de mantenimiento individual por ruta existente.
-// true  = Activa la pantalla de mantenimiento para esta ruta.
 // false = La ruta está activa y accesible.
 export const RUTAS_MANTENIMIENTO: Record<string, boolean> = {
   '/': false, // Inicio
   '/cliente': false, // Hágase Cliente
   '/condiciones-ventas': false, // Condiciones de Venta
   '/contacto': false, // Contacto
-  '/productos': true, // Productos (En construcción)
-  '/productos/brother': true,
+  '/productos': false, // Productos (Activo)
+  '/productos/brother': false,
   '/productos/brother/consumibles': false,
   '/productos/brother/impresoras': false,
-  '/productos/hp': true,
-  '/productos/hp/consumibles': true,
-  '/productos/hp/impresoras': true,
-  '/productos/producto3': true,
-  '/productos/producto3.1': true,
-  '/productos/producto3.2': true,
-  '/productos/producto3.3': true,
-  '/productos/producto3.4': true,
-  '/servicios': true, // Servicios (En construcción)
-  '/servicios/servicio1': true,
-  '/servicios/servicio2': true,
-  '/servicios/servicio3': true,
+  '/productos/hp': false,
+  '/productos/hp/consumibles': false,
+  '/productos/hp/impresoras': false,
+  '/productos/accesorios': false,
+  '/productos/accesorios/perifericos': false,
+  '/productos/accesorios/almacenamiento': false,
+  '/productos/accesorios/redes': false,
+  '/servicios': false, // Servicios (Activo)
+  '/servicios/servicio1': false,
+  '/servicios/servicio2': false,
+  '/servicios/servicio3': false,
+  '/servicios/servicio3.1': false,
+  '/servicios/servicio4': false,
+  '/servicios/servicio5': false,
+  '/servicios/servicio6': false,
   '/servicios/microsoft-copilot': false,
   '/servicios/seguridad-microsoft-365': false,
   '/servicios/microsoft-fabric': false,
+  '/blog': false, // Blog (Activo)
 }
 
 const router = createRouter({
@@ -65,8 +67,6 @@ const router = createRouter({
       name: 'HagaseCliente',
       component: () => import('@/pages/ClientePage.vue'),
     },
-    // Las rutas de abajo están registradas pero apuntan temporalmente a Index o MaintenancePage
-    // mientras se crean sus componentes finales, lo que previene errores de compilación.
     {
       path: '/contacto',
       name: 'Contacto',
@@ -75,22 +75,42 @@ const router = createRouter({
     {
       path: '/servicios',
       name: 'Servicios',
-      component: MaintenancePage,
+      component: () => import('@/pages/ServiciosPage.vue'),
     },
     {
       path: '/servicios/servicio1',
       name: 'Servicio1',
-      component: MaintenancePage,
+      component: () => import('@/pages/ServiciosDetallePage.vue'),
     },
     {
       path: '/servicios/servicio2',
       name: 'Servicio2',
-      component: MaintenancePage,
+      component: () => import('@/pages/ServiciosDetallePage.vue'),
     },
     {
       path: '/servicios/servicio3',
       name: 'Servicio3',
-      component: MaintenancePage,
+      component: () => import('@/pages/OrdenadoresPage.vue'),
+    },
+    {
+      path: '/servicios/servicio3.1',
+      name: 'Servicio3_1',
+      component: () => import('@/pages/OrdenadoresPage.vue'),
+    },
+    {
+      path: '/servicios/servicio4',
+      name: 'Servicio4',
+      component: () => import('@/pages/OrdenadoresPage.vue'),
+    },
+    {
+      path: '/servicios/servicio5',
+      name: 'Servicio5',
+      component: () => import('@/pages/OrdenadoresPage.vue'),
+    },
+    {
+      path: '/servicios/servicio6',
+      name: 'Servicio6',
+      component: () => import('@/pages/ServiciosDetallePage.vue'),
     },
     {
       path: '/servicios/microsoft-copilot',
@@ -110,12 +130,12 @@ const router = createRouter({
     {
       path: '/productos',
       name: 'Productos',
-      component: MaintenancePage,
+      component: () => import('@/pages/ProductosPage.vue'),
     },
     {
       path: '/productos/brother',
       name: 'ProductosBrother',
-      component: MaintenancePage,
+      component: () => import('@/pages/ProductosPage.vue'),
     },
     {
       path: '/productos/brother/consumibles',
@@ -130,42 +150,42 @@ const router = createRouter({
     {
       path: '/productos/hp',
       name: 'ProductoHp',
-      component: MaintenancePage,
+      component: () => import('@/pages/ProductosPage.vue'),
     },
     {
       path: '/productos/hp/impresoras',
       name: 'HpImpresoras',
-      component: MaintenancePage,
+      component: () => import('@/pages/HpImpresorasPage.vue'),
     },
     {
       path: '/productos/hp/consumibles',
       name: 'HpConsumibles',
-      component: MaintenancePage,
+      component: () => import('@/pages/HpConsumiblesPage.vue'),
     },
     {
-      path: '/productos/producto3',
-      name: 'Producto3',
-      component: MaintenancePage,
+      path: '/productos/accesorios',
+      name: 'Accesorios',
+      component: () => import('@/pages/AccessoriesPage.vue'),
     },
     {
-      path: '/productos/producto3.1',
-      name: 'Producto3_1',
-      component: MaintenancePage,
+      path: '/productos/accesorios/perifericos',
+      name: 'AccesoriosPerifericos',
+      component: () => import('@/pages/AccessoriesPage.vue'),
     },
     {
-      path: '/productos/producto3.2',
-      name: 'Producto3_2',
-      component: MaintenancePage,
+      path: '/productos/accesorios/almacenamiento',
+      name: 'AccesoriosAlmacenamiento',
+      component: () => import('@/pages/AccessoriesPage.vue'),
     },
     {
-      path: '/productos/producto3.3',
-      name: 'Producto3_3',
-      component: MaintenancePage,
+      path: '/productos/accesorios/redes',
+      name: 'AccesoriosRedes',
+      component: () => import('@/pages/AccessoriesPage.vue'),
     },
     {
-      path: '/productos/producto3.4',
-      name: 'Producto3_4',
-      component: MaintenancePage,
+      path: '/blog',
+      name: 'Blog',
+      component: () => import('@/pages/BlogPage.vue'),
     },
 
     // --- RUTA DE MANTENIMIENTO ---
