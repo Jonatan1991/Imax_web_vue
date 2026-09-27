@@ -1,0 +1,28 @@
+services:
+  imax-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: imax-web-vue
+    restart: unless-stopped
+    ports:
+      - "80:3000"
+    volumes:
+      # Sincronización en vivo del código fuente (Hot Reload)
+      - .:/app
+      # Volumen anónimo para preservar los node_modules del contenedor Linux
+      - /app/node_modules
+    environment:
+      # Puerto HMR para que el WebSocket de Vite funcione a través del puerto 80 expuesto
+      - VITE_HMR_PORT=80
+      # URL interna del contenedor de Odoo dentro de la red Docker
+      - ODOO_URL=http://odoo-imax-web:8069
+      # Detección de cambios de archivos en Windows / Docker
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - odoo-net
+
+networks:
+  odoo-net:
+    name: odoo-imax_odoo-net
+    external: true

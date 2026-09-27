@@ -45,6 +45,20 @@ export default defineConfig({
     ],
   },
   server: {
+    host: '0.0.0.0',
     port: 3000,
+    watch: {
+      usePolling: true,
+    },
+    hmr: {
+      clientPort: process.env.VITE_HMR_PORT ? Number(process.env.VITE_HMR_PORT) : undefined,
+    },
+    proxy: {
+      '/odoo-api': {
+        target: process.env.ODOO_URL || 'http://localhost:8069',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/odoo-api/, ''),
+      },
+    },
   },
 })
