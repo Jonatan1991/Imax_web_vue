@@ -212,7 +212,7 @@
   const currentService = computed(() => {
     // Determine the service key based on path or name
     const pathParts = route.path.split('/')
-    const lastPart = pathParts.at(-1)
+    const lastPart = pathParts.at(-1) || ''
     return servicesMap[lastPart] || null
   })
 
