@@ -45,6 +45,19 @@
               </div>
             </div>
 
+            <!-- Aviso de error de envío -->
+            <v-alert
+              v-if="errorMsg"
+              class="mb-6 rounded-lg"
+              closable
+              density="comfortable"
+              type="error"
+              variant="tonal"
+              @click:close="errorMsg = ''"
+            >
+              {{ errorMsg }}
+            </v-alert>
+
             <!-- Transición para cuando el mensaje ha sido enviado con éxito -->
             <v-slide-y-transition hide-on-leave>
               <div v-if="submitted" class="text-center py-10 success-animation">
@@ -327,6 +340,7 @@
   const isFormValid = ref(false)
   const loading = ref(false)
   const submitted = ref(false)
+  const errorMsg = ref('')
 
   // Opciones de Asunto
   const subjects = [
@@ -373,25 +387,53 @@
     ],
   }
 
+  // Webhook de n8n (nginx lo proxya en /crm/ para evitar CORS)
+  const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL || '/crm/webhook/contacto-web'
+
   // Enviar el formulario
   async function handleSubmit () {
     if (!contactForm.value) return
 
     const { valid } = await contactForm.value.validate()
 
-    if (valid) {
-      loading.value = true
-      // Simular llamada a API / Envío de email
-      setTimeout(() => {
-        loading.value = false
-        submitted.value = true
-      }, 1500)
+    if (!valid) return
+
+    loading.value = true
+    errorMsg.value = ''
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: form.value.name,
+          email: form.value.email,
+          telefono: form.value.phone,
+          servicio: form.value.subject,
+          mensaje: form.value.message,
+        }),
+      })
+
+      // n8n devuelve { ok: false, error } si Odoo rechaza la creación del lead
+      const data = await response.json().catch(() => null)
+
+      if (!response.ok || data?.ok === false) {
+        throw new Error(data?.error || `HTTP ${response.status}`)
+      }
+
+      submitted.value = true
+    } catch (error) {
+      errorMsg.value = 'No hemos podido enviar tu mensaje. Inténtalo de nuevo o llámanos al 915 70 05 03.'
+      console.error('[contacto] Error al enviar el formulario:', error)
+    } finally {
+      loading.value = false
     }
   }
 
   // Resetear el formulario
   function resetForm () {
     submitted.value = false
+    errorMsg.value = ''
     form.value = {
       name: '',
       phone: '',
