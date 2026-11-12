@@ -213,7 +213,7 @@
     // Determine the service key based on path or name
     const pathParts = route.path.split('/')
     const lastPart = pathParts.at(-1)
-    return servicesMap[lastPart] || null
+    return (lastPart ? servicesMap[lastPart] : null) || null
   })
 
   onMounted(() => {
